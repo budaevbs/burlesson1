@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Бурятский язык — Урок 1: Посуда</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            padding: 20px 24px 40px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h1 span {
+            font-size: 1.9rem;
+        }
+        .sub {
+            color: #475569;
+            border-left: 4px solid #f59e0b;
+            padding-left: 14px;
+            margin: 12px 0 24px 0;
+            font-weight: 500;
+        }
+        .section {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 28px;
+            border: 1px solid #e2e8f0;
+        }
+        .section-title {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .word-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0 5px;
+        }
+        .word-badge {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.1s ease;
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .word-badge:active {
+            background: #fef3c7;
+            transform: scale(0.96);
+        }
+        .constructor-area {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #e2e8f0;
+        }
+        .sentence-template {
+            font-size: 1.4rem;
+            background: #f1f5f9;
+            padding: 16px 20px;
+            border-radius: 60px;
+            text-align: center;
+            font-family: monospace;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        .blank {
+            display: inline-block;
+            min-width: 100px;
+            background: #fde68a;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-weight: bold;
+            color: #92400e;
+            margin: 0 4px;
+        }
+        .select-word {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1rem;
+            border-radius: 60px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            margin-bottom: 16px;
+        }
+        .btn {
+            background: #f59e0b;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .btn:active {
+            background: #d97706;
+            transform: scale(0.97);
+        }
+        .result-feedback {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .quiz-option {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 60px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: 0.05s linear;
+        }
+        .quiz-option:active {
+            background: #fef9e3;
+        }
+        .quiz-option.selected {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            font-weight: 500;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-input {
+            width: 100%;
+            border: 1px solid #cbd5e1;
+            border-radius: 40px;
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            margin: 8px 0;
+        }
+        .comment-list {
+            margin-top: 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 8px 0;
+        }
+        .single-comment {
+            padding: 12px 0;
+            border-bottom: 1px solid #eef2ff;
+            font-size: 0.9rem;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        button {
+            background: #f59e0b;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1><span>🍵</span> ҺООЛОЙ ҺАБА · Посуда</h1>
+    <div class="sub">Урок 1: 30 слов посуды + конструктор предложений</div>
+
+    <!-- Словарь (30 слов) -->
+    <div class="section">
+        <div class="section-title">📖 Үгэнүүд / Слова</div>
+        <div class="word-list" id="wordsContainer"></div>
+        <div style="font-size: 12px; margin-top: 12px; color: #4b5563;">✨ нажми на любое слово — оно вставится в конструктор</div>
+    </div>
+
+    <!-- КОНСТРУКТОР СЛОВ -->
+    <div class="section">
+        <div class="section-title">🧩 Конструктор «Предмет + место»</div>
+        <div class="constructor-area">
+            <div class="sentence-template">
+                <span id="chosenWordDisplay" class="blank">_____</span>
+                шэрэ дээрэ байна.
+            </div>
+            <select id="wordSelector" class="select-word">
+                <option value="">— выбери слово посуды —</option>
+            </select>
+            <button class="btn" id="buildBtn">🛠️ Собрать предложение</button>
+            <div id="constructorResult" class="result-feedback"></div>
+        </div>
+    </div>
+
+    <!-- ТЕСТ 1: бурятский → русский -->
+    <div class="section">
+        <div class="section-title">📝 Тест 1 / 3: Переведи на русский</div>
+        <div id="quiz1Container"></div>
+        <button id="checkQuiz1Btn" class="btn" style="background: #3b82f6; margin-top: 16px;">✅ Проверить ответы</button>
+        <div id="quiz1Result" style="margin-top: 12px; font-size: 0.9rem;"></div>
+    </div>
+
+    <!-- ТЕСТ 2: русский → бурятский (выбор) -->
+    <div class="section">
+        <div class="section-title">📝 Тест 2 / 3: Выбери правильный перевод</div>
+        <div id="quiz2Container"></div>
+        <button id="checkQuiz2Btn" class="btn" style="background: #3b82f6; margin-top: 16px;">📋 Проверить</button>
+        <div id="quiz2Result" style="margin-top: 12px;"></div>
+    </div>
+
+    <!-- ТЕСТ 3: Верно / Неверно (грамматика места) -->
+    <div class="section">
+        <div class="section-title">⚖️ Тест 3 / 3: Верно ❓ Неверно</div>
+        <div id="quiz3Container"></div>
+        <button id="checkQuiz3Btn" class="btn" style="background: #3b82f6;">🔍 Проверить</button>
+        <div id="quiz3Result" style="margin-top: 12px;"></div>
+    </div>
+
+    <!-- КОММЕНТАРИИ (для имитации обратной связи) -->
+    <div class="section">
+        <div class="section-title">💬 Комментарии к уроку</div>
+        <div>
+            <input type="text" id="commentName" placeholder="Ваше имя" style="width: 100%; padding: 10px; border-radius: 40px; border:1px solid #ccc; margin-bottom:8px;">
+            <textarea id="commentText" rows="2" placeholder="Ваш вопрос или ответ по конструктору..." style="width:100%; border-radius: 20px; border:1px solid #ccc; padding: 12px;"></textarea>
+            <button id="addCommentBtn" class="btn" style="background: #10b981; margin-top: 8px;">📎 Отправить комментарий</button>
+        </div>
+        <div id="commentsList" class="comment-list">
+            <div class="single-comment">✨ <strong>Бато:</strong> «Аяга шэрэ дээрэ байна» — правильно?</div>
+            <div class="single-comment">✨ <strong>Сэсэг:</strong> бусэ шэрэ дээрэ байна ✨</div>
+        </div>
+    </div>
+    <div class="footer-note">
+        ⚡ Работает внутри Telegram. Нажимай на слова из списка — они сами подставятся.
+    </div>
+</div>
+
+<script>
+    // ---------- 30 слов посуды (бурятский + перевод) ----------
+    const words30 = [
+        { bur: "аяга", ru: "чашка" }, { bur: "бусэ", ru: "тарелка" }, { bur: "хул", ru: "ложка" },
+        { bur: "һаба", ru: "миска" }, { bur: "шанз", ru: "чайник" }, { bur: "табаг", ru: "блюдо" },
+        { bur: "томо", ru: "половник" }, { bur: "шэрэ", ru: "стол" }, { bur: "халаа", ru: "сковорода" },
+        { bur: "кувшин", ru: "кувшин" }, { bur: "шанага", ru: "кастрюля" }, { bur: "сав", ru: "емкость" },
+        { bur: "айраг", ru: "пиала" }, { bur: "шумбуу", ru: "шумовка" }, { bur: "хутга", ru: "нож" },
+        { bur: "сэрээ", ru: "вилка" }, { bur: "гуйван", ru: "чайная ложка" }, { bur: "бариул", ru: "ручка (кружки)" },
+        { bur: "соосор", ru: "трубочка" }, { bur: "туба", ru: "турка" }, { bur: "бокал", ru: "бокал" },
+        { bur: "стакан", ru: "стакан" }, { bur: "термос", ru: "термос" }, { bur: "котел", ru: "котел" },
+        { bur: "аяган", ru: "пиала" }, { bur: "уут", ru: "мешочек" }, { bur: "шэнгэ", ru: "поднос" },
+        { bur: "далян", ru: "плошка" }, { bur: "сохо", ru: "ложечка" }, { bur: "модон хул", ru: "деревянная ложка" }
+    ];
+
+    // заполняем список слов (кликабельные бейджи)
+    const wordsContainer = document.getElementById('wordsContainer');
+    const wordSelector = document.getElementById('wordSelector');
+    let currentWord = "";
+
+    words30.forEach(w => {
+        const badge = document.createElement('div');
+        badge.className = 'word-badge';
+        badge.innerText = w.bur;
+        badge.onclick = () => {
+            document.getElementById('chosenWordDisplay').innerText = w.bur;
+            currentWord = w.bur;
+            // также синхронизируем выпадающий список
+            wordSelector.value = w.bur;
+        };
+        wordsContainer.appendChild(badge);
+
+        const option = document.createElement('option');
+        option.value = w.bur;
+        option.innerText = w.bur + " — " + w.ru;
+        wordSelector.appendChild(option);
+    });
+
+    // конструктор слов
+    const buildBtn = document.getElementById('buildBtn');
+    const constructorResult = document.getElementById('constructorResult');
+    buildBtn.onclick = () => {
+        let selectedWord = currentWord;
+        if (!selectedWord && wordSelector.value) selectedWord = wordSelector.value;
+        if (!selectedWord) {
+            constructorResult.innerHTML = "❌ Выбери слово посуды (нажми на слово или из выпадающего списка)";
+            constructorResult.style.background = "#fee2e2";
+            return;
+        }
+        const fullSentence = `${selectedWord} шэрэ дээрэ байна.`;
+        constructorResult.innerHTML = `✅ Твоё предложение: <strong style="font-size:1.1rem">${fullSentence}</strong><br>👉 Значит: «${selectedWord} находится на столе». Отлично!`;
+        constructorResult.style.background = "#e6f7e6";
+    };
+
+    // =============== ТЕСТ 1: бурятский -> русский (5 вопросов) ==============
+    const quiz1Data = [
+        { bur: "аяга", correct: "чашка" },
+        { bur: "бусэ", correct: "тарелка" },
+        { bur: "хул", correct: "ложка" },
+        { bur: "шанага", correct: "кастрюля" },
+        { bur: "хутга", correct: "нож" }
+    ];
+    function renderQuiz1() {
+        const container = document.getElementById('quiz1Container');
+        container.innerHTML = "";
+        quiz1Data.forEach((q, idx) => {
+            const div = document.createElement('div');
+            div.style.marginBottom = "15px";
+            div.innerHTML = `
+                <div><strong>${q.bur}</strong> → ?</div>
+                <input type="text" id="q1_${idx}" placeholder="Напиши перевод" style="width:100%; padding: 10px; border-radius: 40px; border:1px solid #ccc; margin-top:6px;">
+            `;
+            container.appendChild(div);
+        });
+    }
+    function checkQuiz1() {
+        let correctCount = 0;
+        quiz1Data.forEach((q, idx) => {
+            const answer = document.getElementById(`q1_${idx}`).value.trim().toLowerCase();
+            if (answer === q.correct.toLowerCase()) correctCount++;
+        });
+        const resultDiv = document.getElementById('quiz1Result');
+        resultDiv.innerHTML = `🎯 Результат: ${correctCount} из ${quiz1Data.length} правильных. ${correctCount === quiz1Data.length ? "Молодец! 🎉" : "Повтори слова посуды."}`;
+    }
+
+    // =============== ТЕСТ 2: русский -> бурятский ===============
+    const quiz2Data = [
+        { ru: "чашка", options: ["аяга", "бусэ", "хул"], correct: "аяга" },
+        { ru: "тарелка", options: ["шанага", "бусэ", "аяга"], correct: "бусэ" },
+        { ru: "ложка", options: ["хутга", "хул", "сэрээ"], correct: "хул" },
+        { ru: "нож", options: ["хутга", "сэрээ", "хул"], correct: "хутга" }
+    ];
+    let quiz2Answers = [null, null, null, null];
+    function renderQuiz2() {
+        const container = document.getElementById('quiz2Container');
+        container.innerHTML = "";
+        quiz2Data.forEach((q, idx) => {
+            const block = document.createElement('div');
+            block.style.marginBottom = "20px";
+            block.innerHTML = `<div><strong>${q.ru}</strong> → выбери бурятское слово:</div>`;
+            const optsDiv = document.createElement('div');
+            optsDiv.style.display = "flex";
+            optsDiv.style.gap = "10px";
+            optsDiv.style.flexWrap = "wrap";
+            optsDiv.style.marginTop = "8px";
+            q.options.forEach(opt => {
+                const optBtn = document.createElement('div');
+                optBtn.className = 'quiz-option';
+                optBtn.innerText = opt;
+                optBtn.onclick = () => {
+                    document.querySelectorAll(`#quiz2Container .quiz-option`).forEach(el => el.classList.remove('selected'));
+                    optBtn.classList.add('selected');
+                    quiz2Answers[idx] = opt;
+                };
+                optsDiv.appendChild(optBtn);
+            });
+            block.appendChild(optsDiv);
+            container.appendChild(block);
+        });
+    }
+    function checkQuiz2() {
+        let correct = 0;
+        quiz2Data.forEach((q, idx) => {
+            if (quiz2Answers[idx] === q.correct) correct++;
+        });
+        document.getElementById('quiz2Result').innerHTML = `📊 Тест 2: ${correct} / ${quiz2Data.length} верно. ${correct === quiz2Data.length ? "Превосходно!" : "Ещё раз взгляни на слова"}`;
+    }
+
+    // =============== ТЕСТ 3: Верно / Неверно (посуда+место) ===============
+    const quiz3Data = [
+        { sentence: "Аяга шэрэ дээрэ байна.", correct: true, explanation: "Чашка на столе — верно" },
+        { sentence: "Бусэ аяга дотор байна.", correct: false, explanation: "Тарелка внутри чашки — странно, обычно неверно" },
+        { sentence: "Хул шэрэ дээрэ байна.", correct: true, explanation: "Ложка на столе — ок" },
+        { sentence: "Шанага дотор хул байна.", correct: false, explanation: "Ложка внутри кастрюли — маловероятно" }
+    ];
+    let quiz3Answers = [null, null, null, null];
+    function renderQuiz3() {
+        const container = document.getElementById('quiz3Container');
+        container.innerHTML = "";
+        quiz3Data.forEach((item, idx) => {
+            const div = document.createElement('div');
+            div.style.marginBottom = "18px";
+            div.innerHTML = `<div>📢 ${item.sentence}</div>`;
+            const btnGroup = document.createElement('div');
+            btnGroup.style.display = "flex";
+            btnGroup.style.gap = "12px";
+            btnGroup.style.marginTop = "6px";
+            const trueBtn = document.createElement('div');
+            trueBtn.className = 'quiz-option';
+            trueBtn.innerText = "✅ Верно";
+            const falseBtn = document.createElement('div');
+            falseBtn.className = 'quiz-option';
+            falseBtn.innerText = "❌ Неверно";
+            trueBtn.onclick = () => { quiz3Answers[idx] = true; clearSelection(idx, trueBtn, falseBtn); };
+            falseBtn.onclick = () => { quiz3Answers[idx] = false; clearSelection(idx, trueBtn, falseBtn); };
+            btnGroup.appendChild(trueBtn);
+            btnGroup.appendChild(falseBtn);
+            div.appendChild(btnGroup);
+            container.appendChild(div);
+        });
+        function clearSelection(idx, trueEl, falseEl) {
+            const parent = trueEl.parentNode;
+            parent.querySelectorAll('.quiz-option').forEach(btn => btn.classList.remove('selected'));
+            if (quiz3Answers[idx] === true) trueEl.classList.add('selected');
+            else falseEl.classList.add('selected');
+        }
+    }
+    function checkQuiz3() {
+        let correctCount = 0;
+        quiz3Data.forEach((item, idx) => {
+            if (quiz3Answers[idx] === item.correct) correctCount++;
+        });
+        document.getElementById('quiz3Result').innerHTML = `🧠 Тест 3 (Верно/Неверно): ${correctCount} / ${quiz3Data.length}. ${correctCount === quiz3Data.length ? "Супер, локативные падежи усвоены!" : "Обрати внимание на логику места."}`;
+    }
+
+    // Комментарии (простейшие localStorage)
+    function loadComments() {
+        const saved = localStorage.getItem("buryat_comments");
+        if (saved) {
+            document.getElementById('commentsList').innerHTML = saved;
+        }
+    }
+    function saveComments() {
+        const commentsDiv = document.getElementById('commentsList');
+        localStorage.setItem("buryat_comments", commentsDiv.innerHTML);
+    }
+    document.getElementById('addCommentBtn').addEventListener('click', () => {
+        const name = document.getElementById('commentName').value.trim() || "Ученик";
+        const text = document.getElementById('commentText').value.trim();
+        if (!text) return;
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'single-comment';
+        commentDiv.innerHTML = `💬 <strong>${escapeHtml(name)}:</strong> ${escapeHtml(text)}`;
+        document.getElementById('commentsList').appendChild(commentDiv);
+        document.getElementById('commentText').value = "";
+        saveComments();
+    });
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+
+    // синхронизация клика по словам с селектом
+    document.getElementById('wordSelector').addEventListener('change', (e) => {
+        if(e.target.value) {
+            document.getElementById('chosenWordDisplay').innerText = e.target.value;
+            currentWord = e.target.value;
+        }
+    });
+
+    renderQuiz1();
+    renderQuiz2();
+    renderQuiz3();
+    loadComments();
+
+    document.getElementById('checkQuiz1Btn').onclick = checkQuiz1;
+    document.getElementById('checkQuiz2Btn').onclick = checkQuiz2;
+    document.getElementById('checkQuiz3Btn').onclick = checkQuiz3;
+</script>
+</body>
+</html>
