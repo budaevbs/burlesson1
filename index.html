@@ -1,488 +1,3097 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="bxr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Бурятский язык — Урок 1: Посуда</title>
+    <title>Тест тренажёр по Бурятскому языку | 3 хубилбаритай | Автомат дараа үгэ</title>
     <style>
         * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-            background: #f0f2f5;
             margin: 0;
-            padding: 20px;
-            color: #1e293b;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, 'Segoe UI', 'Roboto', 'Noto Sans', sans-serif;
         }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 28px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            overflow: hidden;
-            padding: 20px 24px 40px;
+
+        body {
+            background: linear-gradient(145deg, #f5f0e7 0%, #e8dfd3 100%);
+            padding: 1.5rem;
+            min-height: 100vh;
         }
-        h1 {
-            font-size: 1.8rem;
-            margin: 0 0 8px 0;
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        .logo-area {
+            background: rgba(255, 252, 240, 0.9);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 0.6rem 1.2rem 0.6rem 0.8rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e0cfb0;
         }
-        h1 span {
-            font-size: 1.9rem;
+        .logo-image {
+            max-height: 60px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
-        .sub {
-            color: #475569;
-            border-left: 4px solid #f59e0b;
-            padding-left: 14px;
-            margin: 12px 0 24px 0;
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-text .main-title {
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #2c5a2e;
+        }
+        .logo-text .sub-title {
+            font-size: 0.7rem;
+            color: #7a6233;
+        }
+        .donation-area {
+            background: rgba(255, 250, 235, 0.95);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 0.6rem 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #e5cfaa;
+            max-width: 280px;
+            text-align: center;
+        }
+        .donation-title {
+            font-weight: 800;
+            color: #b45f2b;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+        .donation-details {
+            font-size: 0.7rem;
+            color: #3a2a1c;
+        }
+        .donation-details p {
+            margin: 3px 0;
+        }
+        .copy-btn {
+            background: #e9dccd;
+            border: none;
+            border-radius: 2rem;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.65rem;
+            cursor: pointer;
+            margin-top: 4px;
             font-weight: 500;
         }
-        .section {
-            background: #f8fafc;
-            border-radius: 24px;
-            padding: 20px;
-            margin-bottom: 28px;
-            border: 1px solid #e2e8f0;
+        .copy-btn:hover {
+            background: #c7b087;
+            color: white;
         }
+        @media (max-width: 680px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .donation-area {
+                max-width: 100%;
+            }
+        }
+
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            background: linear-gradient(135deg, #2c5a2e, #1e3a2f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: #4b3b2b;
+            font-weight: 500;
+            font-size: 1rem;
+            border-top: 1px solid #cdb891;
+            display: inline-block;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .trainer-dict-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 880px) {
+            .trainer-dict-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            body { padding: 1rem; }
+        }
+
+        .trainer-card {
+            background: #fffef7;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            padding: 1.6rem 1.8rem 2rem;
+            border: 1px solid #f0e2ce;
+            transition: transform 0.2s;
+        }
+        .trainer-card:hover { transform: translateY(-3px); }
+
         .section-title {
-            font-weight: 600;
-            font-size: 1.3rem;
-            margin: 0 0 16px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
+            font-size: 1.7rem;
+            font-weight: 700;
+            border-left: 7px solid #d69e3c;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #2e3b2c;
         }
-        .word-list {
+
+        .buryat-word-big {
+            background: #f3efdf;
+            border-radius: 2rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: inset 0 1px 3px #0001, 0 8px 12px -6px rgba(0,0,0,0.1);
+        }
+        .buryat-word-big span {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #2c5a2e;
+            word-break: break-word;
+        }
+
+        .options-area { margin: 1.5rem 0 1.2rem; }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            background: #f9f5ec;
+            border: 2px solid #e2d5bf;
+            border-radius: 3rem;
+            padding: 0.9rem 1rem;
+            margin-bottom: 0.8rem;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #3d2b1a;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .option-btn:hover:not(:disabled) {
+            background: #ede0ce;
+            border-color: #c7a15e;
+            transform: translateX(5px);
+        }
+        .option-btn:disabled { cursor: default; opacity: 0.8; }
+
+        .correct-highlight {
+            background: #c8e6c9 !important;
+            border-color: #2e7d32 !important;
+            color: #1e4620;
+        }
+        .wrong-highlight {
+            background: #ffcdd2 !important;
+            border-color: #c62828 !important;
+            text-decoration: line-through;
+        }
+
+        .feedback {
+            background: #f5efe3;
+            border-radius: 1.5rem;
+            padding: 0.9rem;
+            margin: 1rem 0;
+            font-weight: 500;
+            text-align: center;
+        }
+        .correct-feedback {
+            background: #d9f0da;
+            color: #1f5e2a;
+            border-left: 5px solid #2e7d32;
+        }
+        .wrong-feedback {
+            background: #ffe1de;
+            color: #b13e3e;
+            border-left: 5px solid #c62828;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 3rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            background: #ede3d2;
+            color: #3d2b1a;
+        }
+        .btn-primary {
+            background: #c78d3a;
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .btn-primary:hover { background: #a96f2a; transform: scale(0.97); }
+
+        .score {
+            font-size: 1rem;
+            background: #e7ddcc;
+            padding: 0.6rem 1rem;
+            border-radius: 2rem;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: 600;
+        }
+
+        .dictionary-card {
+            background: #fffef7;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            padding: 1.6rem 1.5rem 2rem;
+            border: 1px solid #f0e2ce;
+        }
+        .dict-header {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0 5px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            gap: 0.8rem;
         }
-        .word-badge {
-            background: white;
-            border: 1px solid #cbd5e1;
-            padding: 8px 16px;
-            border-radius: 40px;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.1s ease;
-            cursor: pointer;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        .search-box { flex: 2; min-width: 160px; }
+        .search-box input {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid #dac29c;
+            background: #fefaf2;
         }
-        .word-badge:active {
-            background: #fef3c7;
-            transform: scale(0.96);
-        }
-        .constructor-area {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #e2e8f0;
-        }
-        .sentence-template {
-            font-size: 1.4rem;
-            background: #f1f5f9;
-            padding: 16px 20px;
-            border-radius: 60px;
-            text-align: center;
-            font-family: monospace;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
-        }
-        .blank {
-            display: inline-block;
-            min-width: 100px;
-            background: #fde68a;
-            padding: 4px 12px;
-            border-radius: 40px;
+        .word-count {
+            background: #e5d9c8;
+            padding: 0.3rem 1rem;
+            border-radius: 3rem;
             font-weight: bold;
-            color: #92400e;
-            margin: 0 4px;
+            font-size: 0.85rem;
         }
-        .select-word {
-            width: 100%;
-            padding: 14px;
-            font-size: 1.1rem;
-            border-radius: 60px;
-            border: 1px solid #cbd5e1;
-            background: white;
-            margin-bottom: 16px;
+        .table-wrapper {
+            overflow-x: auto;
+            max-height: 550px;
+            overflow-y: auto;
+            border-radius: 1.5rem;
+            margin-top: 1rem;
         }
-        .btn {
-            background: #f59e0b;
+        .dict-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .dict-table th {
+            background: #e9dfcf;
+            position: sticky;
+            top: 0;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 700;
+            color: #3e2c1b;
+        }
+        .dict-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #f0e3d2;
+            color: #2e2b26;
+        }
+        .dict-table tr:hover { background: #fcf7ef; }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .page-btn {
+            background: #f0e5d6;
             border: none;
-            padding: 12px 20px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1rem;
-            color: white;
-            width: 100%;
+            padding: 0.4rem 0.9rem;
+            border-radius: 2rem;
             cursor: pointer;
-            transition: 0.1s;
-        }
-        .btn:active {
-            background: #d97706;
-            transform: scale(0.97);
-        }
-        .result-feedback {
-            margin-top: 16px;
-            padding: 12px;
-            border-radius: 20px;
-            text-align: center;
             font-weight: 500;
         }
-        .quiz-option {
-            background: white;
-            border: 1px solid #cbd5e1;
-            border-radius: 60px;
-            padding: 12px 16px;
-            margin: 8px 0;
-            cursor: pointer;
-            transition: 0.05s linear;
-        }
-        .quiz-option:active {
-            background: #fef9e3;
-        }
-        .quiz-option.selected {
-            background: #fef3c7;
-            border-color: #f59e0b;
-            font-weight: 500;
-        }
-        .comment-section {
-            margin-top: 20px;
-        }
-        .comment-input {
-            width: 100%;
-            border: 1px solid #cbd5e1;
-            border-radius: 40px;
-            padding: 12px 18px;
-            font-size: 0.95rem;
-            margin: 8px 0;
-        }
-        .comment-list {
-            margin-top: 16px;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 8px 0;
-        }
-        .single-comment {
-            padding: 12px 0;
-            border-bottom: 1px solid #eef2ff;
-            font-size: 0.9rem;
-        }
-        .footer-note {
+        .page-btn.active { background: #c78d3a; color: white; }
+
+        footer {
             text-align: center;
-            margin-top: 28px;
+            margin-top: 2rem;
             font-size: 0.8rem;
-            color: #6c757d;
-        }
-        button {
-            background: #f59e0b;
-        }
-        hr {
-            margin: 20px 0;
+            color: #6f5a41;
+            border-top: 1px solid #dcccaa;
+            padding-top: 1.5rem;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1><span>🍵</span> ҺООЛОЙ ҺАБА · Посуда</h1>
-    <div class="sub">Урок 1: 30 слов посуды + конструктор предложений</div>
-
-    <!-- Словарь (30 слов) -->
-    <div class="section">
-        <div class="section-title">📖 Үгэнүүд / Слова</div>
-        <div class="word-list" id="wordsContainer"></div>
-        <div style="font-size: 12px; margin-top: 12px; color: #4b5563;">✨ нажми на любое слово — оно вставится в конструктор</div>
-    </div>
-
-    <!-- КОНСТРУКТОР СЛОВ -->
-    <div class="section">
-        <div class="section-title">🧩 Конструктор «Предмет + место»</div>
-        <div class="constructor-area">
-            <div class="sentence-template">
-                <span id="chosenWordDisplay" class="blank">_____</span>
-                шэрэ дээрэ байна.
+<div style="max-width: 1400px; margin: 0 auto;">
+    <div class="top-bar">
+        <div class="logo-area">
+            <img src="logo.png" alt="Логотип" class="logo-image" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Ctext x=\'50\' y=\'67\' text-anchor=\'middle\' fill=\'%23333333\' font-size=\'40\' font-family=\'monospace\'%3E%3C/text%3E%3C/svg%3E';">
+            <div class="logo-text">
+                <div class="main-title">Пособия для изучения бурятского языка</div>
+                <div class="sub-title">Сохраним бурятский язык</div>
             </div>
-            <select id="wordSelector" class="select-word">
-                <option value="">— выбери слово посуды —</option>
-            </select>
-            <button class="btn" id="buildBtn">🛠️ Собрать предложение</button>
-            <div id="constructorResult" class="result-feedback"></div>
         </div>
-    </div>
-
-    <!-- ТЕСТ 1: бурятский → русский -->
-    <div class="section">
-        <div class="section-title">📝 Тест 1 / 3: Переведи на русский</div>
-        <div id="quiz1Container"></div>
-        <button id="checkQuiz1Btn" class="btn" style="background: #3b82f6; margin-top: 16px;">✅ Проверить ответы</button>
-        <div id="quiz1Result" style="margin-top: 12px; font-size: 0.9rem;"></div>
-    </div>
-
-    <!-- ТЕСТ 2: русский → бурятский (выбор) -->
-    <div class="section">
-        <div class="section-title">📝 Тест 2 / 3: Выбери правильный перевод</div>
-        <div id="quiz2Container"></div>
-        <button id="checkQuiz2Btn" class="btn" style="background: #3b82f6; margin-top: 16px;">📋 Проверить</button>
-        <div id="quiz2Result" style="margin-top: 12px;"></div>
-    </div>
-
-    <!-- ТЕСТ 3: Верно / Неверно (грамматика места) -->
-    <div class="section">
-        <div class="section-title">⚖️ Тест 3 / 3: Верно ❓ Неверно</div>
-        <div id="quiz3Container"></div>
-        <button id="checkQuiz3Btn" class="btn" style="background: #3b82f6;">🔍 Проверить</button>
-        <div id="quiz3Result" style="margin-top: 12px;"></div>
-    </div>
-
-    <!-- КОММЕНТАРИИ (для имитации обратной связи) -->
-    <div class="section">
-        <div class="section-title">💬 Комментарии к уроку</div>
-        <div>
-            <input type="text" id="commentName" placeholder="Ваше имя" style="width: 100%; padding: 10px; border-radius: 40px; border:1px solid #ccc; margin-bottom:8px;">
-            <textarea id="commentText" rows="2" placeholder="Ваш вопрос или ответ по конструктору..." style="width:100%; border-radius: 20px; border:1px solid #ccc; padding: 12px;"></textarea>
-            <button id="addCommentBtn" class="btn" style="background: #10b981; margin-top: 8px;">📎 Отправить комментарий</button>
+        <div class="donation-area">
+            <div class="donation-title">
+                ❤️ ХОЧУ ПОДДЕРЖАТЬ / ТУҺАЛАМЖА
+            </div>
+            <div class="donation-details">
+                <p>💳 Сбербанк: 2202 2003 7163 5580</p>
+                <p>📱 +7 (924) 774-08-49 (СБП)</p>
+                <p>Буряад хэлэеэ һэргээе!</p>
+                <button class="copy-btn" data-copy="2202 2003 7163 5580">📋 Скопировать номер</button>
+            </div>
         </div>
-        <div id="commentsList" class="comment-list">
-            <div class="single-comment">✨ <strong>Бато:</strong> «Аяга шэрэ дээрэ байна» — правильно?</div>
-            <div class="single-comment">✨ <strong>Сэсэг:</strong> бусэ шэрэ дээрэ байна ✨</div>
-        </div>
-    </div>
-    <div class="footer-note">
-        ⚡ Работает внутри Telegram. Нажимай на слова из списка — они сами подставятся.
     </div>
 </div>
 
+<div class="app-container">
+    <div class="header">
+        <h1>🌾 Буряад хэлэнэй тренажёр</h1>
+        <p>✨ 3 харюугай хубилбари | Зүб харюу шэлэгты ✨</p>
+    </div>
+
+    <div class="trainer-dict-grid">
+        <div class="trainer-card">
+            <div class="section-title">📖 Тест: зүб харюу шэлэгты</div>
+            <div class="buryat-word-big">
+                <span id="currentBuryatWord">…</span>
+            </div>
+            <div class="options-area" id="optionsContainer">
+                <button class="option-btn" data-value="0">...</button>
+                <button class="option-btn" data-value="1">...</button>
+                <button class="option-btn" data-value="2">...</button>
+            </div>
+            <div id="feedbackMsg" class="feedback">✨ Үгын зүб оршуулга шэлэгты</div>
+            <div class="button-group">
+                <button id="nextBtn" class="btn btn-primary">🎲 Дараа үгэ (гараар)</button>
+            </div>
+            <div class="score" id="scoreDisplay">✔️ Зүб харюу: 0 / 0</div>
+        </div>
+
+        <div class="dictionary-card">
+            <div class="section-title">📚 Үгын толи</div>
+            <div class="dict-header">
+                <div class="search-box">
+                    <input type="text" id="searchDict" placeholder="🔍 Хайлта: буряад али ород утгаар...">
+                </div>
+                <div class="word-count" id="totalWordsCount">Бүхы үгэнүүд: 0</div>
+            </div>
+            <div class="table-wrapper">
+                <table class="dict-table" id="dictTable">
+                    <thead>
+                        <tr><th>Буряад үгэ</th><th>Ород хэлэнэй утга</th></tr>
+                    </thead>
+                    <tbody id="dictTbody"></tbody>
+                </table>
+            </div>
+            <div class="pagination" id="paginationControls"></div>
+        </div>
+    </div>
+    <footer>🇲🇳 Буряад хэлэн — эртэнэй ба баян хэлэн | Зүб харюу — даруй дараа дасгал</footer>
+</div>
+
 <script>
-    // ---------- 30 слов посуды (бурятский + перевод) ----------
-    const words30 = [
-        { bur: "аяга", ru: "чашка" }, { bur: "бусэ", ru: "тарелка" }, { bur: "хул", ru: "ложка" },
-        { bur: "һаба", ru: "миска" }, { bur: "шанз", ru: "чайник" }, { bur: "табаг", ru: "блюдо" },
-        { bur: "томо", ru: "половник" }, { bur: "шэрэ", ru: "стол" }, { bur: "халаа", ru: "сковорода" },
-        { bur: "кувшин", ru: "кувшин" }, { bur: "шанага", ru: "кастрюля" }, { bur: "сав", ru: "емкость" },
-        { bur: "айраг", ru: "пиала" }, { bur: "шумбуу", ru: "шумовка" }, { bur: "хутга", ru: "нож" },
-        { bur: "сэрээ", ru: "вилка" }, { bur: "гуйван", ru: "чайная ложка" }, { bur: "бариул", ru: "ручка (кружки)" },
-        { bur: "соосор", ru: "трубочка" }, { bur: "туба", ru: "турка" }, { bur: "бокал", ru: "бокал" },
-        { bur: "стакан", ru: "стакан" }, { bur: "термос", ru: "термос" }, { bur: "котел", ru: "котел" },
-        { bur: "аяган", ru: "пиала" }, { bur: "уут", ru: "мешочек" }, { bur: "шэнгэ", ru: "поднос" },
-        { bur: "далян", ru: "плошка" }, { bur: "сохо", ru: "ложечка" }, { bur: "модон хул", ru: "деревянная ложка" }
+    // ============================================================
+    // 📝 СЛОВАРЬ — формат: {word, meaning, pos}
+    //
+    //    {word:"буряад үгэ", meaning:"перевод", pos:"noun"},
+    //
+    // pos: "noun" (сущ.), "verb" (глаг.), "adj" (прил.),
+    //      "adv" (нареч.), "pron" (мест.), "num" (числ.), "other"
+    //
+    // ⚠️ Никакие окончания (-ууд, -нууд, -да, -ай, -һаа и т.д.)
+    // НЕ добавляются. Слово отображается ровно так, как написано.
+    // ============================================================
+    const stemsData = [
+        // ===== Семья =====
+        {word:"аба",                meaning:"папа",                 pos:"noun"},
+        {word:"эжы",                meaning:"мама",                 pos:"noun"},
+        {word:"хүбүүн",             meaning:"сын",                  pos:"noun"},
+        {word:"басаган",            meaning:"дочь",                 pos:"noun"},
+        {word:"гэр",                meaning:"дом",                  pos:"noun"},
+        {word:"эсэгэ",              meaning:"отец",                 pos:"noun"},
+        {word:"эхэ",                meaning:"мать",                 pos:"noun"},
+        {word:"хүбүүн",             meaning:"мальчик",              pos:"noun"},
+        {word:"басаган",            meaning:"девочка",              pos:"noun"},
+        {word:"хүгшэн эжы",         meaning:"бабушка",              pos:"noun"},
+        {word:"мал",                meaning:"скот",                 pos:"noun"},
+        {word:"адуун",              meaning:"лошадь",               pos:"noun"},
+        {word:"тэмээн",             meaning:"верблюд",              pos:"noun"},
+        {word:"нохой",              meaning:"собака",               pos:"noun"},
+        {word:"миисгэй",            meaning:"кошка",                pos:"noun"},
+        {word:"шубуун",             meaning:"птица",                pos:"noun"},
+        {word:"загаһан",            meaning:"рыба",                 pos:"noun"},
+        {word:"гар",                meaning:"рука",                 pos:"noun"},
+        {word:"толгой",             meaning:"голова",               pos:"noun"},
+        {word:"нюдэн",              meaning:"глаз",                 pos:"noun"},
+        {word:"шэхэн",              meaning:"ухо",                  pos:"noun"},
+        {word:"хамар",              meaning:"нос",                  pos:"noun"},
+        {word:"аман",               meaning:"рот",                  pos:"noun"},
+        {word:"шүдэн",              meaning:"зуб",                  pos:"noun"},
+        {word:"хэлэн",              meaning:"язык (орган)",         pos:"noun"},
+        {word:"үбэл",               meaning:"зима",                 pos:"noun"},
+        {word:"зун",                meaning:"лето",                 pos:"noun"},
+        {word:"хабар",              meaning:"весна",                pos:"noun"},
+        {word:"намар",              meaning:"осень",                pos:"noun"},
+        {word:"һара",               meaning:"луна",                 pos:"noun"},
+        {word:"наран",              meaning:"солнце",               pos:"noun"},
+        {word:"одон",               meaning:"звезда",               pos:"noun"},
+        {word:"hолонго",            meaning:"радуга",               pos:"noun"},
+        {word:"бороон",             meaning:"дождь",                pos:"noun"},
+        {word:"саһан",              meaning:"снег",                 pos:"noun"},
+        {word:"газар",              meaning:"земля",                pos:"noun"},
+        {word:"бүрхэг",             meaning:"пасмурный",            pos:"noun"},
+        {word:"аадар",              meaning:"гроза",                pos:"noun"},
+        {word:"мүндэр",             meaning:"град",                 pos:"noun"},
+        {word:"сахилгаан",          meaning:"молния",               pos:"noun"},
+        {word:"сэсэг",              meaning:"цветок",               pos:"noun"},
+        {word:"модон",              meaning:"дерево",               pos:"noun"},
+        {word:"һүүл",               meaning:"хвост",                pos:"noun"},
+        {word:"үгэ",                meaning:"слово",                pos:"noun"},
+        {word:"дуун",               meaning:"песня",                pos:"noun"},
+        {word:"наадан",             meaning:"игра",                 pos:"noun"},
+        {word:"һургуули",           meaning:"школа",                pos:"noun"},
+        {word:"багша",              meaning:"учитель",              pos:"noun"},
+        {word:"һуралсал",           meaning:"учёба",                pos:"noun"},
+        {word:"ажал",               meaning:"работа",               pos:"noun"},
+        {word:"эдеэн",              meaning:"еда",                  pos:"noun"},
+        {word:"уһан",               meaning:"вода",                 pos:"noun"},
+        {word:"шэхэр",              meaning:"сахар",                pos:"noun"},
+        {word:"дабһан",             meaning:"соль",                 pos:"noun"},
+        {word:"алтан",              meaning:"золото",               pos:"noun"},
+        {word:"мүнгэн",             meaning:"серебро",              pos:"noun"},
+        {word:"түмэр",              meaning:"железо",               pos:"noun"},
+        {word:"эбэр",               meaning:"рог",                  pos:"noun"},
+        {word:"үһэн",               meaning:"волос",                pos:"noun"},
+        {word:"жаргал",             meaning:"счастье",              pos:"noun"},
+        {word:"үдэр",               meaning:"день",                 pos:"noun"},
+        {word:"һүни",               meaning:"ночь",                 pos:"noun"},
+        {word:"саг",                meaning:"время",                pos:"noun"},
+        {word:"жэл",                meaning:"год",                  pos:"noun"},
+        {word:"ном",                meaning:"книга",                pos:"noun"},
+        {word:"хутага",             meaning:"нож",                  pos:"noun"},
+        {word:"шэрээ",              meaning:"стол",                 pos:"noun"},
+        {word:"хана",               meaning:"стена",                pos:"noun"},
+        {word:"үүдэн",              meaning:"дверь",                pos:"noun"},
+        {word:"сээжэ",              meaning:"грудь",                pos:"noun"},
+        {word:"бэе",                meaning:"тело",                 pos:"noun"},
+        {word:"наһан",              meaning:"возраст",              pos:"noun"},
+        {word:"номин",              meaning:"изумруд",              pos:"noun"},
+        {word:"уляангир",           meaning:"тополь",               pos:"noun"},
+        {word:"олон",               meaning:"много",                pos:"verb"},
+        {word:"доро",               meaning:"внизу",                pos:"verb"},
+        {word:"дээрэ",              meaning:"наверху",              pos:"verb"},
+        {word:"зүүн тээ",           meaning:"слева",                pos:"verb"},
+        {word:"шагнаха",            meaning:"слушать",              pos:"verb"},
+        {word:"баруун тээ",         meaning:"справа",               pos:"verb"},
+        {word:"холо",               meaning:"далеко",               pos:"verb"},
+        {word:"ойро",               meaning:"близко",               pos:"verb"},
+        {word:"зорюута",            meaning:"нарочно",              pos:"verb"},
+        {word:"шангаар",            meaning:"громко",               pos:"verb"},
+        {word:"аалиханаар",         meaning:"тихо",                 pos:"adj"},
+        {word:"угаа,тон",           meaning:"очень",                pos:"adj"},
+        {word:"дан",                meaning:"слишком",              pos:"adj"},
+        {word:"үлэмжэ",             meaning:"чересчур",             pos:"adj"},
+        {word:"шэбэнэн",            meaning:"шёпотом",              pos:"adj"},
+        {word:"нэгэ бага",          meaning:"чуть",                 pos:"adj"},
+        {word:"дулаан",             meaning:"тёплый",               pos:"adj"},
+        {word:"арай гэжэ",          meaning:"еле-еле",              pos:"adj"},
+        {word:"шэнэ",               meaning:"новый",                pos:"adj"},
+        {word:"хуушан",             meaning:"старый",               pos:"adj"},
+        {word:"эндэ",               meaning:"здесь",                pos:"adj"},
+        {word:"тон",                meaning:"совсем",               pos:"adj"},
+        {word:"улаан",              meaning:"красный",              pos:"adj"},
+        {word:"сагаан",             meaning:"белый",                pos:"adj"},
+        {word:"хара",               meaning:"чёрный",               pos:"adj"},
+        {word:"шара",               meaning:"жёлтый",               pos:"adj"},
+        {word:"ногоон",             meaning:"зелёный",              pos:"adj"},
+        {word:"хүхэ",               meaning:"синий",                pos:"adj"},
+        {word:"яһан",               meaning:"кость",                pos:"noun"},
+        {word:"боро",               meaning:"серый",                pos:"adj"},
+        {word:"үхибүүн",            meaning:"ребёнок",              pos:"noun"},
+        {word:"аха",                meaning:"старший брат",         pos:"noun"},
+        {word:"эгэшэ",              meaning:"старшая сестра",       pos:"noun"},
+        {word:"дүү",                meaning:"младший",              pos:"noun"},
+        {word:"абдар",              meaning:"сундук",               pos:"noun"},
+        {word:"байгаали",           meaning:"природа",              pos:"noun"},
+        {word:"аяншан",             meaning:"путешественник",       pos:"noun"},
+        {word:"үглөө",              meaning:"утро",                 pos:"noun"},
+        {word:"орой",               meaning:"поздно",               pos:"noun"},
+        {word:"хүгшэн аба",         meaning:"дедушка",              pos:"noun"},
+        {word:"нагаса",             meaning:"дядя по матери",       pos:"noun"},
+        {word:"абга",               meaning:"дядя по отцу",         pos:"noun"},
+        {word:"үдэшэ",              meaning:"вечер",                pos:"noun"},
+        {word:"тала",               meaning:"поле",                 pos:"noun"},
+        {word:"арсалан",            meaning:"лев",                  pos:"noun"},
+        {word:"заан",               meaning:"слон",                 pos:"noun"},
+        {word:"гургалдай",          meaning:"жаворонок",            pos:"noun"},
+        {word:"шонхор",             meaning:"сокол",                pos:"noun"},
+        {word:"могой",              meaning:"змея",                 pos:"noun"},
+        {word:"шоргоолжон",         meaning:"муравей",              pos:"noun"},
+        {word:"эрдэни",             meaning:"драгоценность",        pos:"noun"},
+        {word:"найр",               meaning:"пир",                  pos:"noun"},
+        {word:"мүльһэн",            meaning:"лёд",                  pos:"noun"},
+        {word:"дабаан",             meaning:"перевал",              pos:"noun"},
+        {word:"айлшан",             meaning:"гость",                pos:"noun"},
+        {word:"хүндэтэ",            meaning:"уважаемый",            pos:"adj"},
+        {word:"эрье",               meaning:"берег",                pos:"noun"},
+        {word:"аян",                meaning:"путь",                 pos:"noun"},
+        {word:"шандаган",           meaning:"заяц",                 pos:"noun"},
+        {word:"хурьган",            meaning:"ягнёнок",              pos:"noun"},
+        {word:"ямаан",              meaning:"коза",                 pos:"noun"},
+        {word:"үнэн",               meaning:"правда",               pos:"noun"},
+        {word:"хүдэлмэри",          meaning:"труд",                 pos:"noun"},
+        {word:"шанга",              meaning:"крепкий",              pos:"adj"},
+        {word:"эрхэ",               meaning:"право",                pos:"noun"},
+        {word:"зүрхэн",             meaning:"сердце",               pos:"noun"},
+        {word:"эльгэн",             meaning:"печень",               pos:"noun"},
+        {word:"булган",             meaning:"соболь",               pos:"noun"},
+        {word:"хорёо",              meaning:"ограда", pos:"noun"},
+        {word:"утаһан",             meaning:"нитка", pos:"noun"},
+        {word:"гуйлта",             meaning:"просьба", pos:"noun"},
+        {word:"шабар",              meaning:"грязь", pos:"noun"},
+        {word:"хүдөө",              meaning:"деревня", pos:"noun"},
+        {word:"нагаса эгэшэ",       meaning:"тётя по матери", pos:"noun"},
+        {word:"абга эгэшэ",         meaning:"тётя по отцу", pos:"noun"},
+        {word:"аша",                meaning:"внук по отцу", pos:"noun"},
+        {word:"элинсэг",            meaning:"предок", pos:"noun"},
+        {word:"зээ",                meaning:"внук по дочери", pos:"noun"},
+        {word:"hамган",             meaning:"жена", pos:"noun"},
+        {word:"хүгшэн",             meaning:"муж", pos:"noun"},
+        {word:"худа",               meaning:"сват", pos:"noun"},
+        {word:"бэри",               meaning:"невестка", pos:"noun"},
+        {word:"хуряаха",            meaning:"жених", pos:"noun"},
+        {word:"хүршэ",              meaning:"сосед", pos:"noun"},
+        {word:"нүхэр",              meaning:"друг", pos:"noun"},
+        {word:"хүгшэн",             meaning:"старуха", pos:"noun"},
+        {word:"үбгэн",              meaning:"старик", pos:"noun"},
+        {word:"залуушуул",          meaning:"молодёжь", pos:"noun"},
+        {word:"үхибүүд",            meaning:"дети", pos:"noun"},
+        {word:"балшар",             meaning:"младенец", pos:"noun"},
+        {word:"эзэн",               meaning:"хозяин", pos:"noun"},
+        {word:"дахуул",             meaning:"спутник", pos:"noun"},
+        {word:"бүлэ",               meaning:"семья", pos:"noun"},
+        {word:"урал",               meaning:"губы", pos:"noun"},
+        {word:"үhэн",               meaning:"волосы", pos:"noun"},
+        {word:"нидхэ",              meaning:"брови", pos:"noun"},
+        {word:"hорьмоhон",          meaning:"ресницы", pos:"noun"},
+        {word:"хасар",              meaning:"щёки", pos:"noun"},
+        {word:"хоолой",             meaning:"горло", pos:"noun"},
+        {word:"хүзүүн",             meaning:"шея", pos:"noun"},
+        {word:"гэдэhэн",            meaning:"живот", pos:"noun"},
+        {word:"нюрган",             meaning:"спина", pos:"noun"},
+        {word:"хурган",             meaning:"палец", pos:"noun"},
+        {word:"ула",                meaning:"ступня", pos:"noun"},
+        {word:"альган",             meaning:"ладонь", pos:"noun"},
+        {word:"үбдэг",              meaning:"колено", pos:"noun"},
+        {word:"тохоног",            meaning:"локоть", pos:"noun"},
+        {word:"арhан",              meaning:"кожа", pos:"noun"},
+        {word:"шуhан",              meaning:"кровь", pos:"noun"},
+        {word:"хүлhэн",             meaning:"пот", pos:"noun"},
+        {word:"нулимса",            meaning:"слёзы", pos:"noun"},
+        {word:"нёлбоhон",           meaning:"слюна", pos:"noun"},
+        {word:"уураг тархи",        meaning:"мозг", pos:"noun"},
+        {word:"хүл",                meaning:"нога", pos:"noun"},
+        {word:"гар",                meaning:"рука", pos:"noun"},
+        {word:"хото",               meaning:"желудок", pos:"noun"},
+        {word:"уушха",              meaning:"лёгкие", pos:"noun"},
+        {word:"үргэн",              meaning:"подбородок", pos:"noun"},
+        {word:"шүлэн",              meaning:"суп", pos:"noun"},
+        {word:"хилээмэн",           meaning:"хлеб", pos:"noun"},
+        {word:"тоhон",              meaning:"масло", pos:"noun"},
+        {word:"һүн",                meaning:"молоко", pos:"noun"},
+        {word:"мяхан",              meaning:"мясо", pos:"noun"},
+        {word:"бууза",              meaning:"позы", pos:"noun"},
+        {word:"талхан",             meaning:"мука", pos:"noun"},
+        {word:"ээзгэй",             meaning:"творог", pos:"noun"},
+        {word:"шүүhэн",             meaning:"сок", pos:"noun"},
+        {word:"будаа",              meaning:"каша", pos:"noun"},
+        {word:"сагаан будаа",       meaning:"рис", pos:"noun"},
+        {word:"сай",                meaning:"чай", pos:"noun"},
+        {word:"үндэгэн",            meaning:"яйцо", pos:"noun"},
+        {word:"тараг",              meaning:"кефир,простокваша", pos:"noun"},
+        {word:"бялуу",              meaning:"торт", pos:"noun"},
+        {word:"аяга",               meaning:"чашка", pos:"noun"},
+        {word:"табаг",              meaning:"тарелка", pos:"noun"},
+        {word:"халбага",            meaning:"ложка", pos:"noun"},
+        {word:"тэбшэ",              meaning:"сковорода", pos:"noun"},
+        {word:"шанага",             meaning:"ковш", pos:"noun"},
+        {word:"бумба",              meaning:"ваза", pos:"noun"},
+        {word:"бөөрэ",              meaning:"почки", pos:"noun"},
+        {word:"өөхэн",              meaning:"сало", pos:"noun"},
+        {word:"зөөхэй",             meaning:"сметана", pos:"noun"},
+        {word:"hэрээ",              meaning:"вилка", pos:"noun"},
+        {word:"хундага",            meaning:"бокал", pos:"noun"},
+        {word:"тогоон",             meaning:"кастрюля", pos:"noun"},
+        {word:"домбо",              meaning:"чайник", pos:"noun"},
+        {word:"гүсэ",               meaning:"заварник", pos:"noun"},
+        {word:"алим",               meaning:"яблоко", pos:"verb"},
+        {word:"мойhон",             meaning:"черёмуха", pos:"verb"},
+        {word:"шасаргана",          meaning:"облепиха", pos:"verb"},
+        {word:"зэдэгэнэ",           meaning:"земляника", pos:"verb"},
+        {word:"забаан зэдэгэнэ",    meaning:"слушать", pos:"verb"},
+        {word:"алирhан",            meaning:"брусника", pos:"verb"},
+        {word:"нэрhэн",             meaning:"голубика", pos:"verb"},
+        {word:"үхэр нюдэн",         meaning:"смородина", pos:"verb"},
+        {word:"улаагана",           meaning:"красная смородина", pos:"verb"},
+        {word:"түмhэн",             meaning:"картошка", pos:"verb"},
+        {word:"hонгино",            meaning:"лук", pos:"adj"},
+        {word:"лонхо",              meaning:"бутылка", pos:"adj"},
+        {word:"морхооб",            meaning:"морковь", pos:"adj"},
+        {word:"тарвас",             meaning:"арбуз", pos:"adj"},
+        {word:"чавга",              meaning:"слива", pos:"adj"},
+        {word:"үгэрсэ",             meaning:"огурец", pos:"adj"},
+        {word:"hархяаг",            meaning:"гриб", pos:"adj"},
+        {word:"hамар",              meaning:"орех", pos:"adj"},
+        {word:"жэмэс",              meaning:"ягода", pos:"adj"},
+        {word:"лууван",             meaning:"свекла", pos:"adj"},
+        {word:"үhээ",               meaning:"потолок", pos:"adj"},
+        {word:"оёор",               meaning:"дно", pos:"adj"},
+        {word:"шала",               meaning:"пол", pos:"adj"},
+        {word:"хана",               meaning:"стена", pos:"adj"},
+        {word:"сонхо",              meaning:"окно", pos:"adj"},
+        {word:"үүдэн",              meaning:"дверь", pos:"adj"},
+        {word:"орон",               meaning:"кровать", pos:"adj"},
+        {word:"хүнжэл",             meaning:"одеяло", pos:"adj"},
+        {word:"дэрэ",               meaning:"подушка", pos:"noun"},
+        {word:"таhалга",            meaning:"комната", pos:"adj"},
+        {word:"жорлон",             meaning:"туалет", pos:"noun"},
+        {word:"тогооной гэр",       meaning:"кухня", pos:"noun"},
+        {word:"hуудал",             meaning:"стул", pos:"noun"},
+        {word:"hандали",            meaning:"скамейка", pos:"noun"},
+        {word:"гэшхүүр",            meaning:"лестница", pos:"noun"},
+        {word:"боhолго",            meaning:"порог", pos:"noun"},
+        {word:"булан",              meaning:"угол", pos:"noun"},
+        {word:"хушалта",            meaning:"крыша", pos:"noun"},
+        {word:"пеэшэн",             meaning:"печка", pos:"noun"},
+        {word:"хибэс",              meaning:"ковёр", pos:"noun"},
+        {word:"элюур",              meaning:"утюг", pos:"noun"},
+        {word:"хүргээбэри",         meaning:"холодильник", pos:"noun"},
+        {word:"аршуур",             meaning:"полотенце", pos:"noun"},
+        {word:"алха",               meaning:"молоток", pos:"noun"},
+        {word:"хадааhан",           meaning:"гвоздь", pos:"noun"},
+        {word:"хюрөө",              meaning:"пила", pos:"noun"},
+        {word:"hүхэ",               meaning:"топор", pos:"noun"},
+        {word:"тармуур",            meaning:"грабли", pos:"noun"},
+        {word:"тэргэ",              meaning:"телега", pos:"noun"},
+        {word:"түлеэн",             meaning:"дрова", pos:"noun"},
+        {word:"хайша",              meaning:"ножницы", pos:"noun"},
+        {word:"зүүн",               meaning:"иголка", pos:"noun"},
+        {word:"зула",               meaning:"лампадка", pos:"noun"},
+        {word:"хүнэг",              meaning:"ведро", pos:"noun"},
+        {word:"сабуун",             meaning:"клей", pos:"noun"},
+        {word:"зуруул",             meaning:"спички", pos:"adj"},
+        {word:"аса",                meaning:"вилы", pos:"noun"},
+        {word:"хажуур",             meaning:"коса", pos:"noun"},
+        {word:"гүлгэн",             meaning:"щенок, детёныш", pos:"noun"},
+        {word:"үнеэн",              meaning:"корова", pos:"noun"},
+        {word:"тугал",              meaning:"телёнок", pos:"noun"},
+        {word:"хонин",              meaning:"овца", pos:"noun"},
+        {word:"хуса",               meaning:"баран", pos:"noun"},
+        {word:"тэхэ",               meaning:"козёл", pos:"adj"},
+        {word:"эшэгэн",             meaning:"козлёнок", pos:"noun"},
+        {word:"гахай",              meaning:"свинья", pos:"noun"},
+        {word:"поршоонхо",          meaning:"поросёнок", pos:"noun"},
+        {word:"буха",               meaning:"бык", pos:"noun"},
+        {word:"морин",              meaning:"лошадь", pos:"noun"},
+        {word:"унаган",             meaning:"жеребёнок", pos:"noun"},
+        {word:"элжэгэн",            meaning:"осёл", pos:"noun"},
+        {word:"ботогон",            meaning:"верблюжонок", pos:"noun"},
+        {word:"тахяа",              meaning:"курица", pos:"noun"},
+        {word:"эрэ тахяа",          meaning:"петух", pos:"noun"},
+        {word:"галуун",             meaning:"гусь", pos:"noun"},
+        {word:"дальбараа",          meaning:"птенчик", pos:"noun"},
+        {word:"тугас",              meaning:"павлин", pos:"noun"},
+        {word:"нугаhан",            meaning:"утка", pos:"noun"},
+        {word:"гэрэй амитан",       meaning:"домашнее животное", pos:"noun"},
+        {word:"эмээл",              meaning:"седло", pos:"noun"},
+        {word:"таха",               meaning:"подкова", pos:"noun"},
+        {word:"дали",               meaning:"крыло", pos:"noun"},
+        {word:"нооhон",             meaning:"шерсть", pos:"noun"},
+        {word:"шоно",               meaning:"волк", pos:"noun"},
+        {word:"үеэлэн",             meaning:"двюродный", pos:"noun"},
+        {word:"хаяалан",            meaning:"троюродный", pos:"noun"},
+        {word:"түрэ",               meaning:"свадьба", pos:"noun"},
+        {word:"нэрэ", meaning:"имя", pos:"noun"},
+        {word:"обог", meaning:"фамилия", pos:"noun"},
+        {word:"ээм", meaning:"плечо", pos:"noun"},
+        {word:"hуга", meaning:"подмышки", pos:"noun"},
+        {word:"хүйhэн", meaning:"пупок", pos:"noun"},
+        {word:"нюур", meaning:"лицо", pos:"noun"},
+        {word:"туруун", meaning:"копыто", pos:"noun"},
+        {word:"сорго", meaning:"труба", pos:"noun"},
+        {word:"гэрэл", meaning:"зеркало", pos:"noun"},
+        {word:"суурга", meaning:"замок", pos:"noun"},
+        {word:"түлхюур", meaning:"ключ", pos:"noun"},
+        {word:"табюур", meaning:"полка", pos:"noun"},
+        {word:"сэргэ", meaning:"коновязь", pos:"noun"},
+        {word:"гал гуламта", meaning:"домашний очаг", pos:"noun"},
+        {word:"гал", meaning:"огонь", pos:"noun"},
+        {word:"түрьhэн", meaning:"икра", pos:"noun"},
+        {word:"эм", meaning:"лекарство", pos:"noun"},
+        {word:"зайрмаг", meaning:"мороженое", pos:"noun"},
+        {word:"арад", meaning:"народ", pos:"noun"},
+        {word:"hагшуур", meaning:"сито", pos:"noun"},
+        {word:"хүрзэ", meaning:"лопата", pos:"noun"},
+        {word:"бар", meaning:"барс", pos:"noun"},
+        {word:"хэрмэн", meaning:"белка", pos:"noun"},
+        {word:"жэрхи", meaning:"бурундук", pos:"noun"},
+        {word:"заряа", meaning:"ёж", pos:"noun"},
+        {word:"анааша", meaning:"жираф", pos:"noun"},
+        {word:"шандаган", meaning:"заяц", pos:"noun"},
+        {word:"хулан", meaning:"зебра", pos:"noun"},
+        {word:"могой", meaning:"змея", pos:"noun"},
+        {word:"бодон гахай", meaning:"кабан", pos:"noun"},
+        {word:"эмжэ", meaning:"кенгуру", pos:"noun"},
+        {word:"гүрөөhэн", meaning:"косуля", pos:"noun"},
+        {word:"матар", meaning:"крокодил", pos:"noun"},
+        {word:"мана hохор", meaning:"крот", pos:"noun"},
+        {word:"эрбэд", meaning:"леопард", pos:"noun"},
+        {word:"хандагай", meaning:"лось", pos:"noun"},
+        {word:"баабгай", meaning:"медведь", pos:"noun"},
+        {word:"хулгана", meaning:"мышь", pos:"noun"},
+        {word:"hармагшан", meaning:"обезьяна", pos:"noun"},
+        {word:"буга", meaning:"олень", pos:"noun"},
+        {word:"зээгэн", meaning:"росомаха", pos:"noun"},
+        {word:"тарбаган", meaning:"сурок", pos:"noun"},
+        {word:"бар", meaning:"тигр", pos:"noun"},
+        {word:"мэндэ", meaning:"здравствуйте", pos:"noun"},
+        {word:"баяртай", meaning:"до свидания", pos:"noun"},
+        {word:"хүлисыт", meaning:"извините", pos:"noun"},
+        {word:"баярлаа", meaning:"спасибо", pos:"noun"},
+        {word:"шэнэ жэл", meaning:"новый год", pos:"noun"},
+        {word:"амаршалнаб", meaning:"поздравляю", pos:"noun"},
+        {word:"бэлэг", meaning:"подарок", pos:"noun"},
+        {word:"hайндэрөөр", meaning:"с праздником", pos:"noun"},
+        {word:"түрэhэн үдэрөөр", meaning:"с днём рождения", pos:"noun"},
+        {word:"тэг", meaning:"ноль", pos:"noun"},
+        {word:"зуун", meaning:"сто", pos:"noun"},
+        {word:"сая", meaning:"миллион", pos:"noun"},
+        {word:"түмэн", meaning:"десять тысяч", pos:"noun"},
+        {word:"мянган", meaning:"тысяча", pos:"noun"},
+        {word:"тэрбүм", meaning:"миллиард", pos:"noun"},
+        {word:"шара улаан", meaning:"оранжевый", pos:"noun"},
+        {word:"сэнхир", meaning:"голубой", pos:"noun"},
+        {word:"ягаан хүхэ", meaning:"фиолетовый", pos:"verb"},
+        {word:"ягаан", meaning:"розовый", pos:"verb"},
+        {word:"боро", meaning:"серый", pos:"verb"},
+        {word:"хүрин", meaning:"коричневый", pos:"verb"},
+        {word:"алтан", meaning:"золотой", pos:"verb"},
+        {word:"сагаан мүнгэн", meaning:"серебристый", pos:"verb"},
+        {word:"би", meaning:"я", pos:"verb"},
+        {word:"ши", meaning:"ты", pos:"verb"},
+        {word:"бидэ", meaning:"мы", pos:"verb"},
+        {word:"таанар", meaning:"вы", pos:"verb"},
+        {word:"тэрэ", meaning:"он", pos:"adj"},
+        {word:"тэдэнэр", meaning:"они", pos:"adj"},
+        {word:"минии", meaning:"мой", pos:"adj"},
+        {word:"манай", meaning:"наш", pos:"adj"},
+        {word:"шинии", meaning:"твой", pos:"adj"},
+        {word:"танай", meaning:"ваш", pos:"adj"},
+        {word:"намда", meaning:"мне", pos:"adj"},
+        {word:"нам", meaning:"манда", pos:"adj"},
+        {word:"шамда", meaning:"тебе", pos:"adj"},
+        {word:"вам", meaning:"танда", pos:"adj"},
+        {word:"тэрэнэй", meaning:"его", pos:"adj"},
+        {word:"тэдэнэй", meaning:"их", pos:"adj"},
+        {word:"тэрээндэ", meaning:"ему", pos:"adj"},
+        {word:"тэдээндэ", meaning:"им", pos:"adj"},
+        {word:"булта", meaning:"все", pos:"adj"},
+        {word:"хэн", meaning:"кто", pos:"adj"},
+        {word:"юун", meaning:"что", pos:"adj"},
+        {word:"юундэ", meaning:"почему", pos:"adj"},
+        {word:"хаана", meaning:"где", pos:"noun"},
+        {word:"хэзээ", meaning:"когда", pos:"adj"},
+        {word:"хайшан гээд", meaning:"как", pos:"noun"},
+        {word:"хэды", meaning:"сколько", pos:"noun"},
+        {word:"хуу", meaning:"всё", pos:"noun"},
+        {word:"бүхы", meaning:"весь", pos:"noun"},
+        {word:"энэ", meaning:"этот", pos:"noun"},
+        {word:"эдэ", meaning:"эти", pos:"noun"},
+        {word:"бэеэ", meaning:"себя", pos:"noun"},
+        {word:"өөрөө", meaning:"сам", pos:"noun"},
+        {word:"ямар", meaning:"какой", pos:"noun"},
+        {word:"тэндэ", meaning:"там", pos:"noun"},
+        {word:"тиишээ", meaning:"туда", pos:"noun"},
+        {word:"наhан", meaning:"жизнь", pos:"noun"},
+        {word:"хуби заяан", meaning:"судьба", pos:"noun"},
+        {word:"талаан", meaning:"удача", pos:"noun"},
+        {word:"баялиг", meaning:"богатство", pos:"noun"},
+        {word:"ядарал", meaning:"бедность", pos:"noun"},
+        {word:"эб", meaning:"мир", pos:"noun"},
+        {word:"илалта", meaning:"победа", pos:"noun"},
+        {word:"дайн", meaning:"война", pos:"noun"},
+        {word:"элүүр", meaning:"здоровье", pos:"noun"},
+        {word:"оюун бэлиг", meaning:"мудрость", pos:"noun"},
+        {word:"шүүмжэлэл", meaning:"критика", pos:"noun"},
+        {word:"этигэмжэ", meaning:"надежда", pos:"noun"},
+        {word:"ухаан", meaning:"ум", pos:"noun"},
+        {word:"хэрэг", meaning:"дело", pos:"noun"},
+        {word:"ажал", meaning:"труд", pos:"adj"},
+        {word:"амаралта", meaning:"отдых", pos:"noun"},
+        {word:"хүхилгэн", meaning:"веселье", pos:"noun"},
+        {word:"залхууралга", meaning:"лень", pos:"noun"},
+        {word:"эрдэм", meaning:"знание", pos:"noun"},
+        {word:"алдар", meaning:"слава", pos:"noun"},
+        {word:"хүгжэлтэ", meaning:"развитие", pos:"noun"},
+        {word:"ябадал", meaning:"движение", pos:"noun"},
+        {word:"туhа", meaning:"помощь", pos:"adj"},
+        {word:"нүхэрлэлгэ", meaning:"дружба", pos:"noun"},
+        {word:"наадан", meaning:"игра", pos:"noun"},
+        {word:"уулзалга", meaning:"встреча", pos:"noun"},
+        {word:"үhөөн", meaning:"месть", pos:"noun"},
+        {word:"мэхэ", meaning:"хитрость", pos:"noun"},
+        {word:"удха ушар", meaning:"смысл", pos:"noun"},
+        {word:"удха шанар", meaning:"значение", pos:"noun"},
+        {word:"ушар", meaning:"случай", pos:"noun"},
+        {word:"хуули", meaning:"закон", pos:"noun"},
+        {word:"магтаал", meaning:"похвала", pos:"noun"},
+        {word:"үри", meaning:"долг", pos:"noun"},
+        {word:"анхарал", meaning:"внимание", pos:"noun"},
+        {word:"үбшэн", meaning:"болезнь", pos:"noun"},
+        {word:"зөөри", meaning:"имущество", pos:"noun"},
+        {word:"мүрысөөн", meaning:"соревнование", pos:"noun"},
+        {word:"хүсэл", meaning:"желание", pos:"noun"},
+        {word:"угтамжа", meaning:"приветствие", pos:"noun"},
+        {word:"түүхэ", meaning:"история", pos:"noun"},
+        {word:"ёhо заншал", meaning:"традиция", pos:"noun"},
+        {word:"тангариг", meaning:"клятва", pos:"noun"},
+        {word:"дурасхаал", meaning:"память", pos:"noun"},
+        {word:"доромжолго", meaning:"оскорбление", pos:"noun"},
+        {word:"хоног", meaning:"сутки", pos:"noun"},
+        {word:"долоон хоног", meaning:"неделя", pos:"noun"},
+        {word:"жэл", meaning:"год", pos:"noun"},
+        {word:"hара", meaning:"месяц", pos:"noun"},
+        {word:"мүнөөдэр", meaning:"сегодня", pos:"noun"},
+        {word:"үглөөдэр", meaning:"завтра", pos:"noun"},
+        {word:"нүгөөдэр", meaning:"послезавтра", pos:"noun"},
+        {word:"уржадэр", meaning:"позавчера", pos:"noun"},
+        {word:"үсэгэлдэр", meaning:"вчера", pos:"noun"},
+        {word:"орон", meaning:"страна", pos:"noun"},
+        {word:"нютаг", meaning:"родина", pos:"noun"},
+        {word:"хото", meaning:"город", pos:"noun"},
+        {word:"тосхон", meaning:"село", pos:"noun"},
+        {word:"гүрэн", meaning:"государство", pos:"noun"},
+        {word:"аймаг", meaning:"район", pos:"noun"},
+        {word:"гудамжа", meaning:"улица", pos:"noun"},
+        {word:"хилэ", meaning:"граница", pos:"noun"},
+        {word:"яhатан", meaning:"национальность", pos:"noun"},
+        {word:"Газар дэлхэй", meaning:"Земля", pos:"noun"},
+        {word:"юртэмсэ", meaning:"вселенная", pos:"noun"},
+        {word:"замбуулин", meaning:"космос", pos:"noun"},
+        {word:"замби", meaning:"материк", pos:"noun"},
+        {word:"далай", meaning:"море", pos:"noun"},
+        {word:"хаяг", meaning:"адрес", pos:"noun"},
+        {word:"гараг", meaning:"планета", pos:"noun"},
+        {word:"нуур", meaning:"озеро", pos:"noun"},
+        {word:"гол", meaning:"речка", pos:"noun"},
+        {word:"мүрэн", meaning:"река", pos:"noun"},
+        {word:"горхон", meaning:"ручей", pos:"noun"},
+        {word:"арал", meaning:"остров", pos:"noun"},
+        {word:"агы", meaning:"пещера", pos:"noun"},
+        {word:"эрье", meaning:"берег", pos:"noun"},
+        {word:"ой", meaning:"лес", pos:"noun"},
+        {word:"хада", meaning:"гора", pos:"noun"},
+        {word:"элhэн", meaning:"пустыня", pos:"noun"},
+        {word:"урда зүг", meaning:"юг", pos:"noun"},
+        {word:"хойто зүг", meaning:"север", pos:"noun"},
+        {word:"баруун зүг", meaning:"запад", pos:"noun"},
+        {word:"зүүн зүг", meaning:"восток", pos:"noun"},
+        {word:"гүйхэ", meaning:"бегать", pos:"noun"},
+        {word:"үмдэхэ", meaning:"надевать", pos:"noun"},
+        {word:"байха", meaning:"стоять", pos:"noun"},
+        {word:"аршаха", meaning:"вытирать", pos:"noun"},
+        {word:"hууха", meaning:"сидеть", pos:"noun"},
+        {word:"ябаха", meaning:"ходить", pos:"noun"},
+        {word:"абаха", meaning:"взять", pos:"noun"},
+        {word:"бодохо", meaning:"встать", pos:"noun"},
+        {word:"хэлэхэ", meaning:"говорить", pos:"noun"},
+        {word:"химэлхэ", meaning:"грызть", pos:"noun"},
+        {word:"бии", meaning:"имеется", pos:"noun"},
+        {word:"хэхэ", meaning:"делать", pos:"noun"},
+        {word:"наадаха", meaning:"играть", pos:"noun"},
+        {word:"шэрдэхэ", meaning:"красить", pos:"noun"},
+        {word:"худалдажа абаха", meaning:"купить", pos:"noun"},
+        {word:"эдихэ", meaning:"кушать", pos:"noun"},
+        {word:"хэбтэхэ", meaning:"лежать", pos:"noun"},
+        {word:"угааха", meaning:"мыть", pos:"noun"},
+        {word:"олохо", meaning:"найти", pos:"noun"},
+        {word:"эхилхэ", meaning:"начать", pos:"noun"},
+        {word:"бусааха", meaning:"вернуть", pos:"noun"},
+        {word:"үгэхэ", meaning:"дать", pos:"noun"},
+        {word:"ниитэлхэ", meaning:"обобщать", pos:"verb"},
+        {word:"дуулаха", meaning:"петь", pos:"verb"},
+        {word:"бэшэхэ", meaning:"писать", pos:"verb"},
+        {word:"ууха", meaning:"пить", pos:"verb"},
+        {word:"ерэхэ", meaning:"приходить", pos:"verb"},
+        {word:"худалдаха", meaning:"продать", pos:"verb"},
+        {word:"дэбхэрхэ", meaning:"прыгать", pos:"verb"},
+        {word:"хорогодохо", meaning:"прятаться", pos:"verb"},
+        {word:"зураха", meaning:"рисовать", pos:"verb"},
+        {word:"тайлаха", meaning:"снимать", pos:"verb"},
+        {word:"болохо", meaning:"стать", pos:"adj"},
+        {word:"тоншохо", meaning:"стучать", pos:"adj"},
+        {word:"тоолохо", meaning:"считать", pos:"adj"},
+        {word:"хатарха", meaning:"танцевать", pos:"adj"},
+        {word:"эсэхэ", meaning:"устать", pos:"adj"},
+        {word:"хүндэлхэ", meaning:"чтить", pos:"adj"},
+        {word:"уншаха", meaning:"читать", pos:"adj"},
+        {word:"ябаха", meaning:"уйти", pos:"adj"},
+        {word:"хөөрэхэ", meaning:"рассказывать", pos:"adj"},
+        {word:"шэгнэхэ", meaning:"взвешивать", pos:"adj"},
+        {word:"үлеэхэ", meaning:"дуть", pos:"adj"},
+        {word:"сээжэлдэхэ", meaning:"выучить", pos:"adj"},
+        {word:"нэхэхэ", meaning:"вязать", pos:"adj"},
+        {word:"эльбэхэ", meaning:"гладить", pos:"adj"},
+        {word:"сэнгэхэ", meaning:"гулять", pos:"adj"},
+        {word:"шэдэхэ", meaning:"кидать", pos:"adj"},
+        {word:"няаха", meaning:"клеить", pos:"adj"},
+        {word:"малтаха", meaning:"копать", pos:"adj"},
+        {word:"эрьелдэхэ", meaning:"кружиться", pos:"noun"},
+        {word:"шунгаха", meaning:"купаться", pos:"adj"},
+        {word:"шабаха", meaning:"лепить", pos:"noun"},
+        {word:"ниидэхэ", meaning:"лететь", pos:"noun"},
+        {word:"аргалха", meaning:"лечить", pos:"noun"},
+        {word:"хэмжэхэ", meaning:"мерить", pos:"noun"},
+        {word:"хамаха", meaning:"мести", pos:"noun"},
+        {word:"hаатуулха", meaning:"мешать", pos:"noun"},
+        {word:"худхаха", meaning:"перемешивать", pos:"noun"},
+        {word:"тэбэрихэ", meaning:"обнять", pos:"noun"},
+        {word:"унаха", meaning:"падать", pos:"noun"},
+        {word:"адуулха", meaning:"ухаживать", pos:"noun"},
+        {word:"хэблэхэ", meaning:"печатать", pos:"noun"},
+        {word:"үргэхэ", meaning:"поднять", pos:"noun"},
+        {word:"тамарха", meaning:"плавать", pos:"noun"},
+        {word:"харуулха", meaning:"показать", pos:"noun"},
+        {word:"уhалха", meaning:"поливать", pos:"noun"},
+        {word:"ургаха", meaning:"расти", pos:"noun"},
+        {word:"таhалха", meaning:"рвать", pos:"noun"},
+        {word:"отолхо", meaning:"резать", pos:"noun"},
+        {word:"яларха", meaning:"светить", pos:"noun"},
+        {word:"түлхихэ", meaning:"толкать", pos:"noun"},
+        {word:"хараха", meaning:"смотреть", pos:"noun"},
+        {word:"суглуулха", meaning:"собирать", pos:"noun"},
+        {word:"хайшалха", meaning:"стричь", pos:"noun"},
+        {word:"урдаха", meaning:"течь", pos:"noun"},
+        {word:"шэрэхэ", meaning:"тянуть", pos:"noun"},
+        {word:"унагааха", meaning:"уронить", pos:"adj"},
+        {word:"hургаха", meaning:"учить", pos:"noun"},
+        {word:"hураха", meaning:"учиться", pos:"noun"},
+        {word:"таалаха", meaning:"целовать", pos:"noun"},
+        {word:"заhаха", meaning:"чинить", pos:"noun"},
+        {word:"оёхо", meaning:"шить", pos:"noun"},
+        {word:"сохихо", meaning:"бить", pos:"noun"},
+        {word:"үбдэхэ", meaning:"болеть", pos:"noun"},
+        {word:"айха", meaning:"бояться", pos:"adj"},
+        {word:"шанаха", meaning:"варить", pos:"noun"},
+        {word:"дайлалдаха", meaning:"воевать", pos:"noun"},
+        {word:"hанаагаа зобохо", meaning:"волноваться", pos:"noun"},
+        {word:"уулзаха", meaning:"встретиться", pos:"noun"},
+        {word:"шараха", meaning:"жарить", pos:"noun"},
+        {word:"хүсэхэ", meaning:"желать", pos:"noun"},
+        {word:"ажаhууха", meaning:"жить", pos:"noun"},
+        {word:"мартаха", meaning:"забыть", pos:"noun"},
+        {word:"танилсаха", meaning:"знакомиться", pos:"noun"},
+        {word:"эдеэлүүлхэ", meaning:"кормить", pos:"noun"},
+        {word:"залхуурха", meaning:"лениться", pos:"noun"},
+        {word:"адхаха", meaning:"лить", pos:"noun"},
+        {word:"эбдэхэ", meaning:"ломать", pos:"noun"},
+        {word:"дурлаха", meaning:"любить", pos:"noun"},
+        {word:"эбтээ орохо", meaning:"мириться", pos:"noun"},
+        {word:"зобохо", meaning:"мучиться", pos:"noun"},
+        {word:"үзэн ядаха", meaning:"ненавидеть", pos:"noun"},
+        {word:"аягалха", meaning:"наливать", pos:"noun"},
+        {word:"мэхэлхэ", meaning:"обмануть", pos:"noun"},
+        {word:"бэлэглэхэ", meaning:"подарить", pos:"noun"},
+        {word:"дээшэ гараха", meaning:"подняться", pos:"noun"},
+        {word:"амаршалха", meaning:"поздравить", pos:"noun"},
+        {word:"табиха", meaning:"поставить", pos:"noun"},
+        {word:"айлгаха", meaning:"пугать", pos:"noun"},
+        {word:"гуниглаха", meaning:"грустить", pos:"noun"},
+        {word:"бууха", meaning:"спуститься", pos:"noun"},
+        {word:"бариха", meaning:"держать", pos:"noun"},
+        {word:"яараха", meaning:"торопиться", pos:"noun"},
+        {word:"хүндэлхэ", meaning:"угостить", pos:"noun"},
+        {word:"шэмэглэхэ", meaning:"украсить", pos:"noun"},
+        {word:"мэдэрхэ", meaning:"чувствовать", pos:"noun"},
+        {word:"ойлгохо", meaning:"понимать", pos:"noun"},
+        {word:"түрэхэ", meaning:"родиться", pos:"noun"},
+        {word:"ехэ,томо", meaning:"большой", pos:"noun"},
+        {word:"үбшэн", meaning:"больной", pos:"noun"},
+        {word:"мэлигэр", meaning:"гладкий", pos:"noun"},
+        {word:"тэнэг", meaning:"глупый", pos:"noun"},
+        {word:"халуун", meaning:"горячий", pos:"noun"},
+        {word:"муухай", meaning:"грязный", pos:"noun"},
+        {word:"ута", meaning:"длинный", pos:"noun"},
+        {word:"ууртай", meaning:"сердитый", pos:"noun"},
+        {word:"түргэн", meaning:"быстрый", pos:"noun"},
+        {word:"гашуун", meaning:"кислый", pos:"noun"},
+        {word:"богони", meaning:"короткий", pos:"noun"},
+        {word:"hайхан", meaning:"красивый", pos:"noun"},
+        {word:"бэлэн", meaning:"лёгкий", pos:"noun"},
+        {word:"солбон", meaning:"ловкий", pos:"noun"},
+        {word:"хүхюу", meaning:"весёлый", pos:"noun"},
+        {word:"бишыхан", meaning:"маленький", pos:"noun"},
+        {word:"удаан", meaning:"медленный", pos:"noun"},
+        {word:"нойтон", meaning:"мокрый", pos:"noun"},
+        {word:"үндэр", meaning:"высокий", pos:"noun"},
+        {word:"үлэн", meaning:"голодный", pos:"noun"},
+        {word:"бэлигтэй", meaning:"талантливый", pos:"noun"},
+        {word:"набтар", meaning:"низкий", pos:"noun"},
+        {word:"хурса", meaning:"острый", pos:"noun"},
+        {word:"дүүрэн", meaning:"полный", pos:"noun"},
+        {word:"тунгалаг", meaning:"прозрачный", pos:"noun"},
+        {word:"хооhон", meaning:"пустой", pos:"noun"},
+        {word:"бамбагар", meaning:"пушистый", pos:"noun"},
+        {word:"гэрэл", meaning:"светлый", pos:"noun"},
+        {word:"тамиртай", meaning:"сильный", pos:"noun"},
+        {word:"һула", meaning:"слабый", pos:"noun"},
+        {word:"амтатай", meaning:"вкусный", pos:"noun"},
+        {word:"бүхэ", meaning:"крепкий", pos:"noun"},
+        {word:"хүнгэн", meaning:"лёгкий", pos:"noun"},
+        {word:"хуурай", meaning:"сухой", pos:"noun"},
+        {word:"хүндэ", meaning:"тяжёлый", pos:"noun"},
+        {word:"садхалан", meaning:"сытый", pos:"noun"},
+        {word:"хүйтэн", meaning:"холодный", pos:"noun"},
+        {word:"үргэн", meaning:"широкий", pos:"noun"},
+        {word:"харанхы", meaning:"тёмный", pos:"noun"},
+        {word:"нимгэн", meaning:"тонкий", pos:"noun"},
+        {word:"аймхай", meaning:"трусливый", pos:"noun"},
+        {word:"уйтан", meaning:"узкий", pos:"noun"},
+        {word:"сэсэн", meaning:"ухаатай", pos:"noun"},
+        {word:"hайн", meaning:"хороший", pos:"noun"},
+        {word:"элүүр", meaning:"здоровый", pos:"noun"},
+        {word:"зоригтой", meaning:"храбрый", pos:"noun"},
+        {word:"туранхай", meaning:"худой", pos:"noun"},
+        {word:"сэбэр", meaning:"чистый", pos:"noun"},
+        {word:"бүдүүн", meaning:"толстый", pos:"noun"},
+        {word:"үргэн", meaning:"широкий", pos:"noun"},
+        {word:"буурсаг", meaning:"горох", pos:"verb"},
+        {word:"шахуу", meaning:"почти", pos:"verb"},
+        {word:"хожом", meaning:"потом", pos:"verb"},
+        {word:"үни", meaning:"давно", pos:"verb"},
+        {word:"аляаhан", meaning:"муха", pos:"verb"},
+        {word:"батаганаан", meaning:"комар", pos:"verb"},
+        {word:"эрбээхэй", meaning:"бабочка", pos:"verb"},
+        {word:"тэрмээлжэн", meaning:"стрекоза", pos:"verb"},
+        {word:"сохо", meaning:"жук", pos:"verb"},
+        {word:"тэбтээр сохо", meaning:"божья коровка", pos:"verb"},
+        {word:"зүгы", meaning:"пчела", pos:"adj"},
+        {word:"hоно", meaning:"овод", pos:"adj"},
+        {word:"абаахай", meaning:"паук", pos:"adj"},
+        {word:"хорхой", meaning:"червяк", pos:"adj"},
+        {word:"төөлүүр", meaning:"гусеница", pos:"adj"},
+        {word:"таршаа", meaning:"кузнечик", pos:"adj"},
+        {word:"шалза", meaning:"клещ", pos:"adj"},
+        {word:"баха", meaning:"лягушка", pos:"adj"},
+        {word:"мэлхэй", meaning:"черепаха", pos:"adj"},
+        {word:"хаб загаhан", meaning:"нерпа", pos:"adj"},
+        {word:"хабшаахай", meaning:"рак", pos:"adj"},
+        {word:"хубсаhан", meaning:"одежда", pos:"adj"},
+        {word:"малгай", meaning:"шапка", pos:"adj"},
+        {word:"заха", meaning:"воротник", pos:"adj"},
+        {word:"дэгэл", meaning:"костюм", pos:"adj"},
+        {word:"самса", meaning:"рубашка", pos:"adj"},
+        {word:"бээлэй", meaning:"варежки", pos:"adj"},
+        {word:"үмдэн", meaning:"брюки", pos:"adj"},
+        {word:"гутал", meaning:"сапоги", pos:"noun"},
+        {word:"оймhон", meaning:"носки", pos:"adj"},
+        {word:"бүhэ", meaning:"пояс", pos:"noun"},
+        {word:"бэhэлиг", meaning:"кольцо", pos:"noun"},
+        {word:"шүхэр", meaning:"зонт", pos:"noun"},
+        {word:"хамсы", meaning:"рукав", pos:"noun"},
+        {word:"hиихэ", meaning:"серьги", pos:"noun"},
+        {word:"эдэбхитэй", meaning:"активный", pos:"noun"},
+        {word:"агууехэ", meaning:"великий", pos:"noun"},
+        {word:"сүлөөгүй", meaning:"занятой", pos:"noun"},
+        {word:"газаада", meaning:"внешний", pos:"noun"},
+        {word:"досоохи", meaning:"внутренний", pos:"noun"},
+        {word:"ганса", meaning:"единственный", pos:"noun"},
+        {word:"омог", meaning:"гордый", pos:"noun"},
+        {word:"бүхэдэлхэйн", meaning:"всемирный", pos:"noun"},
+        {word:"шэдитэ", meaning:"волшебный", pos:"noun"},
+        {word:"зэрлиг", meaning:"дикий", pos:"noun"},
+        {word:"хомхой", meaning:"жадный", pos:"noun"},
+        {word:"мартамхай", meaning:"забывчивый", pos:"noun"},
+        {word:"хаалгатай", meaning:"закрытый", pos:"noun"},
+        {word:"суута", meaning:"известный", pos:"noun"},
+        {word:"мэдээжэ", meaning:"знаменитый", pos:"noun"},
+        {word:"hонин", meaning:"интересный", pos:"noun"},
+        {word:"дуратай", meaning:"любимый", pos:"noun"},
+        {word:"залхуу", meaning:"ленивый", pos:"noun"},
+        {word:"залуу", meaning:"молодой", pos:"noun"},
+        {word:"уялгатай", meaning:"обязательный", pos:"noun"},
+        {word:"түрэл", meaning:"родной", pos:"adj"},
+        {word:"аюултай", meaning:"опасный", pos:"noun"},
+        {word:"харюусалгатай", meaning:"ответственный", pos:"noun"},
+        {word:"нээлгэтэй", meaning:"открытый", pos:"noun"},
+        {word:"бэрхэ", meaning:"лучший", pos:"noun"},
+        {word:"орой", meaning:"поздний", pos:"noun"},
+        {word:"ойлгосотой", meaning:"понятный", pos:"noun"},
+        {word:"эртын", meaning:"ранний", pos:"noun"},
+        {word:"халтирхай", meaning:"скользкий", pos:"adj"},
+        {word:"даруу", meaning:"скромный", pos:"noun"},
+        {word:"хашартай", meaning:"надоедливый", pos:"noun"},
+        {word:"ажалша", meaning:"трудолюбивый", pos:"noun"},
+        {word:"шууяатай", meaning:"шумный", pos:"noun"},
+        {word:"элбэг", meaning:"щедрый", pos:"noun"},
+        {word:"эмшэн", meaning:"врач", pos:"noun"},
+        {word:"наймаашан", meaning:"продавец", pos:"noun"},
+        {word:"барилгашан", meaning:"строитель", pos:"noun"},
+        {word:"хөөрхэн", meaning:"милый", pos:"noun"},
+        {word:"жолоошон", meaning:"водитель", pos:"noun"},
+        {word:"дарга", meaning:"директор", pos:"noun"},
+        {word:"сагдаа", meaning:"полицейский", pos:"noun"},
+        {word:"дуушан", meaning:"певец", pos:"noun"},
+        {word:"уран зурааша", meaning:"художник", pos:"noun"},
+        {word:"уран зохёолшо", meaning:"писатель", pos:"noun"},
+        {word:"шүлэгшэ", meaning:"поэт", pos:"noun"},
+        {word:"дархан", meaning:"кузнец", pos:"noun"},
+        {word:"харуулшан", meaning:"охранник", pos:"noun"},
+        {word:"хатарагша", meaning:"танцор", pos:"noun"},
+        {word:"хүгжэмшэ", meaning:"музыкант", pos:"noun"},
+        {word:"түрүү", meaning:"ведущий", pos:"noun"},
+        {word:"хүтэлбэригшэ", meaning:"руководитель", pos:"noun"},
+        {word:"хүдэлмэришэн", meaning:"рабочий", pos:"noun"},
+        {word:"оёдолшон", meaning:"портной", pos:"noun"},
+        {word:"хүмүүжүүлэгшэ", meaning:"воспитатель", pos:"noun"},
+        {word:"сэрэгшэн", meaning:"военный", pos:"noun"},
+        {word:"тогоошон", meaning:"повар", pos:"noun"},
+        {word:"hалхин", meaning:"ветер", pos:"noun"},
+        {word:"үүлэн", meaning:"облако", pos:"noun"},
+        {word:"нэреэн", meaning:"гром", pos:"noun"},
+        {word:"мүльhэн дуhаа", meaning:"сосулька", pos:"noun"},
+        {word:"шуурган", meaning:"метель", pos:"noun"},
+        {word:"манан", meaning:"туман", pos:"noun"},
+        {word:"газар хүдэлэлгэ", meaning:"землетрясение", pos:"noun"},
+        {word:"гэрэл", meaning:"свет", pos:"noun"},
+        {word:"hүүдэр", meaning:"тень", pos:"noun"},
+        {word:"элшэ", meaning:"луч", pos:"noun"},
+        {word:"харанхы", meaning:"темнота", pos:"noun"},
+        {word:"шүүдэр", meaning:"роса", pos:"noun"},
+        {word:"борбилоо", meaning:"воробей", pos:"noun"},
+        {word:"турлааг", meaning:"ворона", pos:"noun"},
+        {word:"шаазгай", meaning:"сорока", pos:"noun"},
+        {word:"бэгсэргэ", meaning:"сова", pos:"noun"},
+        {word:"хараасгай", meaning:"ласточка", pos:"noun"},
+        {word:"хун шубуун", meaning:"лебедь", pos:"noun"},
+        {word:"сахали", meaning:"чайка", pos:"noun"},
+        {word:"тоншуул", meaning:"дятел", pos:"noun"},
+        {word:"тэмээн шубуун", meaning:"страус", pos:"noun"},
+        {word:"элеэ", meaning:"коршун", pos:"noun"},
+        {word:"бүргэд", meaning:"орёл", pos:"noun"},
+        {word:"зана шубуун", meaning:"снегирь", pos:"noun"},
+        {word:"хүхэ буха", meaning:"снегирь", pos:"noun"},
+        {word:"булжамуур", meaning:"жаворонок", pos:"noun"},
+        {word:"бүбөөлжэн", meaning:"удод", pos:"noun"},
+        {word:"hойр", meaning:"глухарь", pos:"noun"},
+        {word:"тоти шубуун", meaning:"попугай", pos:"noun"},
+        {word:"тугас шубуун", meaning:"павлин", pos:"noun"},
+        {word:"хилэн", meaning:"цапля", pos:"noun"},
+        {word:"тохорюун", meaning:"журавль", pos:"noun"},
+        {word:"hөөг", meaning:"куст", pos:"noun"},
+        {word:"ногоон", meaning:"трава", pos:"noun"},
+        {word:"набшаhан", meaning:"лист", pos:"noun"},
+        {word:"үндэhэн", meaning:"корень", pos:"noun"},
+        {word:"hалаа", meaning:"ветка", pos:"noun"},
+        {word:"эшэ", meaning:"стебель", pos:"noun"},
+        {word:"хассури", meaning:"ель", pos:"noun"},
+        {word:"нарhан", meaning:"сосна", pos:"noun"},
+        {word:"уляаhан", meaning:"осина", pos:"noun"},
+        {word:"хуша", meaning:"кедр", pos:"noun"},
+        {word:"жодоо", meaning:"пихта", pos:"noun"},
+        {word:"сарса", meaning:"дуб", pos:"noun"},
+        {word:"бургааhан", meaning:"ива", pos:"noun"},
+        {word:"бамба сэсэг", meaning:"роза", pos:"noun"},
+        {word:"бадма сэсэг", meaning:"лотос", pos:"noun"},
+        {word:"ханхинуур", meaning:"колокоьчик", pos:"noun"},
+        {word:"майн сэсэг", meaning:"ландыш", pos:"noun"},
+        {word:"балжан гарма сэсэг", meaning:"ромашка", pos:"noun"},
+        {word:"алтан зула сэсэг", meaning:"тюльпан", pos:"noun"},
+        {word:"табан hалаата", meaning:"подорожник", pos:"noun"},
+        {word:"нямняахай", meaning:"одуванчик", pos:"noun"},
+        {word:"улаалзай", meaning:"сарана", pos:"noun"},
+        {word:"мангир", meaning:"дикий лук", pos:"noun"},
+        {word:"намуу сэсэг", meaning:"мак", pos:"noun"},
+        {word:"ургы", meaning:"подснежник", pos:"verb"},
+        {word:"халаахай", meaning:"крапива", pos:"verb"},
+        {word:"носоргоно", meaning:"репейник", pos:"verb"},
+        {word:"ном", meaning:"книга", pos:"verb"},
+        {word:"дэбтэр", meaning:"тетрадь", pos:"verb"},
+        {word:"гуурhан", meaning:"ручка", pos:"verb"},
+        {word:"биирэ", meaning:"кисточка", pos:"verb"},
+        {word:"шэрэ", meaning:"краски", pos:"verb"},
+        {word:"шугам", meaning:"линейка", pos:"verb"},
+        {word:"саарhан", meaning:"бумага", pos:"verb"},
+        {word:"самбар", meaning:"учебная доска", pos:"adj"},
+        {word:"шохой", meaning:"мел", pos:"adj"},
+        {word:"hурагша", meaning:"ученик", pos:"adj"},
+        {word:"забhар", meaning:"перемена", pos:"adj"},
+        {word:"хонхо", meaning:"звонок", pos:"adj"},
+        {word:"оньhон үгэ", meaning:"пословица", pos:"adj"},
+        {word:"хэшээл", meaning:"урок", pos:"adj"},
+        {word:"гэрэй даабари", meaning:"домашнее задание", pos:"adj"},
+        {word:"тоо", meaning:"цифра", pos:"adj"},
+        {word:"бэшэг", meaning:"письмо", pos:"adj"},
+        {word:"үзэг", meaning:"буква", pos:"adj"},
+        {word:"уншалга", meaning:"чтение", pos:"adj"},
+        {word:"сэгнэлтэ", meaning:"оценка", pos:"adj"},
+        {word:"таабари", meaning:"загадка", pos:"adj"},
+        {word:"анги", meaning:"класс", pos:"adj"},
+        {word:"үргэбшэ", meaning:"рюкзак", pos:"adj"},
+        {word:"бодолго", meaning:"задача", pos:"adj"},
+        {word:"шүлэг", meaning:"стих", pos:"adj"},
+        {word:"дадхаалга", meaning:"упражнение", pos:"noun"},
+        {word:"онтохон", meaning:"сказка", pos:"adj"},
+        {word:"туужа", meaning:"роман", pos:"noun"},
+        {word:"бодолго", meaning:"решение", pos:"noun"},
+        {word:"таабари", meaning:"загадка", pos:"noun"},
+        {word:"нааданха", meaning:"игрушка", pos:"noun"},
+        {word:"хүүгэдэй сэсэрлиг", meaning:"детский сад", pos:"noun"},
+        {word:"шатар", meaning:"шахматы", pos:"noun"},
+        {word:"хөөрөөн", meaning:"рассказ", pos:"noun"},
+        {word:"бүмбэгэ", meaning:"мяч", pos:"noun"},
+        {word:"үльгэр", meaning:"былина", pos:"noun"},
+        {word:"баяр", meaning:"радость", pos:"noun"},
+        {word:"уур", meaning:"злость", pos:"noun"},
+        {word:"гомдол", meaning:"обида", pos:"noun"},
+        {word:"гуниг", meaning:"грусть", pos:"noun"},
+        {word:"айдал", meaning:"страх", pos:"noun"},
+        {word:"гайхал", meaning:"удивление", pos:"noun"},
+        {word:"дуран", meaning:"любовь", pos:"noun"},
+        {word:"hайн hанаан", meaning:"доброта", pos:"noun"},
+        {word:"энеэдэн", meaning:"смех", pos:"noun"},
+        {word:"миhэрэл", meaning:"улыбка", pos:"noun"},
+        {word:"этигэл", meaning:"вера", pos:"noun"},
+        {word:"омогорхол", meaning:"гордость", pos:"noun"},
+        {word:"зориг", meaning:"смелость", pos:"noun"},
+        {word:"эшэдэhэн", meaning:"стыд", pos:"noun"},
+        {word:"обтолго", meaning:"зависть", pos:"noun"},
+        {word:"халаг", meaning:"сожаление", pos:"noun"},
+        {word:"аажам", meaning:"спокойный", pos:"adj"},
+        {word:"ааша", meaning:"поступок", pos:"noun"},
+        {word:"ааяма", meaning:"знойный", pos:"noun"},
+        {word:"аб", meaning:"чары", pos:"noun"},
+        {word:"аба", meaning:"облавная охота", pos:"noun"},
+        {word:"абарга гүрбэл", meaning:"варан", pos:"noun"},
+        {word:"абарха", meaning:"спасти", pos:"noun"},
+        {word:"абирха", meaning:"карабкаться", pos:"noun"},
+        {word:"абьяас", meaning:"призвание,дарование", pos:"adj"},
+        {word:"абьяан", meaning:"звук", pos:"noun"},
+        {word:"агаар", meaning:"воздух", pos:"noun"},
+        {word:"агнуури", meaning:"охота", pos:"noun"},
+        {word:"агы", meaning:"пещера", pos:"noun"},
+        {word:"адаг", meaning:"конец", pos:"noun"},
+        {word:"адис", meaning:"благословение", pos:"noun"},
+        {word:"адли", meaning:"похожий", pos:"noun"},
+        {word:"адуушан", meaning:"табунщик", pos:"noun"},
+        {word:"адха", meaning:"горсть", pos:"noun"},
+        {word:"ажаүйлэдбэри", meaning:"промышленность", pos:"noun"},
+        {word:"ажахы", meaning:"хозяйство", pos:"noun"},
+        {word:"үгын абьяас", meaning:"красноречие", pos:"noun"},
+        {word:"азарга", meaning:"жеребец", pos:"noun"},
+        {word:"ажалгүй", meaning:"безработный", pos:"noun"},
+        {word:"айбала", meaning:"пугало", pos:"noun"},
+        {word:"айдар", meaning:"милый", pos:"noun"},
+        {word:"айл", meaning:"семья", pos:"noun"},
+        {word:"айлшан", meaning:"гость", pos:"noun"},
+        {word:"айрhан", meaning:"творог", pos:"noun"},
+        {word:"айхабтар", meaning:"страшный", pos:"noun"},
+        {word:"алаг", meaning:"полосатый", pos:"noun"},
+        {word:"алас", meaning:"дальний", pos:"noun"},
+        {word:"алаха", meaning:"убить", pos:"noun"},
+        {word:"албан", meaning:"служба", pos:"noun"},
+        {word:"алдуу", meaning:"ошибка", pos:"noun"},
+        {word:"алтаргана", meaning:"золотарник", pos:"noun"},
+        {word:"алха", meaning:"шаг", pos:"noun"},
+        {word:"амар", meaning:"спокойный", pos:"noun"},
+        {word:"амжалта", meaning:"успех", pos:"noun"},
+        {word:"амиды", meaning:"живой", pos:"noun"},
+        {word:"амилха", meaning:"дышать", pos:"noun"},
+        {word:"амин", meaning:"дыхание", pos:"noun"},
+        {word:"амитан", meaning:"животное", pos:"noun"},
+        {word:"амтан", meaning:"успех", pos:"noun"},
+        {word:"амhарта", meaning:"посуда", pos:"noun"},
+        {word:"анда", meaning:"побратим", pos:"noun"},
+        {word:"араан", meaning:"коренной зуб", pos:"noun"},
+        {word:"арга", meaning:"средство", pos:"noun"},
+        {word:"аргал", meaning:"сухой помёт", pos:"noun"},
+        {word:"аргамжа", meaning:"верёвка", pos:"noun"},
+        {word:"арсалдаан", meaning:"спор", pos:"noun"},
+        {word:"архи", meaning:"водка", pos:"noun"},
+        {word:"арhашан", meaning:"кожевник", pos:"noun"},
+        {word:"арын", meaning:"задний", pos:"noun"},
+        {word:"арьбалха", meaning:"быть бережливым", pos:"noun"},
+        {word:"арьяатан", meaning:"хищник", pos:"noun"},
+        {word:"арюудхаха", meaning:"очищать", pos:"noun"},
+        {word:"арюун", meaning:"чистый", pos:"noun"},
+        {word:"асуудал", meaning:"вопрос", pos:"noun"},
+        {word:"ахалагша", meaning:"главный", pos:"noun"},
+        {word:"аhалдаха", meaning:"пристать", pos:"noun"},
+        {word:"ашаан", meaning:"груз", pos:"noun"},
+        {word:"ая", meaning:"приличие", pos:"noun"},
+        {word:"аялга", meaning:"звук", pos:"noun"},
+        {word:"аян", meaning:"дальний путь", pos:"noun"},
+        {word:"баатар", meaning:"богатырь", pos:"noun"},
+        {word:"баг", meaning:"маска", pos:"noun"},
+        {word:"баглаа", meaning:"связка,пучок", pos:"noun"},
+        {word:"бадарха", meaning:"распространяться", pos:"noun"},
+        {word:"бадха", meaning:"прыщ", pos:"noun"},
+        {word:"бажууха", meaning:"сжимать", pos:"noun"},
+        {word:"база", meaning:"свояк", pos:"noun"},
+        {word:"байгаалиин үзэгдэл", meaning:"природное явление", pos:"noun"},
+        {word:"бал", meaning:"мёд", pos:"noun"},
+        {word:"балга", meaning:"глоток", pos:"noun"},
+        {word:"балмад", meaning:"авантюрист", pos:"noun"},
+        {word:"балсан", meaning:"мышцы", pos:"noun"},
+        {word:"банша", meaning:"пельмени", pos:"noun"},
+        {word:"бараан", meaning:"имущество", pos:"noun"},
+        {word:"бараг", meaning:"нормальный", pos:"noun"},
+        {word:"бардам", meaning:"горделивый", pos:"noun"},
+        {word:"барилдаан", meaning:"борьба(спорт)", pos:"noun"},
+        {word:"барлаг", meaning:"раб", pos:"noun"},
+        {word:"бархаг", meaning:"якорь", pos:"noun"},
+        {word:"бархираан", meaning:"рёв", pos:"noun"},
+        {word:"баряаша", meaning:"костоправ", pos:"noun"},
+        {word:"баhаха", meaning:"смотреть свысока", pos:"noun"},
+        {word:"баясхалан", meaning:"благодароность", pos:"noun"},
+        {word:"бимба", meaning:"суббота", pos:"verb"},
+        {word:"бог", meaning:"мусор", pos:"verb"},
+        {word:"Богдо", meaning:"Святой", pos:"verb"},
+        {word:"бодо", meaning:"материя", pos:"verb"},
+        {word:"бодол", meaning:"мысль", pos:"verb"},
+        {word:"бодос", meaning:"вещество", pos:"verb"},
+        {word:"болбосорол", meaning:"просвещение", pos:"verb"},
+        {word:"болгоомжотой", meaning:"осмотрительный", pos:"verb"},
+        {word:"болзор", meaning:"срок", pos:"verb"},
+        {word:"болихо", meaning:"перестать", pos:"verb"},
+        {word:"болтогой", meaning:"да будет так", pos:"adj"},
+        {word:"боомо", meaning:"сибирская язва", pos:"adj"},
+        {word:"боори", meaning:"возвышенность", pos:"adj"},
+        {word:"боохолдой", meaning:"призрак", pos:"adj"},
+        {word:"борбоосгой", meaning:"шишка", pos:"adj"},
+        {word:"бөө", meaning:"шаман", pos:"adj"},
+        {word:"бөөлжэhэн", meaning:"рвота", pos:"adj"},
+        {word:"бугаабша", meaning:"браслет", pos:"adj"},
+        {word:"бугуули", meaning:"аркан", pos:"adj"},
+        {word:"бузар", meaning:"нечистоты", pos:"adj"},
+        {word:"булаг", meaning:"родник", pos:"adj"},
+        {word:"булад", meaning:"сталь", pos:"adj"},
+        {word:"бултайха", meaning:"высовываться", pos:"adj"},
+        {word:"булшан", meaning:"икры", pos:"adj"},
+        {word:"булшархай", meaning:"железа", pos:"adj"},
+        {word:"буляаха", meaning:"отобрать", pos:"adj"},
+        {word:"дура буляама", meaning:"очаровательный", pos:"adj"},
+        {word:"бури", meaning:"плесень", pos:"adj"},
+        {word:"бусааха", meaning:"вернуть", pos:"noun"},
+        {word:"бусалха", meaning:"кипеть", pos:"adj"},
+        {word:"бута", meaning:"кочка", pos:"noun"},
+        {word:"буудал", meaning:"стоянка", pos:"noun"},
+        {word:"буудаха", meaning:"стрелять", pos:"noun"},
+        {word:"буулагабари", meaning:"копия", pos:"noun"},
+        {word:"буумал шулуун", meaning:"метеорит", pos:"noun"},
+        {word:"буурал", meaning:"седой", pos:"noun"},
+        {word:"буу", meaning:"ружьё", pos:"noun"},
+        {word:"бууса", meaning:"стойбище", pos:"noun"},
+        {word:"буян", meaning:"благодеяние", pos:"noun"},
+        {word:"бүгшэм", meaning:"душный", pos:"noun"},
+        {word:"бүднэ", meaning:"перепёлка", pos:"noun"},
+        {word:"бүгсэ", meaning:"зад", pos:"noun"},
+        {word:"бүд", meaning:"ткань", pos:"noun"},
+        {word:"бүдэн", meaning:"веснушки", pos:"noun"},
+        {word:"бүжэг", meaning:"спектакль", pos:"noun"},
+        {word:"бүлбэнүүр", meaning:"бубенчик", pos:"noun"},
+        {word:"бүйлөөhэн", meaning:"абрикос", pos:"noun"},
+        {word:"бүйлсэ", meaning:"миндаль", pos:"noun"},
+        {word:"бүлгэм", meaning:"группа", pos:"noun"},
+        {word:"бүлеэн (о жидкости)", meaning:"тёплый", pos:"noun"},
+        {word:"бүлхин", meaning:"тромб", pos:"noun"},
+        {word:"бүлэг", meaning:"раздел", pos:"noun"},
+        {word:"бүридхэл", meaning:"отчёт", pos:"noun"},
+        {word:"бүрынхы", meaning:"сумерки", pos:"noun"},
+        {word:"бүтүү", meaning:"закрытый", pos:"noun"},
+        {word:"гаараха", meaning:"ругаться", pos:"adj"},
+        {word:"габа", meaning:"щель", pos:"noun"},
+        {word:"габала", meaning:"череп", pos:"noun"},
+        {word:"габьяа", meaning:"заслуга", pos:"noun"},
+        {word:"гадар", meaning:"внешний покров, обложка", pos:"noun"},
+        {word:"газаа", meaning:"на улице", pos:"noun"},
+        {word:"байдаг газар", meaning:"местоприбывание", pos:"noun"},
+        {word:"галзуу", meaning:"бешеный", pos:"noun"},
+        {word:"галиг", meaning:"иноязычные буквы", pos:"adj"},
+        {word:"галта уула", meaning:"вулкан", pos:"noun"},
+        {word:"галта тэргэ", meaning:"поезд", pos:"noun"},
+        {word:"галтай хорхой", meaning:"светлячок", pos:"noun"},
+        {word:"ган", meaning:"засуха", pos:"noun"},
+        {word:"ганса", meaning:"одинокий", pos:"noun"},
+        {word:"гар табилга", meaning:"подпись", pos:"noun"},
+        {word:"гар мүнгэн", meaning:"наличные", pos:"noun"},
+        {word:"гараха", meaning:"выйти", pos:"noun"},
+        {word:"гаргаша", meaning:"расход", pos:"noun"},
+        {word:"гарза", meaning:"убыток", pos:"noun"},
+        {word:"гаршаг", meaning:"оглавление, содержание", pos:"noun"},
+        {word:"гасалан", meaning:"препятствие", pos:"noun"},
+        {word:"гашалха", meaning:"прокиснуть", pos:"noun"},
+        {word:"гашуудал", meaning:"скорьбь", pos:"noun"},
+        {word:"гоёолто", meaning:"украшение", pos:"noun"},
+        {word:"гол", meaning:"середина", pos:"noun"},
+        {word:"гоохон", meaning:"красавица", pos:"noun"},
+        {word:"гороо", meaning:"хождение посолонь кругом дацана", pos:"noun"},
+        {word:"гохо", meaning:"крючок", pos:"noun"},
+        {word:"губшуур", meaning:"невод", pos:"noun"},
+        {word:"гуйлта", meaning:"просьба", pos:"noun"},
+        {word:"гунгарбаа", meaning:"божница", pos:"noun"},
+        {word:"гурбалжан", meaning:"треугольник", pos:"noun"},
+        {word:"гурим", meaning:"режим, порядок", pos:"noun"},
+        {word:"гуя", meaning:"ляжка, бедро", pos:"noun"},
+        {word:"гүн", meaning:"глубина", pos:"noun"},
+        {word:"дангина", meaning:"красавица, фея", pos:"noun"},
+        {word:"дахуул", meaning:"спутник", pos:"noun"},
+        {word:"гүнзэгы", meaning:"глубокий", pos:"noun"},
+        {word:"гүрбэл", meaning:"ящерица", pos:"noun"},
+        {word:"гүйсэ", meaning:"срок", pos:"noun"},
+        {word:"гэгээрэл", meaning:"просвещение", pos:"noun"},
+        {word:"гэзэгэ", meaning:"коса", pos:"noun"},
+        {word:"гэмнэхэ", meaning:"обвинять", pos:"noun"},
+        {word:"гэм", meaning:"вина", pos:"noun"},
+        {word:"гэмтэн", meaning:"преступник", pos:"noun"},
+        {word:"гэнжэ", meaning:"цепь", pos:"noun"},
+        {word:"гэнтэ", meaning:"вдруг", pos:"noun"},
+        {word:"гэрлэхэ", meaning:"жениться", pos:"noun"},
+        {word:"гэршэ", meaning:"свидетель", pos:"noun"},
+        {word:"дааха", meaning:"быть в состоянии поднять что-либо", pos:"noun"},
+        {word:"гэшүүн", meaning:"член (какой-нибудь орагнизации)", pos:"noun"},
+        {word:"дабаан", meaning:"горный перевал", pos:"noun"},
+        {word:"дабталга", meaning:"повторение", pos:"noun"},
+        {word:"дабхар", meaning:"ряд, этаж", pos:"noun"},
+        {word:"дабхаряа", meaning:"складка", pos:"noun"},
+        {word:"дабхаса", meaning:"плащ", pos:"noun"},
+        {word:"даг", meaning:"грязь", pos:"noun"},
+        {word:"дадал", meaning:"навык, опыт", pos:"noun"},
+        {word:"дайда", meaning:"земля, мир", pos:"noun"},
+        {word:"дайн", meaning:"война", pos:"noun"},
+        {word:"дайр", meaning:"рана", pos:"noun"},
+        {word:"дайсан", meaning:"враг", pos:"noun"},
+        {word:"дала", meaning:"лопатка (на теле)", pos:"noun"},
+        {word:"далга", meaning:"жертвенная снедь", pos:"noun"},
+        {word:"дали", meaning:"крыло", pos:"noun"},
+        {word:"дамдаа", meaning:"салки", pos:"noun"},
+        {word:"дамжуулга", meaning:"передача", pos:"noun"},
+        {word:"дамжуур", meaning:"перекладина", pos:"noun"},
+        {word:"даралта", meaning:"давление", pos:"noun"},
+        {word:"дараха", meaning:"давить", pos:"noun"},
+        {word:"дасан", meaning:"буддийский храм", pos:"noun"},
+        {word:"даха", meaning:"шуба, тулуп", pos:"noun"},
+        {word:"дахин", meaning:"опять", pos:"noun"},
+        {word:"долгин", meaning:"волна", pos:"noun"},
+        {word:"долёохо", meaning:"лизать", pos:"noun"},
+        {word:"Долоон Yбгэд", meaning:"Большая Медведица", pos:"noun"},
+        {word:"дом", meaning:"заговор, магия", pos:"noun"},
+        {word:"домог", meaning:"предание", pos:"noun"},
+        {word:"домшо", meaning:"знахарь", pos:"noun"},
+        {word:"донгодохо", meaning:"куковать", pos:"noun"},
+        {word:"доншуур", meaning:"сто миллионов", pos:"noun"},
+        {word:"дорюун", meaning:"уверенный в себе", pos:"noun"},
+        {word:"дотор", meaning:"внутренности", pos:"noun"},
+        {word:"дохёо", meaning:"сигнал", pos:"noun"},
+        {word:"дохолон", meaning:"хромой", pos:"noun"},
+        {word:"дуган", meaning:"молельня у ламаистов", pos:"noun"},
+        {word:"дугаар", meaning:"номер", pos:"noun"},
+        {word:"дугты", meaning:"футляр", pos:"noun"},
+        {word:"дугы", meaning:"пешеходный мостик", pos:"noun"},
+        {word:"дулды", meaning:"опора", pos:"noun"},
+        {word:"дун", meaning:"раковина", pos:"noun"},
+        {word:"дунда", meaning:"середина", pos:"noun"},
+        {word:"дурна", meaning:"восток", pos:"verb"},
+        {word:"дутуу", meaning:"недостаток", pos:"verb"},
+        {word:"дуун", meaning:"песня", pos:"verb"},
+        {word:"дууряан", meaning:"эхо", pos:"verb"},
+        {word:"дуhал", meaning:"капля", pos:"verb"},
+        {word:"дүлэн", meaning:"пламя", pos:"verb"},
+        {word:"дүн", meaning:"итог", pos:"verb"},
+        {word:"дүлгэ", meaning:"инстинкт", pos:"verb"},
+        {word:"дүнгөөр", meaning:"оптом", pos:"verb"},
+        {word:"дүлии", meaning:"глухой", pos:"verb"},
+        {word:"дүрбэлжэн", meaning:"квадрат", pos:"adj"},
+        {word:"дүрим", meaning:"правило", pos:"adj"},
+        {word:"дүрөө", meaning:"стремя", pos:"adj"},
+        {word:"дүрсэ", meaning:"изображение", pos:"adj"},
+        {word:"дүрэ", meaning:"облик", pos:"adj"},
+        {word:"дүрэхэ", meaning:"гореть", pos:"adj"},
+        {word:"дүтэ", meaning:"ближайший", pos:"adj"},
+        {word:"дүтэлхэ", meaning:"приблизиться", pos:"adj"},
+        {word:"дүүжэн", meaning:"качели", pos:"adj"},
+        {word:"дүхэриг", meaning:"круг", pos:"adj"},
+        {word:"дүшэ", meaning:"праправнук", pos:"adj"},
+        {word:"гуша", meaning:"правнук", pos:"adj"},
+        {word:"дэбдихэр", meaning:"постель", pos:"adj"},
+        {word:"дэбтээхэ", meaning:"размачивать", pos:"adj"},
+        {word:"дэгжэхэ", meaning:"развиваться", pos:"adj"},
+        {word:"дэлгүүр", meaning:"рынок", pos:"adj"},
+        {word:"дэлгээхэ", meaning:"расстилать", pos:"adj"},
+        {word:"дэлhэн", meaning:"грива", pos:"adj"},
+        {word:"дэлэн", meaning:"вымя", pos:"noun"},
+        {word:"дэлюун", meaning:"селезёнка", pos:"adj"},
+        {word:"дэмбэрэл", meaning:"предзнаменование", pos:"noun"},
+        {word:"дэмжэг", meaning:"поддержка", pos:"noun"},
+        {word:"дэмы", meaning:"зря", pos:"noun"},
+        {word:"дэмырхэ", meaning:"бредить", pos:"noun"},
+        {word:"дэн", meaning:"свеча", pos:"noun"},
+        {word:"дэрбэгэр", meaning:"растопыренный", pos:"noun"},
+        {word:"дэрбээн", meaning:"восторг", pos:"noun"},
+        {word:"дээдын", meaning:"высший", pos:"noun"},
+        {word:"дээжэ", meaning:"лучшая часть", pos:"noun"},
+        {word:"елүүр", meaning:"каток", pos:"noun"},
+        {word:"енгүү", meaning:"ехидство", pos:"noun"},
+        {word:"ерүүл", meaning:"пришелец", pos:"noun"},
+        {word:"ерээдүй", meaning:"будущее", pos:"noun"},
+        {word:"ёборго", meaning:"кулак", pos:"noun"},
+        {word:"ёгто", meaning:"ирония", pos:"noun"},
+        {word:"ёгто үльгэр", meaning:"басня", pos:"noun"},
+        {word:"ёдогор",       meaning:"остроконечный",        pos:"noun"},
+        {word:"жааханhаа", meaning:"с раннего детства", pos:"noun"},
+        {word:"жабар", meaning:"мороз", pos:"noun"},
+        {word:"жабхалан", meaning:"великолепие", pos:"noun"},
+        {word:"жагсаал", meaning:"строй", pos:"noun"},
+        {word:"жада", meaning:"копьё", pos:"noun"},
+        {word:"жажалдаhан", meaning:"жвачка", pos:"noun"},
+        {word:"жажалха", meaning:"жевать", pos:"noun"},
+        {word:"жама ёhон", meaning:"закономерность", pos:"noun"},
+        {word:"жалма", meaning:"спички", pos:"adj"},
+        {word:"жаргаха", meaning:"наслаждаться", pos:"noun"},
+        {word:"жаса", meaning:"фонд", pos:"noun"},
+        {word:"жолоо", meaning:"руль, поводья", pos:"noun"},
+        {word:"жохоордог", meaning:"любопытный", pos:"noun"},
+        {word:"журам", meaning:"порядок", pos:"noun"},
+        {word:"жүтөөн", meaning:"ревность", pos:"noun"},
+        {word:"жэбэ", meaning:"ржавчина", pos:"noun"},
+        {word:"жэгдэ", meaning:"равномерный", pos:"adj"},
+        {word:"жэгнүүр", meaning:"пароварка", pos:"noun"},
+        {word:"жэгтэй", meaning:"странный", pos:"noun"},
+        {word:"жэгүүр", meaning:"крылья", pos:"noun"},
+        {word:"жэжэ", meaning:"мелкий", pos:"noun"},
+        {word:"hуралсалай жэл", meaning:"учебный год", pos:"noun"},
+        {word:"зуун жэл", meaning:"век", pos:"noun"},
+        {word:"жэмэстэ модод", meaning:"плодовые деревья", pos:"noun"},
+        {word:"жэн", meaning:"караван", pos:"noun"},
+        {word:"жэнгинэмэ", meaning:"звенящий", pos:"noun"},
+        {word:"жэргээн",        meaning:"щебетание",         pos:"noun"},
+        {word:"жэрхэдэhэн",        meaning:"отвращение",         pos:"noun"},
+        {word:"жэшээ",      meaning:"пример",          pos:"noun"},
+        {word:"заабари",    meaning:"наказ",         pos:"noun"},
+        {word:"арсалан заан", meaning:"мамонт",          pos:"noun"},
+        {word:"зааха",      meaning:"указывать",    pos:"noun"},
+        {word:"забаан",     meaning:"пресный",      pos:"noun"},
+        {word:"заб",        meaning:"свободное время",  pos:"noun"},
+        {word:"хаб загаhан",    meaning:"нерпа",      pos:"noun"},
+        {word:"забгүй",     meaning:"занятой",      pos:"noun"},
+        {word:"загаһашан",  meaning:"рыбак",        pos:"noun"},
+        {word:"загбари",    meaning:"стандарт",     pos:"noun"},
+        {word:"задатай",    meaning:"ненастный",    pos:"noun"},
+        {word:"зай",        meaning:"промежуток",   pos:"noun"},
+        {word:"зай",        meaning:"элемент",      pos:"noun"},
+        {word:"зайн гал",   meaning:"электричество",pos:"noun"},
+        {word:"зайгуул",    meaning:"бродяга",      pos:"noun"},
+        {word:"зайлаха",    meaning:"пооскать",     pos:"noun"},
+        {word:"бурхан, зайлуул",    meaning:"избави, боже",   pos:"noun"},
+        {word:"залаа",      meaning:"верхушка, колос",        pos:"noun"},
+        {word:"залаха",     meaning:"исправять",    pos:"noun"},
+        {word:"залгаа",     meaning:"соединение",   pos:"noun"},
+        {word:"залгаа барилга",       meaning:"пристрой",     pos:"noun"},
+        {word:"залги",      meaning:"глоток",       pos:"noun"},
+        {word:"залгиха",    meaning:"глотать",      pos:"noun"},
+        {word:"залд гэхэ",  meaning:"вздрогнуть",   pos:"noun"},
+        {word:"залхуутай",  meaning:"нудный",       pos:"noun"},
+        {word:"зальбарал",  meaning:"молитва",      pos:"noun"},
+        {word:"зам",        meaning:"путь",         pos:"noun"},
+        {word:"түмэр зам",  meaning:"железная дорога",        pos:"noun"},
+        {word:"аян зам",    meaning:"дальняя дорога",         pos:"noun"},
+        {word:"замбаа",     meaning:"поджаренная мука",       pos:"noun"},
+        {word:"шэрүүн зан", meaning:"чёрствость",   pos:"noun"},
+        {word:"зан",        meaning:"характер",     pos:"noun"},
+        {word:"урин зан",   meaning:"приветливость",          pos:"noun"},
+        {word:"замбуулинай онгосо",        meaning:"космический корабль",         pos:"noun"},
+        {word:"замшан",     meaning:"путник",      pos:"noun"},
+        {word:"занга",      meaning:"ловушка",      pos:"noun"},
+        {word:"зангалай",   meaning:"жабры",        pos:"noun"},
+        {word:"зангидаха",  meaning:"завязывать узел",        pos:"noun"},
+        {word:"зангилаа",   meaning:"узел",         pos:"noun"},
+        {word:"зангяа",     meaning:"нашейный талисман",      pos:"noun"},
+        {word:"зандаа",     meaning:"по прежнему",  pos:"noun"},
+        {word:"зандан",     meaning:"сандал",       pos:"noun"},
+        {word:"агар зандан модон",     meaning:"алоэ",        pos:"noun"},
+        {word:"зантагар",   meaning:"большеголовый",          pos:"noun"},
+        {word:"гэнэн зантай",      meaning:"наивный",         pos:"noun"},
+        {word:"хүнгэн зантай",     meaning:"легкомысленный",  pos:"noun"},
+        {word:"заншал",     meaning:"привычка",     pos:"noun"},
+        {word:"заншалта",   meaning:"традиционный", pos:"noun"},
+        {word:"зар",        meaning:"оповещение",   pos:"noun"},
+        {word:"магтажа зар тунхаг болгохо",       meaning:"рекламировать",       pos:"noun"},
+        {word:"заралган",   meaning:"ссылка",       pos:"noun"},
+        {word:"зараса",     meaning:"слуга",        pos:"noun"},
+        {word:"зараха",     meaning:"использовать для услуг", pos:"noun"},
+        {word:"зарга",      meaning:"жалоба",       pos:"noun"},
+        {word:"зарим",      meaning:"некоторый",    pos:"noun"},
+        {word:"заримдаа",   meaning:"иногда",       pos:"noun"},
+        {word:"зарлиг",     meaning:"повеление",    pos:"noun"},
+        {word:"заршам",     meaning:"обыкновение",  pos:"noun"},
+        {word:"засаг",      meaning:"власть",       pos:"noun"},
+        {word:"эзэн хаанта засаг",    meaning:"монархия",       pos:"noun"},
+        {word:"дээдэ засаг",     meaning:"верховная власть",    pos:"noun"},
+        {word:"засаг баригша",   meaning:"правитель",           pos:"noun"},
+        {word:"захирал",    meaning:"распоряжение", pos:"noun"},
+        {word:"захирагша",  meaning:"управляющий",  pos:"noun"},
+        {word:"захиргаан",  meaning:"управление",   pos:"noun"},
+        {word:"захяа",      meaning:"наказ",        pos:"noun"},
+        {word:"заhабари",   meaning:"поправка",     pos:"noun"},
+        {word:"мэсэ заhал",      meaning:"хирургия",       pos:"noun"},
+        {word:"заhал",      meaning:"приданое",     pos:"noun"},
+        {word:"заhарха",    meaning:"исправляться",        pos:"noun"},
+        {word:"унтари заhаха",        meaning:"застилать постель",        pos:"noun"},
+        {word:"бэе заhадаг газар",    meaning:"туалет",       pos:"noun"},
+        {word:"долоон заяанай",       meaning:"испокон веку", pos:"noun"},
+        {word:"заяандаашье",meaning:"никогда",      pos:"noun"},
+        {word:"золгүй",     meaning:"несчастливый", pos:"noun"},
+        {word:"зольбогор",  meaning:"эллипсоидный", pos:"noun"},
+        {word:"зомгоол",    meaning:"стружка",      pos:"noun"},
+        {word:"зомгооhон",  meaning:"щепка",        pos:"noun"},
+        {word:"зон",        meaning:"люди",         pos:"noun"},
+        {word:"зон ниитэ",  meaning:"массы",        pos:"noun"},
+        {word:"бүhэтэй зон",meaning:"мужчины",      pos:"noun"},
+        {word:"наhатай зон",meaning:"пожилые люди", pos:"noun"},
+        {word:"нютагай зон",meaning:"местные жители",         pos:"noun"},
+        {word:"зонгүй",     meaning:"безлюдный",    pos:"noun"},
+        {word:"зонхилогшо", meaning:"администратор",pos:"noun"},
+        {word:"зоо",        meaning:"седалищный нерв",        pos:"noun"},
+        {word:"зоог",       meaning:"кушанье, яства",         pos:"noun"},
+        {word:"зоос",       meaning:"монета",       pos:"noun"},
+        {word:"зоохо",      meaning:"вкапывать",    pos:"noun"},
+        {word:"зоргон",     meaning:"произвол",     pos:"noun"},
+        {word:"зорилго",    meaning:"цель",         pos:"noun"},
+        {word:"зорюулга",   meaning:"предназначение",         pos:"noun"},
+        {word:"зорюулха",   meaning:"посвящать",    pos:"noun"},
+        {word:"зохёогшо",   meaning:"автор",        pos:"noun"},
+        {word:"зохёол",     meaning:"произведение", pos:"noun"},
+        {word:"аман зохёол",meaning:"фольклор",     pos:"noun"},
+        {word:"уран зохёол",meaning:"художественное произведение", pos:"noun"},
+        {word:"ухаалан зохёохо",        meaning:"изобретать",      pos:"noun"},
+        {word:"уран зохёохы",           meaning:"творческий",      pos:"noun"},
+        {word:"зохёохы замынь",         meaning:"творческий путь", pos:"noun"},
+        {word:"зохид",      meaning:"подходящий",   pos:"noun"},
+        {word:"зохид hайн", meaning:"прекрасный",   pos:"verb"},
+        {word:"зохид зантай",  meaning:"вежливый",  pos:"verb"},
+        {word:"урин зохид", meaning:"ласковый",     pos:"verb"},
+        {word:"зохидхон",   meaning:"приятный",     pos:"verb"},
+        {word:"зохилдуулга",meaning:"сочетание",    pos:"verb"},
+        {word:"зоходохо",   meaning:"икать",        pos:"verb"},
+        {word:"зохолоон",   meaning:"зуд",          pos:"verb"},
+        {word:"зошо",       meaning:"гостеприимный",pos:"verb"},
+        {word:"зөөбэри",    meaning:"перевозка",    pos:"verb"},
+        {word:"аша зөөлгэ", meaning:"транспортировка грузов", pos:"verb"},
+        {word:"зөөгшэ",     meaning:"носильщик",    pos:"adj"},
+        {word:"зөөлэн",     meaning:"мягкий",       pos:"adj"},
+        {word:"зөөлэн эдеэн",       meaning:"деликатес",     pos:"adj"},
+        {word:"үнэгэн зөөлөөр",     meaning:"вкрадчиво",     pos:"adj"},
+        {word:"зулгы",      meaning:"любезный",     pos:"adj"},
+        {word:"шанаhан зөөхэй",  meaning:"саламат", pos:"adj"},
+        {word:"зубхи",      meaning:"веки",         pos:"adj"},
+        {word:"зугаа",      meaning:"разговор",     pos:"adj"},
+        {word:"зуд",        meaning:"бескормица",   pos:"adj"},
+        {word:"зузаан",     meaning:"толстый (о предметах)", pos:"adj"},
+        {word:"уhан зулгы", meaning:"льстивый",     pos:"adj"},
+        {word:"зулзага",    meaning:"детёныш животных", pos:"adj"},
+        {word:"зураадаhан", meaning:"линия",        pos:"adj"},
+        {word:"зураг",      meaning:"рисунок",      pos:"adj"},
+        {word:"зураг абагша",       meaning:"фотограф",    pos:"adj"},
+        {word:"hүүдэр зураг",       meaning:"силуэт",      pos:"adj"},
+        {word:"томо зураг", meaning:"панно",         pos:"adj"},
+        {word:"шугам зураг",meaning:"чертёж",        pos:"adj"},
+        {word:"байгаали харуулhан зураг",     meaning:"пейзаж",   pos:"noun"},
+        {word:"шог ёгто зураг",       meaning:"шарж",         pos:"adj"},
+        {word:"зуралга",    meaning:"рисование",     pos:"noun"},
+        {word:"зурам",      meaning:"линия",         pos:"noun"},
+        {word:"зургаан",    meaning:"учреждение",    pos:"noun"},
+        {word:"хуули зургаан",        meaning:"государственное учреждение",   pos:"noun"},
+        {word:"зурхай",     meaning:"астрология",    pos:"noun"},
+        {word:"зурхайша лама",   meaning:"астролог", pos:"noun"},
+        {word:"зуу",        meaning:"статуя Будды",  pos:"noun"},
+        {word:"Зандан зуу", meaning:"Сандаловый Будда",        pos:"noun"},
+        {word:"зуудаг",     meaning:"кусающийся",    pos:"noun"},
+        {word:"гар зуура",  meaning:"мимоходом",     pos:"noun"},
+        {word:"зуулга",     meaning:"укус",          pos:"noun"},
+        {word:"гэхэ зуура", meaning:"между тем",     pos:"noun"},
+        {word:"ябууд зуура",meaning:"мгновенно",     pos:"noun"},
+        {word:"зуураха",    meaning:"смешивать",     pos:"noun"},
+        {word:"зуурмаг",    meaning:"тесто",         pos:"noun"},
+        {word:"саг зуурын", meaning:"временный",     pos:"noun"},
+        {word:"зууша",      meaning:"закуска",       pos:"noun"},
+        {word:"зүб",        meaning:"правильный",    pos:"noun"},
+        {word:"зүб шүүмжэлэл",      meaning:"здоровая критика", pos:"noun"},
+        {word:"нара зүб",   meaning:"посолонь",      pos:"noun"},
+        {word:"зүб даа",    meaning:"верно",         pos:"noun"},
+        {word:"зүблөөн",    meaning:"совещание",     pos:"noun"},
+        {word:"зүблэлтэ",   meaning:"советский",     pos:"noun"},
+        {word:"Зүблэлтэ засаг",     meaning:"Советская власть", pos:"noun"},
+        {word:"зүблөө",     meaning:"довольно",      pos:"noun"},
+        {word:"зүбөөр",     meaning:"правильно",     pos:"adj"},
+        {word:"зүбшөөл",    meaning:"одобрение",     pos:"noun"},
+        {word:"зүбшөөгөөрэйгты",        meaning:"разрешите", pos:"noun"},
+        {word:"зүбшэгшэ",   meaning:"советчик",      pos:"noun"},
+        {word:"зүбшэл",     meaning:"совет",         pos:"noun"},
+        {word:"зүг",        meaning:"сторона",       pos:"noun"},
+        {word:"зүгышэн",    meaning:"пчеловод",      pos:"noun"},
+        {word:"зүгын гэр",  meaning:"улей",          pos:"noun"},
+        {word:"зүдэг",      meaning:"срам",          pos:"adj"},
+        {word:"зүдэрүү",    meaning:"измождённый",   pos:"noun"},
+        {word:"зүжэг",      meaning:"пьеса",         pos:"noun"},
+        {word:"зүжэгшэн",   meaning:"артист",        pos:"noun"},
+        {word:"зүй",        meaning:"сущность",      pos:"noun"},
+        {word:"абяан зүй",  meaning:"фонетика",      pos:"noun"},
+        {word:"газар зүй",  meaning:"география",     pos:"noun"},
+        {word:"хэлэнэй зүй",meaning:"грамматика",    pos:"noun"},
+        {word:"үгэ зүй",    meaning:"морфология",    pos:"noun"},
+        {word:"ургамал зүй",meaning:"ботаника",      pos:"noun"},
+        {word:"зүйл",       meaning:"категория",     pos:"noun"},
+        {word:"янза зүйл",  meaning:"ассортимент",   pos:"noun"},
+        {word:"хуулиин зүйл",        meaning:"статья закона",  pos:"noun"},
+        {word:"жэжэ зүйл",  meaning:"мелочь",        pos:"noun"},
+        {word:"зүндөө болоhон",        meaning:"стихийный",    pos:"noun"},
+        {word:"зүнтэг",     meaning:"одряхлевший от старости", pos:"noun"},
+        {word:"зүргэ",      meaning:"тропинка", pos:"noun"},
+        {word:"зүрилдөөн",  meaning:"противоречие",  pos:"noun"},
+        {word:"зүрхэ буляаха",       meaning:"очаровать",      pos:"noun"},
+        {word:"зүрхэ алдалга",       meaning:"робость",        pos:"noun"},
+        {word:"зүрюу",      meaning:"упрямый",       pos:"noun"},
+        {word:"зүүдхэл",    meaning:"украшение",     pos:"noun"},
+        {word:"зүүдэн",     meaning:"сновидение",    pos:"noun"},
+        {word:"зүүридэhэн", meaning:"родовые схватки",         pos:"noun"},
+        {word:"зүhэм",      meaning:"кусок",         pos:"noun"},
+        {word:"зүhэн",      meaning:"масть",         pos:"noun"},
+        {word:"зүhэхэ",     meaning:"резать ломтями",pos:"noun"},
+        {word:"зэбсэг",     meaning:"орудие",        pos:"noun"},
+        {word:"зэбсэгтэ",   meaning:"вооружённый",   pos:"noun"},
+        {word:"зэбсэгтэ хүсэнүүд",       meaning:"вооружённые силы",  pos:"noun"},
+        {word:"шулуун зэбсэгтэ үе",      meaning:"каменный век",      pos:"noun"},
+        {word:"зэд",        meaning:"медь",          pos:"noun"},
+        {word:"зэд мүнгэн", meaning:"медные деньги", pos:"noun"},
+        {word:"зэлэ",       meaning:"вереница",      pos:"noun"},
+        {word:"зэр зэмсэг", meaning:"оснащение",     pos:"noun"},
+        {word:"зэмэ",       meaning:"вина",          pos:"noun"},
+        {word:"зэмэ тохолго", meaning:"взыскание",   pos:"noun"},
+        {word:"зэмэгүй",    meaning:"невинный",      pos:"noun"},
+        {word:"зэмэтэн",    meaning:"виновник",      pos:"noun"},
+        {word:"дунда зэргын", meaning:"средний",     pos:"noun"},
+        {word:"дээдэ зэргын", meaning:"первоклассный",         pos:"noun"},
+        {word:"зэргэ",      meaning:"степень",       pos:"noun"},
+        {word:"нэрэ зэргэ", meaning:"звание",        pos:"noun"},
+        {word:"албанай зэргэ", meaning:"служебное положение",  pos:"noun"},
+        {word:"зэргэлээ",   meaning:"находящийся рядом",       pos:"noun"},
+        {word:"зэрлиг",     meaning:"дикий",         pos:"noun"},
+        {word:"зээг",       meaning:"перхоть",       pos:"noun"},
+        {word:"зээли",      meaning:"долг",          pos:"noun"},
+        {word:"", meaning:"слюна", pos:"noun"},
+        {word:"уураг тархи", meaning:"мозг", pos:"noun"},
+        {word:"хүл", meaning:"нога", pos:"noun"},
+        {word:"гар", meaning:"рука", pos:"noun"},
+        {word:"хото", meaning:"желудок", pos:"noun"},
+        {word:"уушха", meaning:"лёгкие", pos:"noun"},
+        {word:"үргэн", meaning:"подбородок", pos:"noun"},
+        {word:"шүлэн", meaning:"суп", pos:"noun"},
+        {word:"хилээмэн", meaning:"хлеб", pos:"noun"},
+        {word:"тоhон", meaning:"масло", pos:"noun"},
+        {word:"һүн", meaning:"молоко", pos:"noun"},
+        {word:"мяхан", meaning:"мясо", pos:"noun"},
+        {word:"бууза", meaning:"позы", pos:"noun"},
+        {word:"талхан", meaning:"мука", pos:"noun"},
+        {word:"ээзгэй", meaning:"творог", pos:"noun"},
+        {word:"шүүhэн", meaning:"сок", pos:"noun"},
+        {word:"будаа", meaning:"каша", pos:"noun"},
+        {word:"сагаан будаа", meaning:"рис", pos:"noun"},
+        {word:"сай", meaning:"чай", pos:"noun"},
+        {word:"үндэгэн", meaning:"яйцо", pos:"noun"},
+        {word:"тараг", meaning:"кефир,простокваша", pos:"noun"},
+        {word:"бялуу", meaning:"торт", pos:"noun"},
+        {word:"аяга", meaning:"чашка", pos:"noun"},
+        {word:"табаг", meaning:"тарелка", pos:"noun"},
+        {word:"халбага", meaning:"ложка", pos:"noun"},
+        {word:"тэбшэ", meaning:"сковорода", pos:"noun"},
+        {word:"шанага", meaning:"ковш", pos:"noun"},
+        {word:"бумба", meaning:"ваза", pos:"noun"},
+        {word:"бөөрэ", meaning:"почки", pos:"noun"},
+        {word:"өөхэн", meaning:"сало", pos:"noun"},
+        {word:"зөөхэй", meaning:"сметана", pos:"noun"},
+        {word:"hэрээ", meaning:"вилка", pos:"noun"},
+        {word:"хундага", meaning:"бокал", pos:"noun"},
+        {word:"тогоон", meaning:"кастрюля", pos:"noun"},
+        {word:"домбо", meaning:"чайник", pos:"noun"},
+        {word:"гүсэ", meaning:"заварник", pos:"noun"},
+        {word:"алим", meaning:"яблоко", pos:"verb"},
+        {word:"мойhон", meaning:"черёмуха", pos:"verb"},
+        {word:"шасаргана", meaning:"облепиха", pos:"verb"},
+        {word:"зэдэгэнэ", meaning:"земляника", pos:"verb"},
+        {word:"забаан зэдэгэнэ", meaning:"слушать", pos:"verb"},
+        {word:"алирhан", meaning:"брусника", pos:"verb"},
+        {word:"нэрhэн", meaning:"голубика", pos:"verb"},
+        {word:"үхэр нюдэн", meaning:"смородина", pos:"verb"},
+        {word:"улаагана", meaning:"красная смородина", pos:"verb"},
+        {word:"түмhэн", meaning:"картошка", pos:"verb"},
+        {word:"hонгино", meaning:"лук", pos:"adj"},
+        {word:"лонхо", meaning:"бутылка", pos:"adj"},
+        {word:"морхооб", meaning:"морковь", pos:"adj"},
+        {word:"тарвас", meaning:"арбуз", pos:"adj"},
+        {word:"чавга", meaning:"слива", pos:"adj"},
+        {word:"үгэрсэ", meaning:"огурец", pos:"adj"},
+        {word:"hархяаг", meaning:"гриб", pos:"adj"},
+        {word:"hамар", meaning:"орех", pos:"adj"},
+        {word:"жэмэс", meaning:"ягода", pos:"adj"},
+        {word:"лууван", meaning:"свекла", pos:"adj"},
+        {word:"үhээ", meaning:"потолок", pos:"adj"},
+        {word:"оёор", meaning:"дно", pos:"adj"},
+        {word:"шала", meaning:"пол", pos:"adj"},
+        {word:"хана", meaning:"стена", pos:"adj"},
+        {word:"сонхо", meaning:"окно", pos:"adj"},
+        {word:"үүдэн", meaning:"дверь", pos:"adj"},
+        {word:"орон", meaning:"кровать", pos:"adj"},
+        {word:"хүнжэл", meaning:"одеяло", pos:"adj"},
+        {word:"дэрэ", meaning:"подушка", pos:"noun"},
+        {word:"таhалга", meaning:"комната", pos:"adj"},
+        {word:"жорлон", meaning:"туалет", pos:"noun"},
+        {word:"тогооной гэр", meaning:"кухня", pos:"noun"},
+        {word:"hуудал", meaning:"стул", pos:"noun"},
+        {word:"hандали", meaning:"скамейка", pos:"noun"},
+        {word:"гэшхүүр", meaning:"лестница", pos:"noun"},
+        {word:"боhолго", meaning:"порог", pos:"noun"},
+        {word:"булан", meaning:"угол", pos:"noun"},
+        {word:"хушалта", meaning:"крыша", pos:"noun"},
+        {word:"пеэшэн", meaning:"печка", pos:"noun"},
+        {word:"хибэс", meaning:"ковёр", pos:"noun"},
+        {word:"элюур", meaning:"утюг", pos:"noun"},
+        {word:"хүргээбэри", meaning:"холодильник", pos:"noun"},
+        {word:"аршуур", meaning:"полотенце", pos:"noun"},
+        {word:"алха", meaning:"молоток", pos:"noun"},
+        {word:"хадааhан", meaning:"гвоздь", pos:"noun"},
+        {word:"хюрөө", meaning:"пила", pos:"noun"},
+        {word:"hүхэ", meaning:"топор", pos:"noun"},
+        {word:"тармуур", meaning:"грабли", pos:"noun"},
+        {word:"тэргэ", meaning:"телега", pos:"noun"},
+        {word:"түлеэн", meaning:"дрова", pos:"noun"},
+        {word:"хайша", meaning:"ножницы", pos:"noun"},
+        {word:"зүүн", meaning:"иголка", pos:"noun"},
+        {word:"зула", meaning:"свеча", pos:"noun"},
+        {word:"хүнэг", meaning:"ведро", pos:"noun"},
+        {word:"сабуун", meaning:"клей", pos:"noun"},
+        {word:"зуруул", meaning:"спички", pos:"adj"},
+        {word:"аса", meaning:"вилы", pos:"noun"},
+        {word:"хажуур", meaning:"коса", pos:"noun"},
+        {word:"гүлгэн", meaning:"щенок, детёныш", pos:"noun"},
+        {word:"үнеэн", meaning:"корова", pos:"noun"},
+        {word:"тугал", meaning:"телёнок", pos:"noun"},
+        {word:"хонин", meaning:"овца", pos:"noun"},
+        {word:"хуса", meaning:"баран", pos:"noun"},
+        {word:"тэхэ", meaning:"козёл", pos:"adj"},
+        {word:"эшэгэн", meaning:"козлёнок", pos:"noun"},
+        {word:"гахай", meaning:"свинья", pos:"noun"},
+        {word:"поршоонхо", meaning:"поросёнок", pos:"noun"},
+        {word:"буха", meaning:"бык", pos:"noun"},
+        {word:"морин", meaning:"лошадь", pos:"noun"},
+        {word:"унаган", meaning:"жеребёнок", pos:"noun"},
+        {word:"элжэгэн", meaning:"осёл", pos:"noun"},
+        {word:"ботогон", meaning:"верблюжонок", pos:"noun"},
+        {word:"тахяа", meaning:"курица", pos:"noun"},
+        {word:"эрэ тахяа", meaning:"петух", pos:"noun"},
+        {word:"галуун", meaning:"гусь", pos:"noun"},
+        {word:"дальбараа", meaning:"птенчик", pos:"noun"},
+        {word:"тугас", meaning:"павлин", pos:"noun"},
+        {word:"нугаhан", meaning:"утка", pos:"noun"},
+        {word:"гэрэй амитан", meaning:"домашнее животное", pos:"noun"},
+        {word:"эмээл", meaning:"седло", pos:"noun"},
+        {word:"таха", meaning:"подкова", pos:"noun"},
+        {word:"дали", meaning:"крыло", pos:"noun"},
+        {word:"нооhон", meaning:"шерсть", pos:"noun"},
+        {word:"шоно", meaning:"волк", pos:"noun"},
+        {word:"үеэлэн", meaning:"двюродный", pos:"noun"},
+        {word:"хаяалан", meaning:"троюродный", pos:"noun"},
+        {word:"түрэ", meaning:"свадьба", pos:"noun"},
+        {word:"нэрэ", meaning:"имя", pos:"noun"},
+        {word:"обог", meaning:"фамилия", pos:"noun"},
+        {word:"ээм", meaning:"плечо", pos:"noun"},
+        {word:"hуга", meaning:"подмышки", pos:"noun"},
+        {word:"хүйhэн", meaning:"пупок", pos:"noun"},
+        {word:"нюур", meaning:"лицо", pos:"noun"},
+        {word:"туруун", meaning:"копыто", pos:"noun"},
+        {word:"сорго", meaning:"труба", pos:"noun"},
+        {word:"гэрэл", meaning:"зеркало", pos:"noun"},
+        {word:"суурга", meaning:"замок", pos:"noun"},
+        {word:"түлхюур", meaning:"ключ", pos:"noun"},
+        {word:"табюур", meaning:"полка", pos:"noun"},
+        {word:"сэргэ", meaning:"коновязь", pos:"noun"},
+        {word:"гал гуламта", meaning:"домашний очаг", pos:"noun"},
+        {word:"гал", meaning:"огонь", pos:"noun"},
+        {word:"түрьhэн", meaning:"икра", pos:"noun"},
+        {word:"эм", meaning:"лекарство", pos:"noun"},
+        {word:"зайрмаг", meaning:"мороженое", pos:"noun"},
+        {word:"арад", meaning:"народ", pos:"noun"},
+        {word:"hагшуур", meaning:"сито", pos:"noun"},
+        {word:"хүрзэ", meaning:"лопата", pos:"noun"},
+        {word:"бар", meaning:"барс", pos:"noun"},
+        {word:"хэрмэн", meaning:"белка", pos:"noun"},
+        {word:"жэрхи", meaning:"бурундук", pos:"noun"},
+        {word:"заряа", meaning:"ёж", pos:"noun"},
+        {word:"анааша", meaning:"жираф", pos:"noun"},
+        {word:"шандаган", meaning:"заяц", pos:"noun"},
+        {word:"хулан", meaning:"зебра", pos:"noun"},
+        {word:"могой", meaning:"змея", pos:"noun"},
+        {word:"бодон гахай", meaning:"кабан", pos:"noun"},
+        {word:"эмжэ", meaning:"кенгуру", pos:"noun"},
+        {word:"гүрөөhэн", meaning:"косуля", pos:"noun"},
+        {word:"матар", meaning:"крокодил", pos:"noun"},
+        {word:"мана hохор", meaning:"крот", pos:"noun"},
+        {word:"эрбэд", meaning:"леопард", pos:"noun"},
+        {word:"хандагай", meaning:"лось", pos:"noun"},
+        {word:"баабгай", meaning:"медведь", pos:"noun"},
+        {word:"хулгана", meaning:"мышь", pos:"noun"},
+        {word:"hармагшан", meaning:"обезьяна", pos:"noun"},
+        {word:"буга", meaning:"олень", pos:"noun"},
+        {word:"зээгэн", meaning:"росомаха", pos:"noun"},
+        {word:"тарбаган", meaning:"сурок", pos:"noun"},
+        {word:"бар", meaning:"тигр", pos:"noun"},
+        {word:"мэндэ", meaning:"здравствуйте", pos:"noun"},
+        {word:"баяртай", meaning:"до свидания", pos:"noun"},
+        {word:"хүлисыт", meaning:"извините", pos:"noun"},
+        {word:"баярлаа", meaning:"спасибо", pos:"noun"},
+        {word:"шэнэ жэл", meaning:"новый год", pos:"noun"},
+        {word:"амаршалнаб", meaning:"поздравляю", pos:"noun"},
+        {word:"бэлэг", meaning:"подарок", pos:"noun"},
+        {word:"hайндэрөөр", meaning:"с праздником", pos:"noun"},
+        {word:"түрэhэн үдэрөөр", meaning:"с днём рождения", pos:"noun"},
+        {word:"тэг", meaning:"ноль", pos:"noun"},
+        {word:"зуун", meaning:"сто", pos:"noun"},
+        {word:"сая", meaning:"миллион", pos:"noun"},
+        {word:"түмэн", meaning:"десять тысяч", pos:"noun"},
+        {word:"мянган", meaning:"тысяча", pos:"noun"},
+        {word:"тэрбүм", meaning:"миллиард", pos:"noun"},
+        {word:"шара улаан", meaning:"оранжевый", pos:"noun"},
+        {word:"сэнхир", meaning:"голубой", pos:"noun"},
+        {word:"ягаан хүхэ", meaning:"фиолетовый", pos:"verb"},
+        {word:"ягаан", meaning:"розовый", pos:"verb"},
+        {word:"боро", meaning:"серый", pos:"verb"},
+        {word:"хүрин", meaning:"коричневый", pos:"verb"},
+        {word:"алтан", meaning:"золотой", pos:"verb"},
+        {word:"сагаан мүнгэн", meaning:"серебристый", pos:"verb"},
+        {word:"би", meaning:"я", pos:"verb"},
+        {word:"ши", meaning:"ты", pos:"verb"},
+        {word:"бидэ", meaning:"мы", pos:"verb"},
+        {word:"таанар", meaning:"вы", pos:"verb"},
+        {word:"тэрэ", meaning:"он", pos:"adj"},
+        {word:"тэдэнэр", meaning:"они", pos:"adj"},
+        {word:"минии", meaning:"мой", pos:"adj"},
+        {word:"манай", meaning:"наш", pos:"adj"},
+        {word:"шинии", meaning:"твой", pos:"adj"},
+        {word:"танай", meaning:"ваш", pos:"adj"},
+        {word:"намда", meaning:"мне", pos:"adj"},
+        {word:"нам", meaning:"манда", pos:"adj"},
+        {word:"шамда", meaning:"тебе", pos:"adj"},
+        {word:"вам", meaning:"танда", pos:"adj"},
+        {word:"тэрэнэй", meaning:"его", pos:"adj"},
+        {word:"тэдэнэй", meaning:"их", pos:"adj"},
+        {word:"тэрээндэ", meaning:"ему", pos:"adj"},
+        {word:"тэдээндэ", meaning:"им", pos:"adj"},
+        {word:"булта", meaning:"все", pos:"adj"},
+        {word:"хэн", meaning:"кто", pos:"adj"},
+        {word:"юун", meaning:"что", pos:"adj"},
+        {word:"юундэ", meaning:"почему", pos:"adj"},
+        {word:"хаана", meaning:"где", pos:"noun"},
+        {word:"хэзээ", meaning:"когда", pos:"adj"},
+        {word:"хайшан гээд", meaning:"как", pos:"noun"},
+        {word:"хэды", meaning:"сколько", pos:"noun"},
+        {word:"хуу", meaning:"всё", pos:"noun"},
+        {word:"бүхы", meaning:"весь", pos:"noun"},
+        {word:"энэ", meaning:"этот", pos:"noun"},
+        {word:"эдэ", meaning:"эти", pos:"noun"},
+        {word:"бэеэ", meaning:"себя", pos:"noun"},
+        {word:"өөрөө", meaning:"сам", pos:"noun"},
+        {word:"ямар", meaning:"какой", pos:"noun"},
+        {word:"тэндэ", meaning:"там", pos:"noun"},
+        {word:"тиишээ", meaning:"туда", pos:"noun"},
+        {word:"наhан", meaning:"жизнь", pos:"noun"},
+        {word:"хуби заяан", meaning:"судьба", pos:"noun"},
+        {word:"талаан", meaning:"удача", pos:"noun"},
+        {word:"баялиг", meaning:"богатство", pos:"noun"},
+        {word:"ядарал", meaning:"бедность", pos:"noun"},
+        {word:"эб", meaning:"мир", pos:"noun"},
+        {word:"илалта", meaning:"победа", pos:"noun"},
+        {word:"дайн", meaning:"война", pos:"noun"},
+        {word:"элүүр", meaning:"здоровье", pos:"noun"},
+        {word:"оюун бэлиг", meaning:"мудрость", pos:"noun"},
+        {word:"шүүмжэлэл", meaning:"критика", pos:"noun"},
+        {word:"этигэмжэ", meaning:"надежда", pos:"noun"},
+        {word:"ухаан", meaning:"ум", pos:"noun"},
+        {word:"хэрэг", meaning:"дело", pos:"noun"},
+        {word:"ажал", meaning:"труд", pos:"adj"},
+        {word:"амаралта", meaning:"отдых", pos:"noun"},
+        {word:"хүхилгэн", meaning:"веселье", pos:"noun"},
+        {word:"залхууралга", meaning:"лень", pos:"noun"},
+        {word:"эрдэм", meaning:"знание", pos:"noun"},
+        {word:"алдар", meaning:"слава", pos:"noun"},
+        {word:"хүгжэлтэ", meaning:"развитие", pos:"noun"},
+        {word:"ябадал", meaning:"движение", pos:"noun"},
+        {word:"туhа", meaning:"помощь", pos:"adj"},
+        {word:"нүхэрлэлгэ", meaning:"дружба", pos:"noun"},
+        {word:"наадан", meaning:"игра", pos:"noun"},
+        {word:"уулзалга", meaning:"встреча", pos:"noun"},
+        {word:"үhөөн", meaning:"месть", pos:"noun"},
+        {word:"мэхэ", meaning:"хитрость", pos:"noun"},
+        {word:"удха ушар", meaning:"смысл", pos:"noun"},
+        {word:"удха шанар", meaning:"значение", pos:"noun"},
+        {word:"ушар", meaning:"случай", pos:"noun"},
+        {word:"хуули", meaning:"закон", pos:"noun"},
+        {word:"магтаал", meaning:"похвала", pos:"noun"},
+        {word:"үри", meaning:"долг", pos:"noun"},
+        {word:"анхарал", meaning:"внимание", pos:"noun"},
+        {word:"үбшэн", meaning:"болезнь", pos:"noun"},
+        {word:"зөөри", meaning:"имущество", pos:"noun"},
+        {word:"мүрысөөн", meaning:"соревнование", pos:"noun"},
+        {word:"хүсэл", meaning:"желание", pos:"noun"},
+        {word:"угтамжа", meaning:"приветствие", pos:"noun"},
+        {word:"түүхэ", meaning:"история", pos:"noun"},
+        {word:"ёhо заншал", meaning:"традиция", pos:"noun"},
+        {word:"тангариг", meaning:"клятва", pos:"noun"},
+        {word:"дурасхаал", meaning:"память", pos:"noun"},
+        {word:"доромжолго", meaning:"оскорбление", pos:"noun"},
+        {word:"хоног", meaning:"сутки", pos:"noun"},
+        {word:"долоон хоног", meaning:"неделя", pos:"noun"},
+        {word:"жэл", meaning:"год", pos:"noun"},
+        {word:"hара", meaning:"месяц", pos:"noun"},
+        {word:"мүнөөдэр", meaning:"сегодня", pos:"noun"},
+        {word:"үглөөдэр", meaning:"завтра", pos:"noun"},
+        {word:"нүгөөдэр", meaning:"послезавтра", pos:"noun"},
+        {word:"уржадэр", meaning:"позавчера", pos:"noun"},
+        {word:"үсэгэлдэр", meaning:"вчера", pos:"noun"},
+        {word:"орон", meaning:"страна", pos:"noun"},
+        {word:"нютаг", meaning:"родина", pos:"noun"},
+        {word:"хото", meaning:"город", pos:"noun"},
+        {word:"тосхон", meaning:"село", pos:"noun"},
+        {word:"гүрэн", meaning:"государство", pos:"noun"},
+        {word:"аймаг", meaning:"район", pos:"noun"},
+        {word:"гудамжа", meaning:"улица", pos:"noun"},
+        {word:"хилэ", meaning:"граница", pos:"noun"},
+        {word:"яhатан", meaning:"национальность", pos:"noun"},
+        {word:"Газар дэлхэй", meaning:"Земля", pos:"noun"},
+        {word:"юртэмсэ", meaning:"вселенная", pos:"noun"},
+        {word:"замбуулин", meaning:"космос", pos:"noun"},
+        {word:"замби", meaning:"материк", pos:"noun"},
+        {word:"далай", meaning:"море", pos:"noun"},
+        {word:"хаяг", meaning:"адрес", pos:"noun"},
+        {word:"гараг", meaning:"планета", pos:"noun"},
+        {word:"нуур", meaning:"озеро", pos:"noun"},
+        {word:"гол", meaning:"речка", pos:"noun"},
+        {word:"мүрэн", meaning:"река", pos:"noun"},
+        {word:"горхон", meaning:"ручей", pos:"noun"},
+        {word:"арал", meaning:"остров", pos:"noun"},
+        {word:"агы", meaning:"пещера", pos:"noun"},
+        {word:"эрье", meaning:"берег", pos:"noun"},
+        {word:"ой", meaning:"лес", pos:"noun"},
+        {word:"хада", meaning:"гора", pos:"noun"},
+        {word:"элhэн", meaning:"пустыня", pos:"noun"},
+        {word:"урда зүг", meaning:"юг", pos:"noun"},
+        {word:"хойто зүг", meaning:"север", pos:"noun"},
+        {word:"баруун зүг", meaning:"запад", pos:"noun"},
+        {word:"зүүн зүг", meaning:"восток", pos:"noun"},
+        {word:"гүйхэ", meaning:"бегать", pos:"noun"},
+        {word:"үмдэхэ", meaning:"надевать", pos:"noun"},
+        {word:"байха", meaning:"стоять", pos:"noun"},
+        {word:"аршаха", meaning:"вытирать", pos:"noun"},
+        {word:"hууха", meaning:"сидеть", pos:"noun"},
+        {word:"ябаха", meaning:"ходить", pos:"noun"},
+        {word:"абаха", meaning:"взять", pos:"noun"},
+        {word:"бодохо", meaning:"встать", pos:"noun"},
+        {word:"хэлэхэ", meaning:"говорить", pos:"noun"},
+        {word:"химэлхэ", meaning:"грызть", pos:"noun"},
+        {word:"бии", meaning:"имеется", pos:"noun"},
+        {word:"хэхэ", meaning:"делать", pos:"noun"},
+        {word:"наадаха", meaning:"играть", pos:"noun"},
+        {word:"шэрдэхэ", meaning:"красить", pos:"noun"},
+        {word:"худалдажа абаха", meaning:"купить", pos:"noun"},
+        {word:"эдихэ", meaning:"кушать", pos:"noun"},
+        {word:"хэбтэхэ", meaning:"лежать", pos:"noun"},
+        {word:"угааха", meaning:"мыть", pos:"noun"},
+        {word:"олохо", meaning:"найти", pos:"noun"},
+        {word:"эхилхэ", meaning:"начать", pos:"noun"},
+        {word:"бусааха", meaning:"вернуть", pos:"noun"},
+        {word:"үгэхэ", meaning:"дать", pos:"noun"},
+        {word:"ниитэлхэ", meaning:"обобщать", pos:"verb"},
+        {word:"дуулаха", meaning:"петь", pos:"verb"},
+        {word:"бэшэхэ", meaning:"писать", pos:"verb"},
+        {word:"ууха", meaning:"пить", pos:"verb"},
+        {word:"ерэхэ", meaning:"приходить", pos:"verb"},
+        {word:"худалдаха", meaning:"продать", pos:"verb"},
+        {word:"дэбхэрхэ", meaning:"прыгать", pos:"verb"},
+        {word:"хорогодохо", meaning:"прятаться", pos:"verb"},
+        {word:"зураха", meaning:"рисовать", pos:"verb"},
+        {word:"тайлаха", meaning:"снимать", pos:"verb"},
+        {word:"болохо", meaning:"стать", pos:"adj"},
+        {word:"тоншохо", meaning:"стучать", pos:"adj"},
+        {word:"тоолохо", meaning:"считать", pos:"adj"},
+        {word:"хатарха", meaning:"танцевать", pos:"adj"},
+        {word:"эсэхэ", meaning:"устать", pos:"adj"},
+        {word:"хүндэлхэ", meaning:"чтить", pos:"adj"},
+        {word:"уншаха", meaning:"читать", pos:"adj"},
+        {word:"ябаха", meaning:"уйти", pos:"adj"},
+        {word:"хөөрэхэ", meaning:"рассказывать", pos:"adj"},
+        {word:"шэгнэхэ", meaning:"взвешивать", pos:"adj"},
+        {word:"үлеэхэ", meaning:"дуть", pos:"adj"},
+        {word:"сээжэлдэхэ", meaning:"выучить", pos:"adj"},
+        {word:"нэхэхэ", meaning:"вязать", pos:"adj"},
+        {word:"эльбэхэ", meaning:"гладить", pos:"adj"},
+        {word:"сэнгэхэ", meaning:"гулять", pos:"adj"},
+        {word:"шэдэхэ", meaning:"кидать", pos:"adj"},
+        {word:"няаха", meaning:"клеить", pos:"adj"},
+        {word:"малтаха", meaning:"копать", pos:"adj"},
+        {word:"эрьелдэхэ", meaning:"кружиться", pos:"noun"},
+        {word:"шунгаха", meaning:"купаться", pos:"adj"},
+        {word:"шабаха", meaning:"лепить", pos:"noun"},
+        {word:"ниидэхэ", meaning:"лететь", pos:"noun"},
+        {word:"аргалха", meaning:"лечить", pos:"noun"},
+        {word:"хэмжэхэ", meaning:"мерить", pos:"noun"},
+        {word:"хамаха", meaning:"мести", pos:"noun"},
+        {word:"hаатуулха", meaning:"мешать", pos:"noun"},
+        {word:"худхаха", meaning:"перемешивать", pos:"noun"},
+        {word:"тэбэрихэ", meaning:"обнять", pos:"noun"},
+        {word:"унаха", meaning:"падать", pos:"noun"},
+        {word:"адуулха", meaning:"ухаживать", pos:"noun"},
+        {word:"хэблэхэ", meaning:"печатать", pos:"noun"},
+        {word:"үргэхэ", meaning:"поднять", pos:"noun"},
+        {word:"тамарха", meaning:"плавать", pos:"noun"},
+        {word:"харуулха", meaning:"показать", pos:"noun"},
+        {word:"уhалха", meaning:"поливать", pos:"noun"},
+        {word:"ургаха", meaning:"расти", pos:"noun"},
+        {word:"таhалха", meaning:"рвать", pos:"noun"},
+        {word:"отолхо", meaning:"резать", pos:"noun"},
+        {word:"яларха", meaning:"светить", pos:"noun"},
+        {word:"түлхихэ", meaning:"толкать", pos:"noun"},
+        {word:"хараха", meaning:"смотреть", pos:"noun"},
+        {word:"суглуулха", meaning:"собирать", pos:"noun"},
+        {word:"хайшалха", meaning:"стричь", pos:"noun"},
+        {word:"урдаха", meaning:"течь", pos:"noun"},
+        {word:"шэрэхэ", meaning:"тянуть", pos:"noun"},
+        {word:"унагааха", meaning:"уронить", pos:"adj"},
+        {word:"hургаха", meaning:"учить", pos:"noun"},
+        {word:"hураха", meaning:"учиться", pos:"noun"},
+        {word:"таалаха", meaning:"целовать", pos:"noun"},
+        {word:"заhаха", meaning:"чинить", pos:"noun"},
+        {word:"оёхо", meaning:"шить", pos:"noun"},
+        {word:"сохихо", meaning:"бить", pos:"noun"},
+        {word:"үбдэхэ", meaning:"болеть", pos:"noun"},
+        {word:"айха", meaning:"бояться", pos:"adj"},
+        {word:"шанаха", meaning:"варить", pos:"noun"},
+        {word:"дайлалдаха", meaning:"воевать", pos:"noun"},
+        {word:"hанаагаа зобохо", meaning:"волноваться", pos:"noun"},
+        {word:"уулзаха", meaning:"встретиться", pos:"noun"},
+        {word:"шараха", meaning:"жарить", pos:"noun"},
+        {word:"хүсэхэ", meaning:"желать", pos:"noun"},
+        {word:"ажаhууха", meaning:"жить", pos:"noun"},
+        {word:"мартаха", meaning:"забыть", pos:"noun"},
+        {word:"танилсаха", meaning:"знакомиться", pos:"noun"},
+        {word:"эдеэлүүлхэ", meaning:"кормить", pos:"noun"},
+        {word:"залхуурха", meaning:"лениться", pos:"noun"},
+        {word:"адхаха", meaning:"лить", pos:"noun"},
+        {word:"эбдэхэ", meaning:"ломать", pos:"noun"},
+        {word:"дурлаха", meaning:"любить", pos:"noun"},
+        {word:"эбтээ орохо", meaning:"мириться", pos:"noun"},
+        {word:"зобохо", meaning:"мучиться", pos:"noun"},
+        {word:"үзэн ядаха", meaning:"ненавидеть", pos:"noun"},
+        {word:"аягалха", meaning:"наливать", pos:"noun"},
+        {word:"мэхэлхэ", meaning:"обмануть", pos:"noun"},
+        {word:"бэлэглэхэ", meaning:"подарить", pos:"noun"},
+        {word:"дээшэ гараха", meaning:"подняться", pos:"noun"},
+        {word:"амаршалха", meaning:"поздравить", pos:"noun"},
+        {word:"табиха", meaning:"поставить", pos:"noun"},
+        {word:"айлгаха", meaning:"пугать", pos:"noun"},
+        {word:"гуниглаха", meaning:"грустить", pos:"noun"},
+        {word:"бууха", meaning:"спуститься", pos:"noun"},
+        {word:"бариха", meaning:"держать", pos:"noun"},
+        {word:"яараха", meaning:"торопиться", pos:"noun"},
+        {word:"хүндэлхэ", meaning:"угостить", pos:"noun"},
+        {word:"шэмэглэхэ", meaning:"украсить", pos:"noun"},
+        {word:"мэдэрхэ", meaning:"чувствовать", pos:"noun"},
+        {word:"ойлгохо", meaning:"понимать", pos:"noun"},
+        {word:"түрэхэ", meaning:"родиться", pos:"noun"},
+        {word:"ехэ,томо", meaning:"большой", pos:"noun"},
+        {word:"үбшэн", meaning:"больной", pos:"noun"},
+        {word:"мэлигэр", meaning:"гладкий", pos:"noun"},
+        {word:"тэнэг", meaning:"глупый", pos:"noun"},
+        {word:"халуун", meaning:"горячий", pos:"noun"},
+        {word:"муухай", meaning:"грязный", pos:"noun"},
+        {word:"ута", meaning:"длинный", pos:"noun"},
+        {word:"ууртай", meaning:"сердитый", pos:"noun"},
+        {word:"түргэн", meaning:"быстрый", pos:"noun"},
+        {word:"гашуун", meaning:"кислый", pos:"noun"},
+        {word:"богони", meaning:"короткий", pos:"noun"},
+        {word:"hайхан", meaning:"красивый", pos:"noun"},
+        {word:"бэлэн", meaning:"лёгкий", pos:"noun"},
+        {word:"солбон", meaning:"ловкий", pos:"noun"},
+        {word:"хүхюу", meaning:"весёлый", pos:"noun"},
+        {word:"бишыхан", meaning:"маленький", pos:"noun"},
+        {word:"удаан", meaning:"медленный", pos:"noun"},
+        {word:"нойтон", meaning:"мокрый", pos:"noun"},
+        {word:"үндэр", meaning:"высокий", pos:"noun"},
+        {word:"үлэн", meaning:"голодный", pos:"noun"},
+        {word:"бэлигтэй", meaning:"талантливый", pos:"noun"},
+        {word:"набтар", meaning:"низкий", pos:"noun"},
+        {word:"хурса", meaning:"острый", pos:"noun"},
+        {word:"дүүрэн", meaning:"полный", pos:"noun"},
+        {word:"тунгалаг", meaning:"прозрачный", pos:"noun"},
+        {word:"хооhон", meaning:"пустой", pos:"noun"},
+        {word:"бамбагар", meaning:"пушистый", pos:"noun"},
+        {word:"гэрэл", meaning:"светлый", pos:"noun"},
+        {word:"тамиртай", meaning:"сильный", pos:"noun"},
+        {word:"һула", meaning:"слабый", pos:"noun"},
+        {word:"амтатай", meaning:"вкусный", pos:"noun"},
+        {word:"бүхэ", meaning:"крепкий", pos:"noun"},
+        {word:"хүнгэн", meaning:"лёгкий", pos:"noun"},
+        {word:"хуурай", meaning:"сухой", pos:"noun"},
+        {word:"хүндэ", meaning:"тяжёлый", pos:"noun"},
+        {word:"садхалан", meaning:"сытый", pos:"noun"},
+        {word:"хүйтэн", meaning:"холодный", pos:"noun"},
+        {word:"үргэн", meaning:"широкий", pos:"noun"},
+        {word:"харанхы", meaning:"тёмный", pos:"noun"},
+        {word:"нимгэн", meaning:"тонкий", pos:"noun"},
+        {word:"аймхай", meaning:"трусливый", pos:"noun"},
+        {word:"уйтан", meaning:"узкий", pos:"noun"},
+        {word:"сэсэн", meaning:"ухаатай", pos:"noun"},
+        {word:"hайн", meaning:"хороший", pos:"noun"},
+        {word:"элүүр", meaning:"здоровый", pos:"noun"},
+        {word:"зоригтой", meaning:"храбрый", pos:"noun"},
+        {word:"туранхай", meaning:"худой", pos:"noun"},
+        {word:"сэбэр", meaning:"чистый", pos:"noun"},
+        {word:"бүдүүн", meaning:"толстый", pos:"noun"},
+        {word:"үргэн", meaning:"широкий", pos:"noun"},
+        {word:"буурсаг", meaning:"горох", pos:"verb"},
+        {word:"шахуу", meaning:"почти", pos:"verb"},
+        {word:"хожом", meaning:"потом", pos:"verb"},
+        {word:"үни", meaning:"давно", pos:"verb"},
+        {word:"аляаhан", meaning:"муха", pos:"verb"},
+        {word:"батаганаан", meaning:"комар", pos:"verb"},
+        {word:"эрбээхэй", meaning:"бабочка", pos:"verb"},
+        {word:"тэрмээлжэн", meaning:"стрекоза", pos:"verb"},
+        {word:"сохо", meaning:"жук", pos:"verb"},
+        {word:"тэбтээр сохо", meaning:"божья коровка", pos:"verb"},
+        {word:"зүгы", meaning:"пчела", pos:"adj"},
+        {word:"hоно", meaning:"овод", pos:"adj"},
+        {word:"абаахай", meaning:"паук", pos:"adj"},
+        {word:"хорхой", meaning:"червяк", pos:"adj"},
+        {word:"төөлүүр", meaning:"гусеница", pos:"adj"},
+        {word:"таршаа", meaning:"кузнечик", pos:"adj"},
+        {word:"шалза", meaning:"клещ", pos:"adj"},
+        {word:"баха", meaning:"лягушка", pos:"adj"},
+        {word:"мэлхэй", meaning:"черепаха", pos:"adj"},
+        {word:"хаб загаhан", meaning:"нерпа", pos:"adj"},
+        {word:"хабшаахай", meaning:"рак", pos:"adj"},
+        {word:"хубсаhан", meaning:"одежда", pos:"adj"},
+        {word:"малгай", meaning:"шапка", pos:"adj"},
+        {word:"заха", meaning:"воротник", pos:"adj"},
+        {word:"дэгэл", meaning:"костюм", pos:"adj"},
+        {word:"самса", meaning:"рубашка", pos:"adj"},
+        {word:"бээлэй", meaning:"варежки", pos:"adj"},
+        {word:"үмдэн", meaning:"брюки", pos:"adj"},
+        {word:"гутал", meaning:"сапоги", pos:"noun"},
+        {word:"оймhон", meaning:"носки", pos:"adj"},
+        {word:"бүhэ", meaning:"пояс", pos:"noun"},
+        {word:"бэhэлиг", meaning:"кольцо", pos:"noun"},
+        {word:"шүхэр", meaning:"зонт", pos:"noun"},
+        {word:"хамсы", meaning:"рукав", pos:"noun"},
+        {word:"hиихэ", meaning:"серьги", pos:"noun"},
+        {word:"эдэбхитэй", meaning:"активный", pos:"noun"},
+        {word:"агууехэ", meaning:"великий", pos:"noun"},
+        {word:"сүлөөгүй", meaning:"занятой", pos:"noun"},
+        {word:"газаада", meaning:"внешний", pos:"noun"},
+        {word:"досоохи", meaning:"внутренний", pos:"noun"},
+        {word:"ганса", meaning:"единственный", pos:"noun"},
+        {word:"омог", meaning:"гордый", pos:"noun"},
+        {word:"бүхэдэлхэйн", meaning:"всемирный", pos:"noun"},
+        {word:"шэдитэ", meaning:"волшебный", pos:"noun"},
+        {word:"зэрлиг", meaning:"дикий", pos:"noun"},
+        {word:"хомхой", meaning:"жадный", pos:"noun"},
+        {word:"мартамхай", meaning:"забывчивый", pos:"noun"},
+        {word:"хаалгатай", meaning:"закрытый", pos:"noun"},
+        {word:"суута", meaning:"известный", pos:"noun"},
+        {word:"мэдээжэ", meaning:"знаменитый", pos:"noun"},
+        {word:"hонин", meaning:"интересный", pos:"noun"},
+        {word:"дуратай", meaning:"любимый", pos:"noun"},
+        {word:"залхуу", meaning:"ленивый", pos:"noun"},
+        {word:"залуу", meaning:"молодой", pos:"noun"},
+        {word:"уялгатай", meaning:"обязательный", pos:"noun"},
+        {word:"түрэл", meaning:"родной", pos:"adj"},
+        {word:"аюултай", meaning:"опасный", pos:"noun"},
+        {word:"харюусалгатай", meaning:"ответственный", pos:"noun"},
+        {word:"нээлгэтэй", meaning:"открытый", pos:"noun"},
+        {word:"бэрхэ", meaning:"лучший", pos:"noun"},
+        {word:"орой", meaning:"поздний", pos:"noun"},
+        {word:"ойлгосотой", meaning:"понятный", pos:"noun"},
+        {word:"эртын", meaning:"ранний", pos:"noun"},
+        {word:"халтирхай", meaning:"скользкий", pos:"adj"},
+        {word:"даруу", meaning:"скромный", pos:"noun"},
+        {word:"хашартай", meaning:"надоедливый", pos:"noun"},
+        {word:"ажалша", meaning:"трудолюбивый", pos:"noun"},
+        {word:"шууяатай", meaning:"шумный", pos:"noun"},
+        {word:"элбэг", meaning:"щедрый", pos:"noun"},
+        {word:"эмшэн", meaning:"врач", pos:"noun"},
+        {word:"наймаашан", meaning:"продавец", pos:"noun"},
+        {word:"барилгашан", meaning:"строитель", pos:"noun"},
+        {word:"хөөрхэн", meaning:"милый", pos:"noun"},
+        {word:"жолоошон", meaning:"водитель", pos:"noun"},
+        {word:"дарга", meaning:"директор", pos:"noun"},
+        {word:"сагдаа", meaning:"полицейский", pos:"noun"},
+        {word:"дуушан", meaning:"певец", pos:"noun"},
+        {word:"уран зурааша", meaning:"художник", pos:"noun"},
+        {word:"уран зохёолшо", meaning:"писатель", pos:"noun"},
+        {word:"шүлэгшэ", meaning:"поэт", pos:"noun"},
+        {word:"дархан", meaning:"кузнец", pos:"noun"},
+        {word:"харуулшан", meaning:"охранник", pos:"noun"},
+        {word:"хатарагша", meaning:"танцор", pos:"noun"},
+        {word:"хүгжэмшэ", meaning:"музыкант", pos:"noun"},
+        {word:"түрүү", meaning:"ведущий", pos:"noun"},
+        {word:"хүтэлбэригшэ", meaning:"руководитель", pos:"noun"},
+        {word:"хүдэлмэришэн", meaning:"рабочий", pos:"noun"},
+        {word:"оёдолшон", meaning:"портной", pos:"noun"},
+        {word:"хүмүүжүүлэгшэ", meaning:"воспитатель", pos:"noun"},
+        {word:"сэрэгшэн", meaning:"военный", pos:"noun"},
+        {word:"тогоошон", meaning:"повар", pos:"noun"},
+        {word:"hалхин", meaning:"ветер", pos:"noun"},
+        {word:"үүлэн", meaning:"облако", pos:"noun"},
+        {word:"нэреэн", meaning:"гром", pos:"noun"},
+        {word:"мүльhэн дуhаа", meaning:"сосулька", pos:"noun"},
+        {word:"шуурган", meaning:"метель", pos:"noun"},
+        {word:"манан", meaning:"туман", pos:"noun"},
+        {word:"газар хүдэлэлгэ", meaning:"землетрясение", pos:"noun"},
+        {word:"гэрэл", meaning:"свет", pos:"noun"},
+        {word:"hүүдэр", meaning:"тень", pos:"noun"},
+        {word:"элшэ", meaning:"луч", pos:"noun"},
+        {word:"харанхы", meaning:"темнота", pos:"noun"},
+        {word:"шүүдэр", meaning:"роса", pos:"noun"},
+        {word:"борбилоо", meaning:"воробей", pos:"noun"},
+        {word:"турлааг", meaning:"ворона", pos:"noun"},
+        {word:"шаазгай", meaning:"сорока", pos:"noun"},
+        {word:"бэгсэргэ", meaning:"сова", pos:"noun"},
+        {word:"хараасгай", meaning:"ласточка", pos:"noun"},
+        {word:"хун шубуун", meaning:"лебедь", pos:"noun"},
+        {word:"сахали", meaning:"чайка", pos:"noun"},
+        {word:"тоншуул", meaning:"дятел", pos:"noun"},
+        {word:"тэмээн шубуун", meaning:"страус", pos:"noun"},
+        {word:"элеэ", meaning:"коршун", pos:"noun"},
+        {word:"бүргэд", meaning:"орёл", pos:"noun"},
+        {word:"зана шубуун", meaning:"снегирь", pos:"noun"},
+        {word:"хүхэ буха", meaning:"снегирь", pos:"noun"},
+        {word:"булжамуур", meaning:"жаворонок", pos:"noun"},
+        {word:"бүбөөлжэн", meaning:"удод", pos:"noun"},
+        {word:"hойр", meaning:"глухарь", pos:"noun"},
+        {word:"тоти шубуун", meaning:"попугай", pos:"noun"},
+        {word:"тугас шубуун", meaning:"павлин", pos:"noun"},
+        {word:"хилэн", meaning:"цапля", pos:"noun"},
+        {word:"тохорюун", meaning:"журавль", pos:"noun"},
+        {word:"hөөг", meaning:"куст", pos:"noun"},
+        {word:"ногоон", meaning:"трава", pos:"noun"},
+        {word:"набшаhан", meaning:"лист", pos:"noun"},
+        {word:"үндэhэн", meaning:"корень", pos:"noun"},
+        {word:"hалаа", meaning:"ветка", pos:"noun"},
+        {word:"эшэ", meaning:"стебель", pos:"noun"},
+        {word:"хассури", meaning:"ель", pos:"noun"},
+        {word:"нарhан", meaning:"сосна", pos:"noun"},
+        {word:"уляаhан", meaning:"осина", pos:"noun"},
+        {word:"хуша", meaning:"кедр", pos:"noun"},
+        {word:"жодоо", meaning:"пихта", pos:"noun"},
+        {word:"сарса", meaning:"дуб", pos:"noun"},
+        {word:"бургааhан", meaning:"ива", pos:"noun"},
+        {word:"бамба сэсэг", meaning:"роза", pos:"noun"},
+        {word:"бадма сэсэг", meaning:"лотос", pos:"noun"},
+        {word:"ханхинуур", meaning:"колокоьчик", pos:"noun"},
+        {word:"майн сэсэг", meaning:"ландыш", pos:"noun"},
+        {word:"балжан гарма сэсэг", meaning:"ромашка", pos:"noun"},
+        {word:"алтан зула сэсэг", meaning:"тюльпан", pos:"noun"},
+        {word:"табан hалаата", meaning:"подорожник", pos:"noun"},
+        {word:"нямняахай", meaning:"одуванчик", pos:"noun"},
+        {word:"улаалзай", meaning:"сарана", pos:"noun"},
+        {word:"мангир", meaning:"дикий лук", pos:"noun"},
+        {word:"намуу сэсэг", meaning:"мак", pos:"noun"},
+        {word:"ургы", meaning:"подснежник", pos:"verb"},
+        {word:"халаахай", meaning:"крапива", pos:"verb"},
+        {word:"носоргоно", meaning:"репейник", pos:"verb"},
+        {word:"ном", meaning:"книга", pos:"verb"},
+        {word:"дэбтэр", meaning:"тетрадь", pos:"verb"},
+        {word:"гуурhан", meaning:"ручка", pos:"verb"},
+        {word:"биирэ", meaning:"кисточка", pos:"verb"},
+        {word:"шэрэ", meaning:"краски", pos:"verb"},
+        {word:"шугам", meaning:"линейка", pos:"verb"},
+        {word:"саарhан", meaning:"бумага", pos:"verb"},
+        {word:"самбар", meaning:"учебная доска", pos:"adj"},
+        {word:"шохой", meaning:"мел", pos:"adj"},
+        {word:"hурагша", meaning:"ученик", pos:"adj"},
+        {word:"забhар", meaning:"перемена", pos:"adj"},
+        {word:"хонхо", meaning:"звонок", pos:"adj"},
+        {word:"оньhон үгэ", meaning:"пословица", pos:"adj"},
+        {word:"хэшээл", meaning:"урок", pos:"adj"},
+        {word:"гэрэй даабари", meaning:"домашнее задание", pos:"adj"},
+        {word:"тоо", meaning:"цифра", pos:"adj"},
+        {word:"бэшэг", meaning:"письмо", pos:"adj"},
+        {word:"үзэг", meaning:"буква", pos:"adj"},
+        {word:"уншалга", meaning:"чтение", pos:"adj"},
+        {word:"сэгнэлтэ", meaning:"оценка", pos:"adj"},
+        {word:"таабари", meaning:"загадка", pos:"adj"},
+        {word:"анги", meaning:"класс", pos:"adj"},
+        {word:"үргэбшэ", meaning:"рюкзак", pos:"adj"},
+        {word:"бодолго", meaning:"задача", pos:"adj"},
+        {word:"шүлэг", meaning:"стих", pos:"adj"},
+        {word:"дадхаалга", meaning:"упражнение", pos:"noun"},
+        {word:"онтохон", meaning:"сказка", pos:"adj"},
+        {word:"туужа", meaning:"роман", pos:"noun"},
+        {word:"бодолго", meaning:"решение", pos:"noun"},
+        {word:"таабари", meaning:"загадка", pos:"noun"},
+        {word:"нааданха", meaning:"игрушка", pos:"noun"},
+        {word:"хүүгэдэй сэсэрлиг", meaning:"детский сад", pos:"noun"},
+        {word:"шатар", meaning:"шахматы", pos:"noun"},
+        {word:"хөөрөөн", meaning:"рассказ", pos:"noun"},
+        {word:"бүмбэгэ", meaning:"мяч", pos:"noun"},
+        {word:"үльгэр", meaning:"былина", pos:"noun"},
+        {word:"баяр", meaning:"радость", pos:"noun"},
+        {word:"уур", meaning:"злость", pos:"noun"},
+        {word:"гомдол", meaning:"обида", pos:"noun"},
+        {word:"гуниг", meaning:"грусть", pos:"noun"},
+        {word:"айдал", meaning:"страх", pos:"noun"},
+        {word:"гайхал", meaning:"удивление", pos:"noun"},
+        {word:"дуран", meaning:"любовь", pos:"noun"},
+        {word:"hайн hанаан", meaning:"доброта", pos:"noun"},
+        {word:"энеэдэн", meaning:"смех", pos:"noun"},
+        {word:"миhэрэл", meaning:"улыбка", pos:"noun"},
+        {word:"этигэл", meaning:"вера", pos:"noun"},
+        {word:"омогорхол", meaning:"гордость", pos:"noun"},
+        {word:"зориг", meaning:"смелость", pos:"noun"},
+        {word:"эшэдэhэн", meaning:"стыд", pos:"noun"},
+        {word:"обтолго", meaning:"зависть", pos:"noun"},
+        {word:"халаг", meaning:"сожаление", pos:"noun"},
+        {word:"аажам", meaning:"спокойный", pos:"adj"},
+        {word:"ааша", meaning:"поступок", pos:"noun"},
+        {word:"ааяма", meaning:"знойный", pos:"noun"},
+        {word:"аб", meaning:"чары", pos:"noun"},
+        {word:"аба", meaning:"облавная охота", pos:"noun"},
+        {word:"абарга гүрбэл", meaning:"варан", pos:"noun"},
+        {word:"абарха", meaning:"спасти", pos:"noun"},
+        {word:"абирха", meaning:"карабкаться", pos:"noun"},
+        {word:"абьяас", meaning:"призвание,дарование", pos:"adj"},
+        {word:"абьяан", meaning:"звук", pos:"noun"},
+        {word:"агаар", meaning:"воздух", pos:"noun"},
+        {word:"агнуури", meaning:"охота", pos:"noun"},
+        {word:"агы", meaning:"пещера", pos:"noun"},
+        {word:"адаг", meaning:"конец", pos:"noun"},
+        {word:"адис", meaning:"благословение", pos:"noun"},
+        {word:"адли", meaning:"похожий", pos:"noun"},
+        {word:"адуушан", meaning:"табунщик", pos:"noun"},
+        {word:"адха", meaning:"горсть", pos:"noun"},
+        {word:"ажаүйлэдбэри", meaning:"промышленность", pos:"noun"},
+        {word:"ажахы", meaning:"хозяйство", pos:"noun"},
+        {word:"үгын абьяас", meaning:"красноречие", pos:"noun"},
+        {word:"азарга", meaning:"жеребец", pos:"noun"},
+        {word:"ажалгүй", meaning:"безработный", pos:"noun"},
+        {word:"айбала", meaning:"пугало", pos:"noun"},
+        {word:"айдар", meaning:"милый", pos:"noun"},
+        {word:"айл", meaning:"семья", pos:"noun"},
+        {word:"айлшан", meaning:"гость", pos:"noun"},
+        {word:"айрhан", meaning:"творог", pos:"noun"},
+        {word:"айхабтар", meaning:"страшный", pos:"noun"},
+        {word:"алаг", meaning:"полосатый", pos:"noun"},
+        {word:"алас", meaning:"дальний", pos:"noun"},
+        {word:"алаха", meaning:"убить", pos:"noun"},
+        {word:"албан", meaning:"служба", pos:"noun"},
+        {word:"алдуу", meaning:"ошибка", pos:"noun"},
+        {word:"алтаргана", meaning:"золотарник", pos:"noun"},
+        {word:"алха", meaning:"шаг", pos:"noun"},
+        {word:"амар", meaning:"спокойный", pos:"noun"},
+        {word:"амжалта", meaning:"успех", pos:"noun"},
+        {word:"амиды", meaning:"живой", pos:"noun"},
+        {word:"амилха", meaning:"дышать", pos:"noun"},
+        {word:"амин", meaning:"дыхание", pos:"noun"},
+        {word:"амитан", meaning:"животное", pos:"noun"},
+        {word:"амтан", meaning:"успех", pos:"noun"},
+        {word:"амhарта", meaning:"посуда", pos:"noun"},
+        {word:"анда", meaning:"побратим", pos:"noun"},
+        {word:"араан", meaning:"коренной зуб", pos:"noun"},
+        {word:"арга", meaning:"средство", pos:"noun"},
+        {word:"аргал", meaning:"сухой помёт", pos:"noun"},
+        {word:"аргамжа", meaning:"верёвка", pos:"noun"},
+        {word:"арсалдаан", meaning:"спор", pos:"noun"},
+        {word:"архи", meaning:"водка", pos:"noun"},
+        {word:"арhашан", meaning:"кожевник", pos:"noun"},
+        {word:"арын", meaning:"задний", pos:"noun"},
+        {word:"арьбалха", meaning:"быть бережливым", pos:"noun"},
+        {word:"арьяатан", meaning:"хищник", pos:"noun"},
+        {word:"арюудхаха", meaning:"очищать", pos:"noun"},
+        {word:"арюун", meaning:"чистый", pos:"noun"},
+        {word:"асуудал", meaning:"вопрос", pos:"noun"},
+        {word:"ахалагша", meaning:"главный", pos:"noun"},
+        {word:"аhалдаха", meaning:"пристать", pos:"noun"},
+        {word:"ашаан", meaning:"груз", pos:"noun"},
+        {word:"ая", meaning:"приличие", pos:"noun"},
+        {word:"аялга", meaning:"звук", pos:"noun"},
+        {word:"аян", meaning:"дальний путь", pos:"noun"},
+        {word:"баатар", meaning:"богатырь", pos:"noun"},
+        {word:"баг", meaning:"маска", pos:"noun"},
+        {word:"баглаа", meaning:"связка,пучок", pos:"noun"},
+        {word:"бадарха", meaning:"распространяться", pos:"noun"},
+        {word:"бадха", meaning:"прыщ", pos:"noun"},
+        {word:"бажууха", meaning:"сжимать", pos:"noun"},
+        {word:"база", meaning:"свояк", pos:"noun"},
+        {word:"байгаалиин үзэгдэл", meaning:"природное явление", pos:"noun"},
+        {word:"бал", meaning:"мёд", pos:"noun"},
+        {word:"балга", meaning:"глоток", pos:"noun"},
+        {word:"балмад", meaning:"авантюрист", pos:"noun"},
+        {word:"балсан", meaning:"мышцы", pos:"noun"},
+        {word:"банша", meaning:"пельмени", pos:"noun"},
+        {word:"бараан", meaning:"имущество", pos:"noun"},
+        {word:"бараг", meaning:"нормальный", pos:"noun"},
+        {word:"бардам", meaning:"горделивый", pos:"noun"},
+        {word:"барилдаан", meaning:"борьба(спорт)", pos:"noun"},
+        {word:"барлаг", meaning:"раб", pos:"noun"},
+        {word:"бархаг", meaning:"якорь", pos:"noun"},
+        {word:"бархираан", meaning:"рёв", pos:"noun"},
+        {word:"баряаша", meaning:"костоправ", pos:"noun"},
+        {word:"баhаха", meaning:"смотреть свысока", pos:"noun"},
+        {word:"баясхалан", meaning:"благодароность", pos:"noun"},
+        {word:"бимба", meaning:"суббота", pos:"verb"},
+        {word:"бог", meaning:"мусор", pos:"verb"},
+        {word:"Богдо", meaning:"Святой", pos:"verb"},
+        {word:"бодо", meaning:"материя", pos:"verb"},
+        {word:"бодол", meaning:"мысль", pos:"verb"},
+        {word:"бодос", meaning:"вещество", pos:"verb"},
+        {word:"болбосорол", meaning:"просвещение", pos:"verb"},
+        {word:"болгоомжотой", meaning:"осмотрительный", pos:"verb"},
+        {word:"болзор", meaning:"срок", pos:"verb"},
+        {word:"болихо", meaning:"перестать", pos:"verb"},
+        {word:"болтогой", meaning:"да будет так", pos:"adj"},
+        {word:"боомо", meaning:"сибирская язва", pos:"adj"},
+        {word:"боори", meaning:"возвышенность", pos:"adj"},
+        {word:"боохолдой", meaning:"призрак", pos:"adj"},
+        {word:"борбоосгой", meaning:"шишка", pos:"adj"},
+        {word:"бөө", meaning:"шаман", pos:"adj"},
+        {word:"бөөлжэhэн", meaning:"рвота", pos:"adj"},
+        {word:"бугаабша", meaning:"браслет", pos:"adj"},
+        {word:"бугуули", meaning:"аркан", pos:"adj"},
+        {word:"бузар", meaning:"нечистоты", pos:"adj"},
+        {word:"булаг", meaning:"родник", pos:"adj"},
+        {word:"булад", meaning:"сталь", pos:"adj"},
+        {word:"бултайха", meaning:"высовываться", pos:"adj"},
+        {word:"булшан", meaning:"икры", pos:"adj"},
+        {word:"булшархай", meaning:"железа", pos:"adj"},
+        {word:"буляаха", meaning:"отобрать", pos:"adj"},
+        {word:"дура буляама", meaning:"очаровательный", pos:"adj"},
+        {word:"бури", meaning:"плесень", pos:"adj"},
+        {word:"бусааха", meaning:"вернуть", pos:"noun"},
+        {word:"бусалха", meaning:"кипеть", pos:"adj"},
+        {word:"бута", meaning:"кочка", pos:"noun"},
+        {word:"буудал", meaning:"стоянка", pos:"noun"},
+        {word:"буудаха", meaning:"стрелять", pos:"noun"},
+        {word:"буулагабари", meaning:"копия", pos:"noun"},
+        {word:"буумал шулуун", meaning:"метеорит", pos:"noun"},
+        {word:"буурал", meaning:"седой", pos:"noun"},
+        {word:"буу", meaning:"ружьё", pos:"noun"},
+        {word:"бууса", meaning:"стойбище", pos:"noun"},
+        {word:"буян", meaning:"благодеяние", pos:"noun"},
+        {word:"бүгшэм", meaning:"душный", pos:"noun"},
+        {word:"бүднэ", meaning:"перепёлка", pos:"noun"},
+        {word:"бүгсэ", meaning:"зад", pos:"noun"},
+        {word:"бүд", meaning:"ткань", pos:"noun"},
+        {word:"бүдэн", meaning:"веснушки", pos:"noun"},
+        {word:"бүжэг", meaning:"спектакль", pos:"noun"},
+        {word:"бүлбэнүүр", meaning:"бубенчик", pos:"noun"},
+        {word:"бүйлөөhэн", meaning:"абрикос", pos:"noun"},
+        {word:"бүйлсэ", meaning:"миндаль", pos:"noun"},
+        {word:"бүлгэм", meaning:"группа", pos:"noun"},
+        {word:"бүлеэн (о жидкости)", meaning:"тёплый", pos:"noun"},
+        {word:"бүлхин", meaning:"тромб", pos:"noun"},
+        {word:"бүлэг", meaning:"раздел", pos:"noun"},
+        {word:"бүридхэл", meaning:"отчёт", pos:"noun"},
+        {word:"бүрынхы", meaning:"сумерки", pos:"noun"},
+        {word:"бүтүү", meaning:"закрытый", pos:"noun"},
+        {word:"гаараха", meaning:"ругаться", pos:"adj"},
+        {word:"габа", meaning:"щель", pos:"noun"},
+        {word:"габала", meaning:"череп", pos:"noun"},
+        {word:"габьяа", meaning:"заслуга", pos:"noun"},
+        {word:"гадар", meaning:"внешний покров, обложка", pos:"noun"},
+        {word:"газаа", meaning:"на улице", pos:"noun"},
+        {word:"байдаг газар", meaning:"местоприбывание", pos:"noun"},
+        {word:"галзуу", meaning:"бешеный", pos:"noun"},
+        {word:"галиг", meaning:"иноязычные буквы", pos:"adj"},
+        {word:"галта уула", meaning:"вулкан", pos:"noun"},
+        {word:"галта тэргэ", meaning:"поезд", pos:"noun"},
+        {word:"галтай хорхой", meaning:"светлячок", pos:"noun"},
+        {word:"ган", meaning:"засуха", pos:"noun"},
+        {word:"ганса", meaning:"одинокий", pos:"noun"},
+        {word:"гар табилга", meaning:"подпись", pos:"noun"},
+        {word:"гар мүнгэн", meaning:"наличные", pos:"noun"},
+        {word:"гараха", meaning:"выйти", pos:"noun"},
+        {word:"гаргаша", meaning:"расход", pos:"noun"},
+        {word:"гарза", meaning:"убыток", pos:"noun"},
+        {word:"гаршаг", meaning:"оглавление, содержание", pos:"noun"},
+        {word:"гасалан", meaning:"препятствие", pos:"noun"},
+        {word:"гашалха", meaning:"прокиснуть", pos:"noun"},
+        {word:"гашуудал", meaning:"скорьбь", pos:"noun"},
+        {word:"гоёолто", meaning:"украшение", pos:"noun"},
+        {word:"гол", meaning:"середина", pos:"noun"},
+        {word:"гоохон", meaning:"красавица", pos:"noun"},
+        {word:"гороо", meaning:"хождение посолонь кругом дацана", pos:"noun"},
+        {word:"гохо", meaning:"крючок", pos:"noun"},
+        {word:"губшуур", meaning:"невод", pos:"noun"},
+        {word:"гуйлта", meaning:"просьба", pos:"noun"},
+        {word:"гунгарбаа", meaning:"божница", pos:"noun"},
+        {word:"гурбалжан", meaning:"треугольник", pos:"noun"},
+        {word:"гурим", meaning:"режим, порядок", pos:"noun"},
+        {word:"гуя", meaning:"ляжка, бедро", pos:"noun"},
+        {word:"гүн", meaning:"глубина", pos:"noun"},
+        {word:"дангина", meaning:"красавица, фея", pos:"noun"},
+        {word:"дахуул", meaning:"спутник", pos:"noun"},
+        {word:"гүнзэгы", meaning:"глубокий", pos:"noun"},
+        {word:"гүрбэл", meaning:"ящерица", pos:"noun"},
+        {word:"гүйсэ", meaning:"срок", pos:"noun"},
+        {word:"гэгээрэл", meaning:"просвещение", pos:"noun"},
+        {word:"гэзэгэ", meaning:"коса", pos:"noun"},
+        {word:"гэмнэхэ", meaning:"обвинять", pos:"noun"},
+        {word:"гэм", meaning:"вина", pos:"noun"},
+        {word:"гэмтэн", meaning:"преступник", pos:"noun"},
+        {word:"гэнжэ", meaning:"цепь", pos:"noun"},
+        {word:"гэнтэ", meaning:"вдруг", pos:"noun"},
+        {word:"гэрлэхэ", meaning:"жениться", pos:"noun"},
+        {word:"гэршэ", meaning:"свидетель", pos:"noun"},
+        {word:"дааха", meaning:"быть в состоянии поднять что-либо", pos:"noun"},
+        {word:"гэшүүн", meaning:"член (какой-нибудь орагнизации)", pos:"noun"},
+        {word:"дабаан", meaning:"горный перевал", pos:"noun"},
+        {word:"дабталга", meaning:"повторение", pos:"noun"},
+        {word:"дабхар", meaning:"ряд, этаж", pos:"noun"},
+        {word:"дабхаряа", meaning:"складка", pos:"noun"},
+        {word:"дабхаса", meaning:"плащ", pos:"noun"},
+        {word:"даг", meaning:"грязь", pos:"noun"},
+        {word:"дадал", meaning:"навык, опыт", pos:"noun"},
+        {word:"дайда", meaning:"земля, мир", pos:"noun"},
+        {word:"дайн", meaning:"война", pos:"noun"},
+        {word:"дайр", meaning:"рана", pos:"noun"},
+        {word:"дайсан", meaning:"враг", pos:"noun"},
+        {word:"дала", meaning:"лопатка (на теле)", pos:"noun"},
+        {word:"далга", meaning:"жертвенная снедь", pos:"noun"},
+        {word:"дали", meaning:"крыло", pos:"noun"},
+        {word:"дамдаа", meaning:"салки", pos:"noun"},
+        {word:"дамжуулга", meaning:"передача", pos:"noun"},
+        {word:"дамжуур", meaning:"перекладина", pos:"noun"},
+        {word:"даралта", meaning:"давление", pos:"noun"},
+        {word:"дараха", meaning:"давить", pos:"noun"},
+        {word:"дасан", meaning:"буддийский храм", pos:"noun"},
+        {word:"даха", meaning:"шуба, тулуп", pos:"noun"},
+        {word:"дахин", meaning:"опять", pos:"noun"},
+        {word:"долгин", meaning:"волна", pos:"noun"},
+        {word:"долёохо", meaning:"лизать", pos:"noun"},
+        {word:"Долоон Yбгэд", meaning:"Большая Медведица", pos:"noun"},
+        {word:"дом", meaning:"заговор, магия", pos:"noun"},
+        {word:"домог", meaning:"предание", pos:"noun"},
+        {word:"домшо", meaning:"знахарь", pos:"noun"},
+        {word:"донгодохо", meaning:"куковать", pos:"noun"},
+        {word:"доншуур", meaning:"сто миллионов", pos:"noun"},
+        {word:"дорюун", meaning:"уверенный в себе", pos:"noun"},
+        {word:"дотор", meaning:"внутренности", pos:"noun"},
+        {word:"дохёо", meaning:"сигнал", pos:"noun"},
+        {word:"дохолон", meaning:"хромой", pos:"noun"},
+        {word:"дуган", meaning:"молельня у ламаистов", pos:"noun"},
+        {word:"дугаар", meaning:"номер", pos:"noun"},
+        {word:"дугты", meaning:"футляр", pos:"noun"},
+        {word:"дугы", meaning:"пешеходный мостик", pos:"noun"},
+        {word:"дулды", meaning:"опора", pos:"noun"},
+        {word:"дун", meaning:"раковина", pos:"noun"},
+        {word:"дунда", meaning:"середина", pos:"noun"},
+        {word:"дурна", meaning:"восток", pos:"verb"},
+        {word:"дутуу", meaning:"недостаток", pos:"verb"},
+        {word:"дуун", meaning:"песня", pos:"verb"},
+        {word:"дууряан", meaning:"эхо", pos:"verb"},
+        {word:"дуhал", meaning:"капля", pos:"verb"},
+        {word:"дүлэн", meaning:"пламя", pos:"verb"},
+        {word:"дүн", meaning:"итог", pos:"verb"},
+        {word:"дүлгэ", meaning:"инстинкт", pos:"verb"},
+        {word:"дүнгөөр", meaning:"оптом", pos:"verb"},
+        {word:"дүлии", meaning:"глухой", pos:"verb"},
+        {word:"дүрбэлжэн", meaning:"квадрат", pos:"adj"},
+        {word:"дүрим", meaning:"правило", pos:"adj"},
+        {word:"дүрөө", meaning:"стремя", pos:"adj"},
+        {word:"дүрсэ", meaning:"изображение", pos:"adj"},
+        {word:"дүрэ", meaning:"облик", pos:"adj"},
+        {word:"дүрэхэ", meaning:"гореть", pos:"adj"},
+        {word:"дүтэ", meaning:"ближайший", pos:"adj"},
+        {word:"дүтэлхэ", meaning:"приблизиться", pos:"adj"},
+        {word:"дүүжэн", meaning:"качели", pos:"adj"},
+        {word:"дүхэриг", meaning:"круг", pos:"adj"},
+        {word:"дүшэ", meaning:"праправнук", pos:"adj"},
+        {word:"гуша", meaning:"правнук", pos:"adj"},
+        {word:"дэбдихэр", meaning:"постель", pos:"adj"},
+        {word:"дэбтээхэ", meaning:"размачивать", pos:"adj"},
+        {word:"дэгжэхэ", meaning:"развиваться", pos:"adj"},
+        {word:"дэлгүүр", meaning:"рынок", pos:"adj"},
+        {word:"дэлгээхэ", meaning:"расстилать", pos:"adj"},
+        {word:"дэлhэн", meaning:"грива", pos:"adj"},
+        {word:"дэлэн", meaning:"вымя", pos:"noun"},
+        {word:"дэлюун", meaning:"селезёнка", pos:"adj"},
+        {word:"дэмбэрэл", meaning:"предзнаменование", pos:"noun"},
+        {word:"дэмжэг", meaning:"поддержка", pos:"noun"},
+        {word:"дэмы", meaning:"зря", pos:"noun"},
+        {word:"дэмырхэ", meaning:"бредить", pos:"noun"},
+        {word:"дэн", meaning:"свеча", pos:"noun"},
+        {word:"дэрбэгэр", meaning:"растопыренный", pos:"noun"},
+        {word:"дэрбээн", meaning:"восторг", pos:"noun"},
+        {word:"дээдын", meaning:"высший", pos:"noun"},
+        {word:"дээжэ", meaning:"лучшая часть", pos:"noun"},
+        {word:"елүүр", meaning:"каток", pos:"noun"},
+        {word:"енгүү", meaning:"ехидство", pos:"noun"},
+        {word:"ерүүл", meaning:"пришелец", pos:"noun"},
+        {word:"ерээдүй", meaning:"будущее", pos:"noun"},
+        {word:"ёборго", meaning:"кулак", pos:"noun"},
+        {word:"ёгто", meaning:"ирония", pos:"noun"},
+        {word:"ёгто үльгэр", meaning:"басня", pos:"noun"},
+        {word:"ёдогор",       meaning:"остроконечный",        pos:"noun"},
+        {word:"жааханhаа", meaning:"с раннего детства", pos:"noun"},
+        {word:"жабар", meaning:"мороз", pos:"noun"},
+        {word:"жабхалан", meaning:"великолепие", pos:"noun"},
+        {word:"жагсаал", meaning:"строй", pos:"noun"},
+        {word:"жада", meaning:"копьё", pos:"noun"},
+        {word:"жажалдаhан", meaning:"жвачка", pos:"noun"},
+        {word:"жажалха", meaning:"жевать", pos:"noun"},
+        {word:"жама ёhон", meaning:"закономерность", pos:"noun"},
+        {word:"жалма", meaning:"спички", pos:"adj"},
+        {word:"жаргаха", meaning:"наслаждаться", pos:"noun"},
+        {word:"жаса", meaning:"фонд", pos:"noun"},
+        {word:"жолоо", meaning:"руль, поводья", pos:"noun"},
+        {word:"жохоордог", meaning:"любопытный", pos:"noun"},
+        {word:"журам", meaning:"порядок", pos:"noun"},
+        {word:"жүтөөн", meaning:"ревность", pos:"noun"},
+        {word:"жэбэ", meaning:"ржавчина", pos:"noun"},
+        {word:"жэгдэ", meaning:"равномерный", pos:"adj"},
+        {word:"жэгнүүр", meaning:"пароварка", pos:"noun"},
+        {word:"жэгтэй", meaning:"странный", pos:"noun"},
+        {word:"жэгүүр", meaning:"крылья", pos:"noun"},
+        {word:"жэжэ", meaning:"мелкий", pos:"noun"},
+        {word:"hуралсалай жэл", meaning:"учебный год", pos:"noun"},
+        {word:"зуун жэл", meaning:"век", pos:"noun"},
+        {word:"жэмэстэ модод", meaning:"плодовые деревья", pos:"noun"},
+        {word:"жэн", meaning:"караван", pos:"noun"},
+        {word:"жэнгинэмэ", meaning:"звенящий", pos:"noun"},
+        {word:"жэргээн",        meaning:"щебетание",         pos:"noun"},
+        {word:"жэрхэдэhэн",        meaning:"отвращение",         pos:"noun"},
+        {word:"жэшээ",      meaning:"пример",          pos:"noun"},
+        {word:"заабари",    meaning:"наказ",         pos:"noun"},
+        {word:"арсалан заан", meaning:"мамонт",          pos:"noun"},
+        {word:"зааха",      meaning:"указывать",    pos:"noun"},
+        {word:"забаан",     meaning:"пресный",      pos:"noun"},
+        {word:"заб",        meaning:"свободное время",  pos:"noun"},
+        {word:"хаб загаhан",    meaning:"нерпа",      pos:"noun"},
+        {word:"забгүй",     meaning:"занятой",      pos:"noun"},
+        {word:"загаһашан",  meaning:"рыбак",        pos:"noun"},
+        {word:"загбари",    meaning:"стандарт",     pos:"noun"},
+        {word:"задатай",    meaning:"ненастный",    pos:"noun"},
+        {word:"зай",        meaning:"промежуток",   pos:"noun"},
+        {word:"зай",        meaning:"элемент",      pos:"noun"},
+        {word:"зайн гал",   meaning:"электричество",pos:"noun"},
+        {word:"зайгуул",    meaning:"бродяга",      pos:"noun"},
+        {word:"зайлаха",    meaning:"пооскать",     pos:"noun"},
+        {word:"бурхан, зайлуул",    meaning:"избави, боже",    pos:"noun"},
+        {word:"залаа",      meaning:"верхушка, колос",         pos:"noun"},
+        {word:"залаха",     meaning:"исправять",    pos:"noun"},
+        {word:"залгаа",     meaning:"соединение",   pos:"noun"},
+        {word:"залгаа барилга",       meaning:"пристрой",          pos:"noun"},
+        {word:"залги",      meaning:"глоток",       pos:"noun"},
+        {word:"залгиха",    meaning:"глотать",      pos:"noun"},
+        {word:"залд гэхэ",  meaning:"вздрогнуть",   pos:"noun"},
+        {word:"залхуутай",  meaning:"нудный",       pos:"noun"},
+        {word:"зальбарал",  meaning:"молитва",      pos:"noun"},
+        {word:"зам",        meaning:"путь",         pos:"noun"},
+
+
+
+
+
+
+        // ↓↓↓ ВСТАВЛЯЙТЕ СЮДА ВАШИ СЛОВА ↓↓↓
+        // {word:"...",  meaning:"...",  pos:"noun"},
+        // {word:"...",  meaning:"...",  pos:"verb"},
+        // {word:"...",  meaning:"...",  pos:"adj"},
     ];
 
-    // заполняем список слов (кликабельные бейджи)
-    const wordsContainer = document.getElementById('wordsContainer');
-    const wordSelector = document.getElementById('wordSelector');
-    let currentWord = "";
+    // ============================================================
+    // Преобразуем stemsData → DICTIONARY (БЕЗ генерации форм)
+    // ============================================================
+    const DICTIONARY = stemsData.map(s => ({
+        buryat: s.word,
+        russian: s.meaning,
+        pos: s.pos
+    }));
 
-    words30.forEach(w => {
-        const badge = document.createElement('div');
-        badge.className = 'word-badge';
-        badge.innerText = w.bur;
-        badge.onclick = () => {
-            document.getElementById('chosenWordDisplay').innerText = w.bur;
-            currentWord = w.bur;
-            // также синхронизируем выпадающий список
-            wordSelector.value = w.bur;
-        };
-        wordsContainer.appendChild(badge);
+    // ============================================================
+    // Тренажёр
+    // ============================================================
+    let currentQuestion = null;
+    let canAnswer = true;
+    let scoreCorrect = 0;
+    let totalAttempts = 0;
+    let autoNextTimeout = null;
 
-        const option = document.createElement('option');
-        option.value = w.bur;
-        option.innerText = w.bur + " — " + w.ru;
-        wordSelector.appendChild(option);
-    });
+    const buryatSpan = document.getElementById('currentBuryatWord');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const feedbackDiv = document.getElementById('feedbackMsg');
+    const nextBtn = document.getElementById('nextBtn');
+    const scoreDisplay = document.getElementById('scoreDisplay');
 
-    // конструктор слов
-    const buildBtn = document.getElementById('buildBtn');
-    const constructorResult = document.getElementById('constructorResult');
-    buildBtn.onclick = () => {
-        let selectedWord = currentWord;
-        if (!selectedWord && wordSelector.value) selectedWord = wordSelector.value;
-        if (!selectedWord) {
-            constructorResult.innerHTML = "❌ Выбери слово посуды (нажми на слово или из выпадающего списка)";
-            constructorResult.style.background = "#fee2e2";
+    function getRandomDictWord() {
+        const idx = Math.floor(Math.random() * DICTIONARY.length);
+        return { ...DICTIONARY[idx], idx };
+    }
+
+    function generateOptions(correctWordObj) {
+        const correctMeaning = correctWordObj.russian;
+        const correctBuryat = correctWordObj.buryat;
+        let distractorSet = new Set();
+        distractorSet.add(correctMeaning);
+        let attempts = 0;
+        while (distractorSet.size < 3 && attempts < 100) {
+            const randomWord = getRandomDictWord();
+            if (randomWord.buryat !== correctBuryat && randomWord.russian !== correctMeaning) {
+                distractorSet.add(randomWord.russian);
+            }
+            attempts++;
+        }
+        if (distractorSet.size < 3) {
+            ["—", "···", "(нет варианта)"].forEach(s => {
+                if (distractorSet.size < 3) distractorSet.add(s);
+            });
+        }
+        let optionsArray = Array.from(distractorSet);
+        for (let i = optionsArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
+        }
+        return optionsArray;
+    }
+
+    function loadNewQuestion() {
+        if (autoNextTimeout) clearTimeout(autoNextTimeout);
+        if (DICTIONARY.length === 0) {
+            buryatSpan.innerText = "—";
+            feedbackDiv.innerText = "Словарь пуст. Добавьте слова в массив stemsData.";
             return;
         }
-        const fullSentence = `${selectedWord} шэрэ дээрэ байна.`;
-        constructorResult.innerHTML = `✅ Твоё предложение: <strong style="font-size:1.1rem">${fullSentence}</strong><br>👉 Значит: «${selectedWord} находится на столе». Отлично!`;
-        constructorResult.style.background = "#e6f7e6";
-    };
-
-    // =============== ТЕСТ 1: бурятский -> русский (5 вопросов) ==============
-    const quiz1Data = [
-        { bur: "аяга", correct: "чашка" },
-        { bur: "бусэ", correct: "тарелка" },
-        { bur: "хул", correct: "ложка" },
-        { bur: "шанага", correct: "кастрюля" },
-        { bur: "хутга", correct: "нож" }
-    ];
-    function renderQuiz1() {
-        const container = document.getElementById('quiz1Container');
-        container.innerHTML = "";
-        quiz1Data.forEach((q, idx) => {
-            const div = document.createElement('div');
-            div.style.marginBottom = "15px";
-            div.innerHTML = `
-                <div><strong>${q.bur}</strong> → ?</div>
-                <input type="text" id="q1_${idx}" placeholder="Напиши перевод" style="width:100%; padding: 10px; border-radius: 40px; border:1px solid #ccc; margin-top:6px;">
-            `;
-            container.appendChild(div);
+        const newWordObj = getRandomDictWord();
+        const options = generateOptions(newWordObj);
+        currentQuestion = {
+            buryat: newWordObj.buryat,
+            correctMeaning: newWordObj.russian,
+            options: options
+        };
+        buryatSpan.innerText = currentQuestion.buryat;
+        const btns = optionsContainer.querySelectorAll('.option-btn');
+        btns.forEach((btn, idx) => {
+            if (idx < currentQuestion.options.length) {
+                btn.innerText = currentQuestion.options[idx];
+                btn.disabled = false;
+                btn.classList.remove('correct-highlight', 'wrong-highlight');
+                btn.style.background = "";
+            }
         });
-    }
-    function checkQuiz1() {
-        let correctCount = 0;
-        quiz1Data.forEach((q, idx) => {
-            const answer = document.getElementById(`q1_${idx}`).value.trim().toLowerCase();
-            if (answer === q.correct.toLowerCase()) correctCount++;
-        });
-        const resultDiv = document.getElementById('quiz1Result');
-        resultDiv.innerHTML = `🎯 Результат: ${correctCount} из ${quiz1Data.length} правильных. ${correctCount === quiz1Data.length ? "Молодец! 🎉" : "Повтори слова посуды."}`;
+        canAnswer = true;
+        feedbackDiv.innerHTML = "🤔 Зүб хубилбари шэлэгты.";
+        feedbackDiv.className = 'feedback';
     }
 
-    // =============== ТЕСТ 2: русский -> бурятский ===============
-    const quiz2Data = [
-        { ru: "чашка", options: ["аяга", "бусэ", "хул"], correct: "аяга" },
-        { ru: "тарелка", options: ["шанага", "бусэ", "аяга"], correct: "бусэ" },
-        { ru: "ложка", options: ["хутга", "хул", "сэрээ"], correct: "хул" },
-        { ru: "нож", options: ["хутга", "сэрээ", "хул"], correct: "хутга" }
-    ];
-    let quiz2Answers = [null, null, null, null];
-    function renderQuiz2() {
-        const container = document.getElementById('quiz2Container');
-        container.innerHTML = "";
-        quiz2Data.forEach((q, idx) => {
-            const block = document.createElement('div');
-            block.style.marginBottom = "20px";
-            block.innerHTML = `<div><strong>${q.ru}</strong> → выбери бурятское слово:</div>`;
-            const optsDiv = document.createElement('div');
-            optsDiv.style.display = "flex";
-            optsDiv.style.gap = "10px";
-            optsDiv.style.flexWrap = "wrap";
-            optsDiv.style.marginTop = "8px";
-            q.options.forEach(opt => {
-                const optBtn = document.createElement('div');
-                optBtn.className = 'quiz-option';
-                optBtn.innerText = opt;
-                optBtn.onclick = () => {
-                    document.querySelectorAll(`#quiz2Container .quiz-option`).forEach(el => el.classList.remove('selected'));
-                    optBtn.classList.add('selected');
-                    quiz2Answers[idx] = opt;
-                };
-                optsDiv.appendChild(optBtn);
+    function handleAnswer(selectedOptionText) {
+        if (!canAnswer) return;
+        const isCorrect = (selectedOptionText === currentQuestion.correctMeaning);
+        totalAttempts++;
+        const btns = optionsContainer.querySelectorAll('.option-btn');
+        if (isCorrect) {
+            scoreCorrect++;
+            feedbackDiv.innerHTML = `✅ ЗҮБ! «${currentQuestion.buryat}» — ${currentQuestion.correctMeaning}. Дараа үгэ рүү шэлжэнэ...`;
+            feedbackDiv.className = 'feedback correct-feedback';
+            btns.forEach(btn => {
+                btn.disabled = true;
+                if (btn.innerText === currentQuestion.correctMeaning) {
+                    btn.classList.add('correct-highlight');
+                }
             });
-            block.appendChild(optsDiv);
-            container.appendChild(block);
-        });
-    }
-    function checkQuiz2() {
-        let correct = 0;
-        quiz2Data.forEach((q, idx) => {
-            if (quiz2Answers[idx] === q.correct) correct++;
-        });
-        document.getElementById('quiz2Result').innerHTML = `📊 Тест 2: ${correct} / ${quiz2Data.length} верно. ${correct === quiz2Data.length ? "Превосходно!" : "Ещё раз взгляни на слова"}`;
-    }
-
-    // =============== ТЕСТ 3: Верно / Неверно (посуда+место) ===============
-    const quiz3Data = [
-        { sentence: "Аяга шэрэ дээрэ байна.", correct: true, explanation: "Чашка на столе — верно" },
-        { sentence: "Бусэ аяга дотор байна.", correct: false, explanation: "Тарелка внутри чашки — странно, обычно неверно" },
-        { sentence: "Хул шэрэ дээрэ байна.", correct: true, explanation: "Ложка на столе — ок" },
-        { sentence: "Шанага дотор хул байна.", correct: false, explanation: "Ложка внутри кастрюли — маловероятно" }
-    ];
-    let quiz3Answers = [null, null, null, null];
-    function renderQuiz3() {
-        const container = document.getElementById('quiz3Container');
-        container.innerHTML = "";
-        quiz3Data.forEach((item, idx) => {
-            const div = document.createElement('div');
-            div.style.marginBottom = "18px";
-            div.innerHTML = `<div>📢 ${item.sentence}</div>`;
-            const btnGroup = document.createElement('div');
-            btnGroup.style.display = "flex";
-            btnGroup.style.gap = "12px";
-            btnGroup.style.marginTop = "6px";
-            const trueBtn = document.createElement('div');
-            trueBtn.className = 'quiz-option';
-            trueBtn.innerText = "✅ Верно";
-            const falseBtn = document.createElement('div');
-            falseBtn.className = 'quiz-option';
-            falseBtn.innerText = "❌ Неверно";
-            trueBtn.onclick = () => { quiz3Answers[idx] = true; clearSelection(idx, trueBtn, falseBtn); };
-            falseBtn.onclick = () => { quiz3Answers[idx] = false; clearSelection(idx, trueBtn, falseBtn); };
-            btnGroup.appendChild(trueBtn);
-            btnGroup.appendChild(falseBtn);
-            div.appendChild(btnGroup);
-            container.appendChild(div);
-        });
-        function clearSelection(idx, trueEl, falseEl) {
-            const parent = trueEl.parentNode;
-            parent.querySelectorAll('.quiz-option').forEach(btn => btn.classList.remove('selected'));
-            if (quiz3Answers[idx] === true) trueEl.classList.add('selected');
-            else falseEl.classList.add('selected');
+            canAnswer = false;
+            scoreDisplay.innerText = `✔️ Зүб харюу: ${scoreCorrect} / ${totalAttempts}`;
+            autoNextTimeout = setTimeout(() => { loadNewQuestion(); }, 700);
+        } else {
+            feedbackDiv.innerHTML = `❌ БУРУУ. Зүб харюу: «${currentQuestion.buryat}» — ${currentQuestion.correctMeaning}. «Дараа үгэ» товшые дарагты.`;
+            feedbackDiv.className = 'feedback wrong-feedback';
+            btns.forEach(btn => {
+                btn.disabled = true;
+                const btnText = btn.innerText;
+                if (btnText === currentQuestion.correctMeaning) {
+                    btn.classList.add('correct-highlight');
+                }
+                if (btnText === selectedOptionText && selectedOptionText !== currentQuestion.correctMeaning) {
+                    btn.classList.add('wrong-highlight');
+                }
+            });
+            canAnswer = false;
+            scoreDisplay.innerText = `✔️ Зүб харюу: ${scoreCorrect} / ${totalAttempts}`;
         }
     }
-    function checkQuiz3() {
-        let correctCount = 0;
-        quiz3Data.forEach((item, idx) => {
-            if (quiz3Answers[idx] === item.correct) correctCount++;
+
+    function bindOptionEvents() {
+        const btns = optionsContainer.querySelectorAll('.option-btn');
+        btns.forEach(btn => {
+            btn.removeEventListener('click', optionClickHandler);
+            btn.addEventListener('click', optionClickHandler);
         });
-        document.getElementById('quiz3Result').innerHTML = `🧠 Тест 3 (Верно/Неверно): ${correctCount} / ${quiz3Data.length}. ${correctCount === quiz3Data.length ? "Супер, локативные падежи усвоены!" : "Обрати внимание на логику места."}`;
+    }
+    function optionClickHandler(e) {
+        handleAnswer(e.currentTarget.innerText);
     }
 
-    // Комментарии (простейшие localStorage)
-    function loadComments() {
-        const saved = localStorage.getItem("buryat_comments");
-        if (saved) {
-            document.getElementById('commentsList').innerHTML = saved;
-        }
+    function initTrainer() {
+        scoreCorrect = 0;
+        totalAttempts = 0;
+        scoreDisplay.innerText = `✔️ Зүб харюу: 0 / 0`;
+        canAnswer = true;
+        if (autoNextTimeout) clearTimeout(autoNextTimeout);
+        loadNewQuestion();
+        bindOptionEvents();
     }
-    function saveComments() {
-        const commentsDiv = document.getElementById('commentsList');
-        localStorage.setItem("buryat_comments", commentsDiv.innerHTML);
-    }
-    document.getElementById('addCommentBtn').addEventListener('click', () => {
-        const name = document.getElementById('commentName').value.trim() || "Ученик";
-        const text = document.getElementById('commentText').value.trim();
-        if (!text) return;
-        const commentDiv = document.createElement('div');
-        commentDiv.className = 'single-comment';
-        commentDiv.innerHTML = `💬 <strong>${escapeHtml(name)}:</strong> ${escapeHtml(text)}`;
-        document.getElementById('commentsList').appendChild(commentDiv);
-        document.getElementById('commentText').value = "";
-        saveComments();
+
+    nextBtn.addEventListener('click', () => {
+        if (autoNextTimeout) clearTimeout(autoNextTimeout);
+        loadNewQuestion();
+        bindOptionEvents();
     });
+
+    // ============================================================
+    // Словарь с поиском и пагинацией
+    // ============================================================
+    let filteredWords = [...DICTIONARY];
+    let currentPage = 1;
+    const rowsPerPage = 20;
+    const tbody = document.getElementById('dictTbody');
+    const searchInput = document.getElementById('searchDict');
+    const paginationDiv = document.getElementById('paginationControls');
+    const totalWordsSpan = document.getElementById('totalWordsCount');
+
     function escapeHtml(str) {
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        });
+        return String(str).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
     }
 
-    // синхронизация клика по словам с селектом
-    document.getElementById('wordSelector').addEventListener('change', (e) => {
-        if(e.target.value) {
-            document.getElementById('chosenWordDisplay').innerText = e.target.value;
-            currentWord = e.target.value;
+    function renderDictTable() {
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const pageWords = filteredWords.slice(start, end);
+        tbody.innerHTML = '';
+        pageWords.forEach(w => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${escapeHtml(w.buryat)}</td><td>${escapeHtml(w.russian)}</td>`;
+            tbody.appendChild(tr);
+        });
+        totalWordsSpan.innerText = `Бүхы үгэнүүд: ${filteredWords.length}`;
+        renderPagination();
+    }
+
+    function renderPagination() {
+        const totalPages = Math.ceil(filteredWords.length / rowsPerPage);
+        paginationDiv.innerHTML = '';
+        if (totalPages <= 1) return;
+        for (let i = 1; i <= Math.min(totalPages, 12); i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.classList.add('page-btn');
+            if (i === currentPage) btn.classList.add('active');
+            btn.addEventListener('click', () => {
+                currentPage = i;
+                renderDictTable();
+            });
+            paginationDiv.appendChild(btn);
         }
+        if (totalPages > 12) {
+            const dots = document.createElement('span');
+            dots.textContent = '...';
+            paginationDiv.appendChild(dots);
+        }
+    }
+
+    function filterDictionary() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query === '') filteredWords = [...DICTIONARY];
+        else filteredWords = DICTIONARY.filter(w =>
+            w.buryat.toLowerCase().includes(query) ||
+            w.russian.toLowerCase().includes(query)
+        );
+        currentPage = 1;
+        renderDictTable();
+    }
+    searchInput.addEventListener('input', filterDictionary);
+
+    function initDictionary() {
+        filteredWords = [...DICTIONARY];
+        currentPage = 1;
+        renderDictTable();
+    }
+
+    // ============================================================
+    // Запуск
+    // ============================================================
+    initTrainer();
+    initDictionary();
+    console.log(`Тренажёр загружен: ${DICTIONARY.length} слов.`);
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const textToCopy = this.getAttribute('data-copy');
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = this.innerText;
+                this.innerText = '✅ Скопировано!';
+                setTimeout(() => { this.innerText = originalText; }, 1500);
+            }).catch(() => {
+                alert('Не удалось скопировать. Скопируйте вручную: ' + textToCopy);
+            });
+        });
     });
-
-    renderQuiz1();
-    renderQuiz2();
-    renderQuiz3();
-    loadComments();
-
-    document.getElementById('checkQuiz1Btn').onclick = checkQuiz1;
-    document.getElementById('checkQuiz2Btn').onclick = checkQuiz2;
-    document.getElementById('checkQuiz3Btn').onclick = checkQuiz3;
 </script>
 </body>
 </html>
